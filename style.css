@@ -1,0 +1,99 @@
+body {
+  background-color: black;
+  background-image: url(./images/fundo-uni.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+header {
+  background-color: rgba(104, 70, 197, 0.521);
+  display: block;
+  padding: 2px;
+  text-align: center;
+}
+
+nav {
+  background-color: rgba(104, 70, 197, 0.87);
+  position: fixed;
+  text-align: center;
+  top: 0;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+nav ul li {
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10%;
+  margin-right: auto;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#artigo-principal {
+  display: inline-block;
+  float: left;
+  width: 70%;
+}
+
+#habilidades {
+  background-color: rgba(104, 70, 197, 0.521);
+  display: inline-block;
+  float: right;
+  width: 28%;
+}
+
+#sobre-mim, #meu-trabalho {
+  background-color: rgba(104, 70, 197, 0.521);
+  display: block;
+  padding: 1px;
+  margin: 10px;
+}
+
+#eu-foto {
+  display: block;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
+#rodape {
+  background-color: rgba(104, 70, 197, 0.521);
+  display: block;
+  list-style: none;
+  margin-top: 90%;
+  padding: 0px;
+  text-align: center;
+  width: 100%;
+}
+
+#rodape ul li {
+  display: inline-block;
+}
+
+#rodape ul li a, #rodape p {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  width: 70px;
+}
+
+#rodape ul li a:hover {
+  background-color: aliceblue;
+  color: black;
+  display: inline-block;
+  font-weight: 700;
+  width: 100px;
+}
