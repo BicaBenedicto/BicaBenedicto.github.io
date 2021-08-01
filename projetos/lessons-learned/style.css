@@ -1,0 +1,74 @@
+body {
+  background-color: rgb(253, 251, 251);
+  color: black;
+  font-size: 16px;
+  font-family: monospace;
+  line-height: 18px;
+}
+
+main {
+  margin-bottom: 3em;
+}
+
+#cabecalho {
+  background-color: bisque;
+  text-align: center;
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+
+#minha_foto {
+  border: 10px dotted black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 72px;
+}
+
+#licoes {
+  display: block;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  width: 650px;
+}
+
+#aprendizado {
+  margin-bottom: 400px;
+}
+
+#rodape {
+  background-color: bisque;
+  border: 1px solid black;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+}
+
+#rodape p {
+  background-color: bisque;
+  color: black;
+}
+
+#rodape p:hover {
+  background-color: blanchedalmond;
+  color: blue;
+  font-weight: 700;
+}
+
+.lado-esquerdo {
+  float: left;
+  margin: 5px;
+  width: 60%;
+}
+
+.lado-direito {
+  float: right;
+  margin: 5px;
+  padding: 5px;
+  width: 35%;
+}
+
