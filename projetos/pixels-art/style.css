@@ -16,12 +16,14 @@ header {
 }
 
 button {
+  background-color: black;
   background-image: url('images/button2.png');
   background-repeat: no-repeat;
   background-size: cover;
   display: inline-block;
   font-size: 20px;
   height: 65px;
+  border-radius: 10px;
   padding: 5px;
   font-family: monospace;
   width: 200px;
@@ -32,7 +34,7 @@ button:hover {
 }
 
 button:active {
-  background-color: black;
+  background-color: rgb(12, 236, 12);
   transform: translateY(5px);
   transition-duration: 0.5s;
 }
@@ -112,6 +114,7 @@ div .color:hover {
 }
 
 #altenate-color {
+  background-color: black;
   background-image: url('images/button2.png');
   background-repeat: no-repeat;
   background-size: cover;

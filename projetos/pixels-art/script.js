@@ -8,7 +8,7 @@ function unselectOthers(evento) {
 }
 
 function select(evento) {
-  if (!evento.target.classList.contains('selected')) {
+  if (!evento.target.classList.contains('selected') && !evento.target.classList.contains('palette')) {
     unselectOthers(evento);
     evento.target.classList.add('selected');
   }
