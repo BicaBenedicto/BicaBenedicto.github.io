@@ -52,7 +52,7 @@ div .color:hover {
   width: 12em;
 }
 
-div .selected {
+div.selected {
   transform: translateY(-20px);
   width: 12em;
 }
