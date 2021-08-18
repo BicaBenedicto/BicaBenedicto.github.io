@@ -1,6 +1,5 @@
-const color = document.querySelectorAll('.color');
-
 function unselectOthers(evento) {
+  const color = document.querySelectorAll('.color');
   for (let c = 0; c < color.length; c += 1) {
     if (evento.target !== color[c]) {
       color[c].classList.remove('selected');
@@ -20,6 +19,7 @@ colorPalette.addEventListener('click', select);
 
 function changeColor(evento) {
   const event = evento;
+  const color = document.querySelectorAll('.color');
   for (let c = 0; c < color.length; c += 1) {
     if (color[c].classList.contains('selected')) {
       event.target.style.backgroundColor = color[c].style.backgroundColor;
@@ -107,7 +107,7 @@ getInitColor();
 
 function inicio() {
   const buttonVQV = document.getElementById('board-size');
-  const borda = 5 * 42;
+  const borda = 5 * 40;
   const px = 'px';
 
   buttonVQV.type = 'number';
@@ -123,3 +123,31 @@ inicio();
 
 const buttonResetColor = document.getElementById('reset-color');
 buttonResetColor.addEventListener('click', getInitColor);
+
+function morePalette() {
+  const paleta = document.createElement('div');
+
+  paleta.className = 'color';
+  paleta.style.backgroundColor = generateColor();
+  colorPalette.appendChild(paleta);
+}
+
+const buttonMorePalette = document.getElementById('more-palette');
+buttonMorePalette.addEventListener('click', morePalette);
+
+function lessPalette() {
+  colorPalette.lastElementChild.remove();
+}
+
+const buttonLessPalette = document.getElementById('less-palette');
+buttonLessPalette.addEventListener('click', lessPalette);
+
+function alternateColor() {
+  const colorNew = document.getElementById('altenate-color').value;
+  const selected = document.querySelector('div.selected');
+
+  selected.style.backgroundColor = colorNew;
+}
+
+const buttonNewColor = document.getElementById('change-color');
+buttonNewColor.addEventListener('click', alternateColor);
