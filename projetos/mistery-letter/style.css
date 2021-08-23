@@ -1,0 +1,170 @@
+p {
+  cursor: pointer;
+}
+
+span {
+  display: inline-block;
+}
+
+body {
+  background-color: rgb(37, 37, 37);
+  color: white;
+  text-shadow: 3px 3px 3px black;
+  text-align: center;
+}
+
+header {
+  margin: 30px auto;
+}
+
+input {
+  margin-right: 10px;
+  font-size: 20px;
+  height: 30px;
+  width: 200px;
+}
+
+.newspaper {
+  background-color: antiquewhite;
+  font-family: Times New Roman, Times, serif;
+  font-weight: 700;
+}
+
+.magazine1 {
+  background-color: teal;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.magazine2 {
+  background-image: url('images/pink-pattern.png');
+  color: fuchsia;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+}
+
+.other1 {
+  background-color: rgb(168, 180, 172);
+  color: blue;
+  font-family: Courier, monospace;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.other2 {
+  background-color: rgb(167, 22, 211);
+  color: black;
+  font-family: monospace;
+  font-weight: 200;
+}
+
+.other3 {
+  background-color: rgba(12, 228, 84, 0.897);
+  color: rgb(217, 255, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.medium {
+  font-size: 20px;
+  padding: 8px;
+}
+
+.big {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.reallybig {
+  font-size: 40px;
+  padding: 15px;
+}
+
+.rotateleft {
+  transform: rotate(-5deg);
+}
+
+.rotateright {
+  transform: rotate(5deg);
+}
+
+.skewleft {
+  transform: skewX(10deg);
+}
+
+.skewright {
+  transform: skewX(-10deg);
+}
+
+.skewleft2 {
+  transform: skewX(20deg);
+}
+
+.skewright2 {
+  transform: skewX(-20deg);
+}
+
+.skewleft3 {
+  transform: skewX(30deg);
+}
+
+.skewright3 {
+  transform: skewX(-30deg);
+}
+
+/* Crédito do botão: https://webdeasy.de/en/top-css-buttons-en/ */
+#criar-carta {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: white;
+  background: rgb(37, 37, 37);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+#criar-carta:before {
+  content: '';
+  background: linear-gradient(45deg, #002bff, #7a00ff, #ff00c8);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+#criar-carta:active {
+  color: black;
+}
+
+#criar-carta:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(37, 37, 37);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+#criar-carta:active:after {
+  background: transparent;
+}
+
+#criar-carta:hover:before {
+  opacity: 1;
+}
