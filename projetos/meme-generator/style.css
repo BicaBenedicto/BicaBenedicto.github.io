@@ -1,0 +1,100 @@
+* {
+  text-align: center;
+}
+
+body {
+  background-color: rgb(42 , 42 , 42);
+  background-image: url('imgs/memebk2.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header {
+  display: flex;
+  height: 200px;
+  justify-content: space-between;
+}
+
+header h2 {
+  background-image: url('imgs/memebk.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  color: white;
+  height: 100px;
+  margin: 0 20%;
+  padding: 30px;
+  width: 200px;
+}
+
+header div {
+  background-image: url('imgs/dog-dogs.gif');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  height: 100px;
+  width: 200px;
+}
+
+section {
+  margin: 30px auto;
+}
+
+#text-input {
+  margin: 5px;
+}
+
+#meme-image-container {
+  align-content: flex-end;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 300px;
+  margin: 20px auto;
+  width: 300px;
+  z-index: 0;
+}
+
+#meme-text {
+  text-shadow: 5px 5px 5px black;
+  color: white;
+  display: flex;
+  font-size: 30px;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: flex-end;
+  position: absolute;
+  max-width: 250px;
+  z-index: 2;
+}
+
+#meme-image {
+  height: 300px;
+  width: 300px;
+  z-index: 1;
+}
+
+#fire {
+  color: white;
+  text-shadow: 5px 5px 5px black;
+  background-color: red;
+}
+
+#water {
+  color: white;
+  text-shadow: 5px 5px 5px black;
+  background-color: blue;
+}
+
+#earth {
+  color: white;
+  text-shadow: 5px 5px 5px black;
+  background-color: green;
+}
+
+.meme-preview {
+  height: 100px;
+  margin: 10px;
+  width: 100px;
+}
