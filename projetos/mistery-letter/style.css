@@ -7,8 +7,9 @@ span {
 }
 
 body {
-  background-color: #111;
+  background-color: rgb(37, 37, 37);
   color: white;
+  text-shadow: 3px 3px 3px black;
   text-align: center;
 }
 
@@ -121,7 +122,7 @@ input {
   border: none;
   outline: none;
   color: white;
-  background: #111;
+  background: rgb(37, 37, 37);
   cursor: pointer;
   position: relative;
   z-index: 0;
@@ -154,7 +155,7 @@ input {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #111;
+  background: rgb(37, 37, 37);
   left: 0;
   top: 0;
   border-radius: 10px;

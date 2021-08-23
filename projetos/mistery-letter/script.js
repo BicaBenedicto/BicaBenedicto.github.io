@@ -8,7 +8,7 @@ function contador() {
 }
 
 function randomClassSelect(group, span) {
-  const indexRandom = Math.round(Math.random() * group.length);
+  const indexRandom = Math.floor(Math.random() * group.length);
 
   span.classList.add(group[indexRandom]);
 }
