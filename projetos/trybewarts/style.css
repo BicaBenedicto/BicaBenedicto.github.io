@@ -1,0 +1,160 @@
+body {
+  background-image: url('./images/bkhp3.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  color: white;
+  text-shadow: 5px 5px 5px black;
+  margin: 0;
+}
+
+main {
+  background-color: rgba(0, 0, 0, 0.774);
+}
+
+main , #evaluation-form {
+  align-items: stretch;
+  align-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px;
+}
+
+button {
+  border: 0;
+  border-radius: 100%;
+  background-color: rgb(50, 167, 145);
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  margin-left: 10px;
+}
+
+button:hover {
+  box-shadow: 5px 5px 5px black;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+footer {
+  text-align: center;
+}
+
+#evaluation-form {
+  flex-direction: column;
+  width: 675px;
+}
+
+#trybewarts-forms-logo {
+  height: 500px;
+}
+
+#input-name , #input-lastname {
+  align-items: center;
+  align-content: center;
+  display: inline-block;
+  justify-content: center;
+  margin-bottom: 10px;
+  width: 40%;
+}
+
+#input-lastname {
+  width: 48%;
+}
+
+#input-email , #house {
+  align-items: center;
+  align-content: center;
+  display: inline-block;
+  justify-content: center;
+  width: 44%;
+}
+
+#house {
+  border-radius: 10px;
+  height: 30px;
+  width: 39.4%;
+}
+
+#trybewarts-header-title {
+  color: white;
+  align-self: center;
+}
+
+#div-cont-learn {
+  margin-top: 5px;
+}
+
+#counter {
+  display: inline-block;
+}
+
+.family-inputs-divs {
+  display: block;
+  margin: 10px auto;
+}
+
+.header {
+  align-content: center;
+  align-items: center;
+  box-shadow: 0 5px 5px rgba(139, 255, 234, 0.616);
+  display: flex;
+  background-color: rgb(50, 167, 145);
+  justify-content: space-between;
+  height: 100px;
+  padding: 10px 20px;
+}
+
+.trybewarts-login {
+  display: flex;
+}
+
+.trybewarts-header-logo {
+  display: block;
+  width: 80px;
+}
+
+.hide {
+  display: none;
+}
+
+.inputText {
+  border: 0;
+  border-radius: 10px;
+  height: 25px;
+  padding: 5px;
+  margin: 10px 2px;
+}
+
+.inputText:hover , #house:hover {
+  border: 3px solid rgb(50, 167, 145);
+}
+
+.inputText:active , #house:active {
+  border: 3px solid blue;
+}
+
+#textarea {
+  border-radius: 10px;
+  border: 0;
+  margin-top: 5px;
+}
+
+.textarea:hover {
+  border: 3px solid rgb(50, 167, 145);
+}
+
+.textarea:active {
+  border: 3px solid blue;
+}
+
+.div-form {
+  margin-bottom: 10px;
+}
+
+.subject {
+  margin-top: 10px;
+}
