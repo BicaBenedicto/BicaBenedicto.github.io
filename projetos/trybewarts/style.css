@@ -24,14 +24,26 @@ main , #evaluation-form {
 button {
   border: 0;
   border-radius: 100%;
-  background-color: rgb(50, 167, 145);
-  color: white;
+  background-color: transparent;
+  background-image: url('./images/buttonsemfundo.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: scroll;
+  color: rgb(255, 255, 255);
   text-shadow: 2px 2px 2px black;
+  font-weight: 700;
+  height: 50px;
+  width: 50px;
   margin-left: 10px;
 }
 
+p {
+  margin: 0;
+}
+
 button:hover {
-  box-shadow: 5px 5px 5px black;
+  background-color: rgba(59, 0, 0, 0.315);
+  box-shadow: 2px 2px 2px black;
 }
 
 button:active {
@@ -92,6 +104,20 @@ footer {
   display: inline-block;
 }
 
+.reply-form-show {
+  background-image: url('./images/cartasemfundo.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: scroll;
+  color: black;
+  text-shadow: none;
+  font-size: 60px;
+  font-family: Allison;
+  padding: 30px;
+  padding-top: 100px;
+  padding-bottom: 300px;
+}
+
 .family-inputs-divs {
   display: block;
   margin: 10px auto;
@@ -100,9 +126,9 @@ footer {
 .header {
   align-content: center;
   align-items: center;
-  box-shadow: 0 5px 5px rgba(139, 255, 234, 0.616);
+  box-shadow: 0 5px 5px rgba(32, 37, 36, 0.616);
   display: flex;
-  background-color: rgb(50, 167, 145);
+  background-color: rgb(14, 14, 14);
   justify-content: space-between;
   height: 100px;
   padding: 10px 20px;
@@ -121,9 +147,13 @@ footer {
   display: none;
 }
 
-.inputText {
+.inputText , select {
   border: 0;
   border-radius: 10px;
+  background-image: url('./images/cartatentativa1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
   height: 25px;
   padding: 5px;
   margin: 10px 2px;
@@ -140,6 +170,10 @@ footer {
 #textarea {
   border-radius: 10px;
   border: 0;
+  background-image: url('./images/cartatentativa1.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: scroll;
   margin-top: 5px;
 }
 

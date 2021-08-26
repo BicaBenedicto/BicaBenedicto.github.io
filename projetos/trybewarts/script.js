@@ -47,6 +47,7 @@ function createFormReply(value1, value2) {
     p.classList.add('reply-form-item');
     p.innerText = value1 + value2;
     form.appendChild(p);
+    form.classList.add('reply-form-show');
   }
 }
 

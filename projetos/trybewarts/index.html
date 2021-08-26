@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
     <title>Project Trybewarts</title>
   </head>
   <body>
@@ -12,8 +15,8 @@
       <img class="trybewarts-header-logo" src="images/trybewarts-header-logo.svg" alt="logo-trybewarts">
       <h1 id="trybewarts-header-title">Trybewarts</h1>
       <form class="trybewarts-login" action="">
-        <input id="email" class="inputText" type="text" name="email" placeholder="Email">
-        <input id="password" class="inputText" name="password" type="text" placeholder="Senha">
+        <input id="email" class="inputText" type="text" name="email" placeholder="Email" autocomplete="off">
+        <input id="password" class="inputText" name="password" type="text" placeholder="Senha" autocomplete="off">
         <button class="login-button">Entrar</button>
       </form>
     </header>
@@ -21,11 +24,11 @@
       <section id="section-evaluation-form">
         <form id="evaluation-form">
           <div id="div-name-form" class="div-form">
-            <input id="input-name" class="inputText" placeholder="Nome" type="text">
-            <input id="input-lastname" class="inputText" placeholder="Sobrenome" type="text">
+            <input id="input-name" class="inputText" placeholder="Nome" type="text" autocomplete="off">
+            <input id="input-lastname" class="inputText" placeholder="Sobrenome" type="text" autocomplete="off">
           </div>
           <div class="div-form">
-            <input id="input-email"class="inputText"  placeholder="Email" type="email">
+            <input id="input-email"class="inputText"  placeholder="Email" type="email" autocomplete="off">
             <label for="house">Casa: 
               <select id="house" type="Gitnória" value="Gitnória" name="house">
                 <option id="gitnoria-house" value="Gitnória">Gitnória</option>
