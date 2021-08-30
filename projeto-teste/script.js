@@ -48,4 +48,4 @@ function sendMail() {
 }
 
 const buttonSubmitForm = document.getElementById('button-asks');
-buttonSubmitForm.addEventListener('click', sendMail);
+// buttonSubmitForm.addEventListener('click', sendMail);
