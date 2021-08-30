@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>DavSom</title>
+</head>
+<body>
+  <header id='header'>
+    <img src='./imgs/logo.png' alt='logo' id='logo' width='200px'>
+    <div id='header-contact'>
+    <div id='tel'>
+      <img src='./imgs/tell.png' alt='tell-icon' width='40px'>
+      <p>11 5081-6514</p>
+    </div><a href='https://api.whatsapp.com/send?phone=551196629946&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20um%20or%C3%A7amento' target='_blank'>
+    <div id='whats'>
+      <p>Manda um WHATSAPP</p>
+      <img src='./imgs/icon-whatsApp.png' alt='tell-icon' width='40px'>
+    </div></a>
+    </div>
+  </header>
+  <nav id='menu-nav'>
+    <ul>
+      <li><a href='#banner' style='color: steelblue;'>HOME <span class='seta-baixo'>&#9662;</span></a></li>
+      <li><a href='#div-services'>SERVIÇOS <span class='seta-baixo'>&#9662;</span></a></li>
+      <li><a href='#contact'>CONTATO <span class='seta-baixo'>&#9662;</span></a></li>
+      <li><a href='#andress'>LOCALIZAÇÃO <span class='seta-baixo'>&#9662;</span></a></li>
+    </ul>
+  </nav>
+  <main>
+    <header id='banner' class='banner1'>
+      <div id='div-banner-msg'>
+        <p id='banner-msg'>Cuide bem de quem te leva para tantos destinos!</p>
+        <button id='button-right-banner' class='seta-banner'>&#707;</button>
+      </div>
+      <a href='#frases'><button class='button-down-banner seta-baixar'>&#709;</button></a>
+    </header>
+    <section>
+      <div id='frases'>
+        <div class='frases'>
+        <span class='mission'><b>Nosso diferencial é o cuidado com o seu carro.</b></span>
+        <span class='mission'>Entendemos o que ele significa para você!</span>
+        </div>
+        <a href='#div-services'><button class='button-down-banner seta-baixar'>&#709;</button></a>
+      </div>
+      <div id='div-services'>
+        <div class='services-item'>
+          <img src='./imgs/trava-multlock.png' alt='trava-multlock' class='services'>
+          <span class='title-services'>TRAVA MULTLOCK</span>
+          <span class='service'>Sair de casa com medo de ser roubado? Nem pensar. Aqui é proteção, com preço justo para seu bolso!</span>
+        </div>
+        <div class='services-item'>
+          <img src='./imgs/central-multimidia.png' alt='central-multimidia' class='services'>
+          <span class='title-services'>CENTRAL MULTIMIDIA</span>
+          <span class='service'>As Centrais Multimidias oferecem conectividade, recursos de áudio e vídeo. Muito mais diversão para as suas viagens!</span>
+        </div>
+        <div class='services-item'>
+          <img src='./imgs/banco-de-couro.png' alt='banco-de-couro' class='services'>
+          <span class='title-services'>BANCO DE COURO</span>
+          <span class='service'>Quer deixar o interior do seu carro mais charmoso? Aqui produzimos bancos com couro legítimo, muito mais conforto para o seu dia a dia!</span>
+        </div>
+      </div>
+      <div id='other-services'>
+        <br>
+        <span class='mission'><b>Outros Serviços</b></span>
+        <div class='other-services-div'>
+        <div class='other-services-item'>
+          <img src='./imgs/trava.png' alt='trava' class='other-services''>
+          <p class='mission'>Trava elétrica</p>
+        </div>
+        <div class='other-services-item'>
+          <img src='./imgs/sensor.png' alt='sensor' class='other-services''>
+          <p class='mission'>Sensor de estacionamento</p>
+        </div>
+        <div class='other-services-item'>
+          <img src='./imgs/farol.png' alt='farol-de-milha' class='other-services''>
+          <p class='mission'>Farol de milha</p>
+        </div>
+        </div>
+      </div>
+      <div id='more-services'>
+        <a href='https://davsom.com.br/' target='_blank'><button class='more-services'><span class='seta-baixo'>	
+          &#707;</span> MAIS SERVIÇOS <span class='seta-baixo'>	
+            &#706;</span></button></a>
+            <br>
+        <div><a href='#contact'><button class='button-down-banner seta-baixar' >&#709;</button></a></div>
+      </div>
+    </section>
+    <section>
+      <br>
+      <br>
+      <div id='contact'>
+        <form method="post" id='myForm' name='myForm'>
+          <h3>Tire suas dúvidas sem compromisso!</h3>
+          <label for='your-name'>SEU NOME<br>
+            <input id='your-name' type='text' name='name' required>
+          </label>
+          <br><br>
+          <label for='your-tel'>TELEFONE<br>
+            <input id='your-tel' type='tel' name='telefone' required>
+          </label>
+          <br>
+          <button id='button-asks' type='submit'>ENVIAR</button>
+        </form>
+      </div>
+      <a href='#andress'><button class='button-down-banner seta-baixar' >&#709;</button></a>
+        <div id='andress'><span class='mission'><b>Nosso endereço:</b></span>
+          <br>
+        <span class='mission'>Av. Lins de Vasconcelos, 2059 - Vila Mariana, SP</span>
+        </div>
+        <br>
+        <div id='location'>
+          <iframe id='google-maps' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.641469632408!2d-46.627296984516306!3d-23.581316868215797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce597db9faba63%3A0x2ae337396a97cb2e!2sAv.%20Lins%20de%20Vasconcelos%2C%202059%20-%20Cambuci%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001537-001!5e0!3m2!1spt-BR!2sbr!4v1630224135385!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <div>
+        <a href='#missao'><button class='button-down-banner seta-baixar' >&#709;</button></a>
+        <span id='missao' class='mission'><b>Aqui seu carro é prioridade máxima.</b></span>
+        <br>
+        <span class='mission'>Venha nos visitar!</span>
+        <img id='foto-equipe' src='./imgs/foto-equipe.png' alt='foto-equipe' width='100%'>
+      </div>
+      <footer id='footer'>
+        <div class='footer'> 
+          <img class='logo' src='./imgs/logofooter.png' alt='logo'>
+          <div class='footer-infos'>
+            <span><b>Fale conosco:</b></span>
+            <div><img src='./imgs/icon-whatsApp (1).png' width='20px'>
+            <span>11 98584-1208</span></div>
+            <div><img src='./imgs/tell.png' width='20px'>
+            <span>11 5081-6514</span></div>
+            <br>
+            <span><b>Horário de atendimento:</b></span>
+            <span>Seg a sex: 8:30 às 17:30</span>
+            <span>Sab.: 8:30 às 13:30</span>
+          </div>
+        </div>
+        <div>
+          <h4>SIGA NOSSAS REDES SOCIAIS</h4>
+          <a href='https://www.instagram.com/davsom.sa/' target='_blank'>
+          <img class='rede-social' src='./imgs/instagram-icon.png' alt='instagram' width='40px'>
+          </a>
+          <a href='https://www.facebook.com/davsom.sa/' target='_blank'>
+          <img class='rede-social' src='./imgs/facebook-icon.png' alt='facebook' width='40px'>
+          </a>
+        </div>
+      </footer>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
