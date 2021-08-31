@@ -427,7 +427,7 @@ footer {
 }
 
 .banner3 {
-  background-image: url('./imgs/banner3.jpeg');
+  background-image: url('./imgs/banner3.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -528,34 +528,7 @@ footer {
   }
 
   #banner , #contact , .other-services-item {
-    position: relative;
-    left: 3%;
-    width: 100%;
-  }
-
-  .banner1 {
-    background-image: url('./imgs/banner1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: 0.5s;
-    width: 100%;
-  }
-  
-  .banner2 {
-    background-image: url('./imgs/banner2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: 0.5s;
-    width: 100%;
-  }
-  
-  .banner3 {
-    background-image: url('./imgs/banner3.jpeg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: 0.5s;
+    padding: 20px;
     width: 100%;
   }
 
@@ -576,6 +549,8 @@ footer {
 
   #div-services , .footer {
     flex-flow: column;
+    padding: 10px;
+    width: 100%;
   }
 
   #contact form {
@@ -588,6 +563,12 @@ footer {
   #foto-equipe {
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
+    width: 100%;
+  }
+
+  #location {
+    padding: 0 20px;
+    padding-bottom: 60px;
     width: 100%;
   }
 
