@@ -1,19 +1,27 @@
 body {
-  margin: 0px auto;
+  margin: 0 auto;
   font-family: Arial;
-  color: steelblue;
+  color: #33618e;
   text-align: center;
-  width: 1200px;
 }
 
 a , a:active {
   text-decoration: none;
 }
 
+footer {
+  align-items: center;
+  align-content: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 100%;
+}
+
 #header {
   align-items: center;
   align-content: center;
-  background-color: steelblue;
+  background-color: #33618e;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -150,12 +158,22 @@ a , a:active {
 }
 
 #your-tel , #your-name {
-  background-color: steelblue;
+  background-color: #33618e;
+  color: white;
   border: 1px solid white;
   border-radius: 10px;
   height: 40px;
   width: 300px;
 }
+
+#your-tel:hover , #your-name:hover {
+  border: 1px solid rgb(255, 251, 0);
+}
+
+#your-tel:active , #your-name:active {
+  border: 1px solid rgb(0, 110, 255);
+}
+
 
 #button-asks {
   background-color: rgb(209, 178, 0);
@@ -168,15 +186,18 @@ a , a:active {
   margin: 20px;
 }
 
-.button-down-banner {
-  margin: 10px auto;
-  margin-bottom: 5px;
+#button-asks:hover {
+  background-color: rgba(209, 178, 0, 0.787);
+}
+
+#button-asks:active {
+  background-color: rgb(13, 161, 0);
 }
 
 #location {
   align-items: center;
   align-content: center;
-  background-color: steelblue;
+  background-color: #33618e;
   color: white;
   display: flex;
   flex-flow: column wrap;
@@ -194,14 +215,6 @@ a , a:active {
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
   margin: 30px auto;
-}
-
-footer {
-  align-items: center;
-  align-content: center;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
   width: 100%;
 }
 
@@ -214,39 +227,31 @@ footer {
   margin: 20px auto;
 }
 
-.footer {
-  align-items: center;
-  align-content: center;
-  display: flex;
-  justify-content: center;
-  width: 80%;
+#whatsappicon {
+  background-color: #25d366;
+  border-radius: 20px;
+  bottom: 20px;
+  display: block;
+  left: 20px;
+  position: fixed;
+  height: 60px;
+  margin: 0;
+  width: 60px;
+  z-index: 2;
 }
 
-.footer .logo{
-  flex-grow: 0;
-  width: 460px;
+#whatsappicon:hover {
+  background-color: rgba(41, 209, 103, 0.822);
 }
 
-.footer-infos {
-  align-items: flex-start;
-  border-left: 1px solid white;
-  display: flex;
-  flex-flow: column;
-  flex-grow: 1;
-  font-size: 30px;
-  margin-left: 20px;
-  padding-left: 60px;
-
+#whatsappicon:active {
+  background-color: #25d366;
+  transform: translateX(10px) translateY(-10px);
 }
 
-.footer-infos div {
-  align-items: center;
-  align-content: center;
-  display: flex;
-}
-
-.footer-infos div span{
-  margin-left: 10px;
+.button-down-banner {
+  margin: 10px auto;
+  margin-bottom: 5px;
 }
 
 .seta-baixo {
@@ -260,17 +265,30 @@ footer {
   color: orange;
   font-size: 50px;
   font-weight: 700;
+  transition: 0.5s;
 }
 
-.seta-baixar:hover {
+.seta-baixada {
+  background-color: transparent;
+  border: none;
+  display: block;
+  color: rgb(0, 255, 98);
+  font-size: 50px;
+  font-weight: 700;
+  transition: 0.5s;
+  transform: translateY(15px);
+}
+
+.seta-baixar:hover , .seta-baixada:hover {
   color: yellow;
 }
 
-.seta-baixar:active {
+.seta-baixar:active , .seta-baixada:active {
   color: green;
   transition: 0.5s;
   transform:translateY(15px);
 }
+
 
 .seta-banner {
   background-color: transparent;
@@ -314,7 +332,7 @@ footer {
   align-content: flex-start;
   display: flex;
   justify-content: flex-start;
-  background-color: rgb(217, 250, 250);
+  background-color: #eef0f6;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   font-size: 30px;
@@ -332,9 +350,9 @@ footer {
 }
 
 .title-services {
-  color: rgb(54, 122, 179);
+  color: #33618e;
   font-size: 31px;
-  font-weight: 700;
+  font-weight: 1000;
   padding: 0 20px;
   margin: 5px auto;
 }
@@ -362,7 +380,7 @@ footer {
 }
 
 .more-services {
-  background-color: steelblue;
+  background-color: #33618e;
   color: white;
   border: none;
   border-radius: 30px;
@@ -393,21 +411,370 @@ footer {
   transform: translateY(-5px);
 }
 
-
 .banner1 {
   background-image: url('./imgs/banner1.jpg');
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  transition: 0.5s;
 }
 
 .banner2 {
   background-image: url('./imgs/banner2.jpg');
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
+  transition: 0.5s;
 }
 
 .banner3 {
   background-image: url('./imgs/banner3.jpeg');
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
+  transition: 0.5s;
+}
+
+.footer {
+  align-items: center;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
+.footer .logo{
+  flex-grow: 0;
+  width: 460px;
+}
+
+.footer-infos {
+  align-items: flex-start;
+  border-left: 1px solid white;
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  font-size: 30px;
+  margin-left: 20px;
+  padding-left: 60px;
+
+}
+
+.footer-infos div {
+  align-items: center;
+  align-content: center;
+  display: flex;
+}
+
+.footer-infos div span{
+  margin-left: 10px;
+}
+
+.logo-header {
+  width: 200px;
+}
+
+.icon-header {
+  width: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 0;
+    bottom: 0px;
+    display: block;
+    left: 0px;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  #location {
+    padding-bottom: 70px;
+  }
+
+  #header {
+    display: block;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  #header-contact {
+    align-items: center;
+    align-content: center;
+    display: flex;
+    font-size: 20px;
+  }
+
+  #header #whats , #whatsappicon , .hide-mobile {
+    display: none;
+  }
+
+  #header #tel {
+    margin: 5px auto;
+    font-size: 30px;
+  }
+
+  #whatsappbar {
+    background-color: #25d366;
+    bottom: 0px;
+    display: block;
+    left: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  #whatsappbar:active {
+    background-color: #25d366;
+    transform: translateX(10px) translateY(-10px);
+  }
+
+  #banner , #contact , .other-services-item {
+    width: 100%;
+  }
+
+  #banner-msg {
+    font-size: 25px;
+    padding-left: 10px;
+  }
+
+  #your-tel , #your-name {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #menu-nav li {
+    font-size: 15px;
+    margin: 20px;
+  }
+
+  #div-services , .footer {
+    flex-flow: column;
+  }
+
+  #contact form {
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    width: 100%
+  }
+
+  #foto-equipe {
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    width: 100%;
+  }
+
+  .more-services , .more-services .seta-baixo {
+    font-size: 20px;
+    padding: 10px 5px;
+  }
+
+  .other-services-div {
+    flex-flow: column;
+    margin-top: 50px;
+  }
+
+  .rede-social {
+    margin: 0 50px;
+    margin-bottom: 30px;
+  }
+
+  .logo-header {
+    margin: 0px auto;
+    width: 150px;
+  }
+
+  .services-item {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  
+  .icon-header {
+    width: 20px;
+  }
+  
+  .mission {
+    font-size: 30px;
+    padding: 20px;
+  }
+
+  .services {
+    height: 300px;
+    width: 100%;
+  }
+
+  .footer .logo{
+    flex-grow: 1;
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+  }
+
+  .footer-infos {
+    border-left: 0;
+    border-top: 1px solid white;
+    flex-grow: 1;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+  }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  body {
+    width: 800px;
+  }
+
+  #location {
+    padding-bottom: 70px;
+  }
+
+  #header {
+    padding: 10px 20px;
+  }
+
+  #header-contact {
+    align-items: center;
+    align-content: center;
+    display: flex;
+    font-size: 20px;
+  }
+
+  #header #whats {
+    display: none;
+  }
+
+  #header #tel {
+    font-size: 30px;
+  }
+
+  #whatsappbar {
+    background-color: #25d366;
+    bottom: 0px;
+    display: block;
+    left: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  #whatsappbar:active {
+    background-color: #25d366;
+    transform: translateX(10px) translateY(-10px);
+  }
+
+  #banner {
+    font-size: 40px;
+  }
+
+  #whatsappicon {
+    display: none;
+  }
+
+  #your-tel {
+    margin-bottom: 20px;
+  }
+
+  .rede-social {
+    margin: 0 50px;
+    margin-bottom: 30px;
+  }
+
+  .logo-header {
+    width: 150px;
+  }
+
+  .services-item {
+    height: 500px;
+  }
+  
+  .icon-header {
+    width: 20px;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+  
+  .mission {
+    font-size: 30px;
+  }
+
+  .services {
+    height: 200px;
+    width: 100%;
+  }
+
+  .footer .logo{
+    width: 305px;
+  }
+
+  .footer-infos , #your-name , #your-tel {
+    font-size: 20px;  
+  }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+  body {
+    width: 850px;
+  }
+  #header {
+    padding: 10px 10px;
+  }
+
+  .logo-header {
+    width: 150px;
+  }
+  
+  .icon-header {
+    width: 20px;
+  }
+  
+  #header-contact {
+    align-items: center;
+    align-content: center;
+    display: flex;
+    font-size: 20px;
+  }
+
+  #whats {
+    background-color: #25d366;
+    border-radius: 15px;
+    font-size: 15px;
+    height: 20px;
+  }
+
+  #banner {
+    font-size: 40px;
+  }
+
+  .mission {
+    font-size: 35px;
+  }
+
+  .services {
+    height: 200px;
+    width: 100%;
+  }
+
+  .footer .logo{
+    width: 305px;
+  }
+
+  .footer-infos , #your-name , #your-tel {
+    font-size: 20px;  
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    width: 1200px;
+  }
+
+  #your-name , #your-tel {
+    font-size: 30px;
+  }
 }
