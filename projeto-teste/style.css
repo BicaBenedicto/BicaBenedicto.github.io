@@ -479,12 +479,14 @@ footer {
 
 @media only screen and (max-width: 600px) {
   body {
-    margin: 0;
-    bottom: 0px;
-    display: block;
-    left: 0px;
     width: 100%;
   }
+
+  #menu-nav ul li {
+    display: block;
+    margin: 10px 20px;
+  }
+  
 
   #location {
     padding-bottom: 70px;
