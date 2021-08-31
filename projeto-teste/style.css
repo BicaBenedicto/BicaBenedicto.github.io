@@ -484,7 +484,6 @@ footer {
     display: block;
     left: 0px;
     width: 100%;
-    max-width: 600px;
   }
 
   #location {
@@ -529,6 +528,34 @@ footer {
   }
 
   #banner , #contact , .other-services-item {
+    position: relative;
+    left: 3%;
+    width: 100%;
+  }
+
+  .banner1 {
+    background-image: url('./imgs/banner1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+    width: 100%;
+  }
+  
+  .banner2 {
+    background-image: url('./imgs/banner2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+    width: 100%;
+  }
+  
+  .banner3 {
+    background-image: url('./imgs/banner3.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
     width: 100%;
   }
 
