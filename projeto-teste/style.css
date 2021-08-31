@@ -208,6 +208,7 @@ footer {
   border-bottom-left-radius: 70px;
   border-bottom-right-radius: 70px;
   padding-bottom: 30px;
+  height: 450px;
   width: 100%;
 }
 
@@ -477,7 +478,166 @@ footer {
   width: 40px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 200px) {
+  body {
+    width: 200px;
+  }
+
+  #menu-nav ul li {
+    display: block;
+    margin: 10px 20px;
+  }
+  
+  #google-maps {
+    height: 400px;
+    width: 100%;
+  }
+
+  #location {
+    padding-bottom: 70px;
+  }
+
+  #header {
+    display: block;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  #header-contact {
+    align-items: center;
+    align-content: center;
+    display: flex;
+    font-size: 20px;
+  }
+
+  #header #whats , #whatsappicon , .hide-mobile {
+    display: none;
+  }
+
+  #header #tel {
+    margin: 5px auto;
+    font-size: 30px;
+  }
+
+  #whatsappbar {
+    background-color: #25d366;
+    bottom: 0px;
+    display: block;
+    left: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  #whatsappbar:active {
+    background-color: #25d366;
+    transform: translateX(10px) translateY(-10px);
+  }
+
+  #banner , #contact , .other-services-item {
+    padding: 20px;
+    width: 100%;
+  }
+
+  #banner-msg {
+    font-size: 25px;
+    padding-left: 10px;
+  }
+
+  #your-tel , #your-name {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #menu-nav li {
+    font-size: 15px;
+    margin: 20px;
+  }
+
+  #div-services , .footer {
+    flex-flow: column;
+    padding: 10px;
+    width: 100%;
+  }
+
+  #contact form {
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    width: 100%
+  }
+
+  #foto-equipe {
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    width: 100%;
+  }
+
+  #location {
+    padding: 0 20px;
+    padding-bottom: 60px;
+    width: 100%;
+  }
+
+  .more-services , .more-services .seta-baixo {
+    font-size: 20px;
+    padding: 10px 5px;
+  }
+
+  .other-services-div {
+    flex-flow: column;
+    margin-top: 50px;
+  }
+
+  .rede-social {
+    margin: 0 50px;
+    margin-bottom: 30px;
+  }
+
+  .logo-header {
+    margin: 0px auto;
+    width: 150px;
+  }
+
+  .services-item {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  
+  .icon-header {
+    width: 20px;
+  }
+  
+  .mission {
+    font-size: 30px;
+    padding: 20px;
+  }
+
+  .services {
+    height: 300px;
+    width: 100%;
+  }
+
+  .footer .logo{
+    flex-grow: 1;
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+  }
+
+  .footer-infos {
+    border-left: 0;
+    border-top: 1px solid white;
+    flex-grow: 1;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 600px) {
   body {
     width: 100%;
   }
@@ -487,6 +647,10 @@ footer {
     margin: 10px 20px;
   }
   
+  #google-maps {
+    height: 400px;
+    width: 100%;
+  }
 
   #location {
     padding-bottom: 70px;
