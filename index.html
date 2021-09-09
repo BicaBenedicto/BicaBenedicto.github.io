@@ -2,68 +2,131 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Portfólio - Gabriel Benedicto</title>
-  <link rel="stylesheet" href="style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style-mobile-small.css" media="screen and (max-width: 450px)">
+  <link rel="stylesheet" href="style-mobile-medium.css" media="screen and (min-width: 450px) and (max-width: 600px)">
+  <link rel="stylesheet" href="style.css" media="screen and (min-width: 600px)">
+  <link rel="shortcut icon" href="./images/favicon.webp" type="image/x-icon" class="round">
+
+  <title>Gabriel Benedicto</title>
 </head>
 <body>
-  <header>
-    <h1>Portfólio - Gabriel Pereira Benedicto</h1>
+  <header id='header-top'>
+    <img id='logo' src='./images/logo.webp' alt='logo'>
+    <nav id='header-menu'>
+      <a class='nav-link' href='#home'>Home</a>|
+      <a class='nav-link' href='#about'>Sobre</a>|
+      <a class='nav-link' href='#project'>Projetos</a>|
+      <a class='nav-link' href='#contact'>Contato</a>
+    </nav>
   </header>
-  <nav>
-    <ul>
-      <li><a href=#eu-foto>Sobre mim</a></li>
-      <li><a href=#habilidades>Minhas habilidades</a></li>
-      <li><a href=#rodape>Contato</a></li>
-    </ul>
-  </nav>
   <main>
-    <img id="eu-foto" alt="Gabriel Benedicto" src="./images/Eu.jpg"
-    alt="Gabriel Pereira Benedicto" width="300px" weight="300px" id=eu>
-    <article id="artigo-principal">
-      <div id="sobre-mim">
+    <section id='home' class='container'>
+      <h2>Desenvolvedor Web | Front-End</h2>
+      <p class='home-word-p'>Estudante de Desenvolvimento Web na Tryber</p>
+      <p class='home-word-p'>Estudante de Análise e Desenvolvimento de Sistema na FMU</p>
+    </section>
+    <section id='about' class='container'>
+      <div class='aside-left'>
         <h3>Sobre mim</h3>
-        <p>Sou de <b>São Paulo - Capital</b>, nasci e cresci aqui, já realizei algumas faculdade como Engenharia Mecânica e Mecânica de Precisão, apesar de não ter terminado elas.<br>
-        Atualmente estudo Ánalise de Desenvolvimento de Sistemas na FMU e <b>Desenvolvimento Web na Trybe</b>, trabalho em <em>Call Center de madrugada</em> (Sim, possuo uma rotina um pouco corrida)<br>
-        Acabei aprendendo um pouco de programação da faculdade, e quando era mais novo meu hobbie era fazer site e apesar de não ter levado para parte profissional<br> quando era criança, me divertia muito criando sites de rádio para um jogo que eu jogava.</p>
+        <p>Me chamo Gabriel, tenho 23 anos atualmente, tive a oportunidade de re-ingressar na área da tecnologia, realizando o processo seletivo e conseguindo passar e entrar no <b>Curso da Trybe</b>, aproveitei para um complemento da <b>Faculdade de Análise e Desenvolvimento de Sistemas na FMU</b>.<br>Sou dedicado e focado no que quero, paciente, flexivel e adaptável, estou pronto para aprender novas linguagens, sistemas e até idiomas para conhecimento profissional/pessoal e aperfeiçoamento em minha carreira.</p>
       </div>
-      <div id="meu-trabalho">
-        <h3>Meu trabalho</h3>
-        <p>Sou iniciante em programação e por conta disso não tenho trabalhos para mostrar no momento, mas é possivel estar verificando os projetos criados durante o estudo na <b>Trybe</b>,
-        além do proprío <b>Portfólio</b> em que está.
-        </p>
-    </article>
-    <aside>
-      <div id="habilidades">
+      <div class='aside-right'>
         <ul>
-            <h4>Minhas habilidades</h4>
-            <li>Facilidade de aprendizado</li>
-            <li>Comprometimento</li>
-            <li>Comunicação</li>
-            <li>Curiosidade</li>
-            <li>Criativadade</li>
-            <li>Capacidade crítica</li>
-            <li>Capacidade análitica</li>
-            <li>Capacidade de adaptação</li>
-            <li>Estratégia</li>
-            <li>Administração</li>
-            <li>Pesquisa</li>
-            <li>Inteligência Emocional</li>
-            <li>Liderança</li>
-            <li>Busca contínua <br>de aperfeiçoamento <br>pessoal e profissional</li>
+          <h3>SoftSkills</h3>
+          <li>Facilidade de aprendizado</li>
+          <li>Comprometimento</li>
+          <li>Comunicação</li>
+          <li>Criativadade</li>
+          <li>Capacidade crítica</li>
+          <li>Capacidade análitica</li>
+          <li>Capacidade de adaptação</li>
+          <li>Estratégia</li>
+          <li>Administração</li>
+          <li>Pesquisa</li>
+          <li>Inteligência Emocional</li>
+          <li>Liderança</li>
+          <li>Desenvolvimento pessoal / profissional</li>
+        </ul>
+        <h3>Talentos</h3>
+        <h4 class='hide-ul hide-ul-title'>Reconhecidos por mim</h4>
+        <ul class='hide-ul'>
+          <li>Adaptabilidade</li>
+          <li>Analítico</li>
+          <li>Comando</li>
+          <li>Desenvolvimento</li>
+          <li>Empatia</li>
+          <li>Imparcialidade</li>
+          <li>Intelecção</li>
+          <li>Estratégico</li>
+          <li>Responsabilidade</li>
+          <li>Restauração</li>
+        </ul>
+        <h4 class='hide-ul hide-ul-title'>Reconhecidos por conhecidos</h4>
+        <ul class='hide-ul'>
+          <li>Proativo</li>
+          <li>Curioso</li>
+          <li>Desenvolvimento</li>
+          <li>Cauteloso e detalhista com algumas coisas que faz</li>
+          <li>Faz entrega do que é lhe passado e desafiado, sem deixar pendência</li>
+          <li>Administrador</li>
+          <li>Motivador</li>
+          <li>Visão crítica (Perfeccionista)</li>
+          <li>Persistência</li>
+          <li>Calmo</li>
+          <li>Estudioso</li>
+          <li>Amavel</li>
+        </ul>
+        <h4 class='hide-ul hide-ul-title'>Entenda sobre os talentos</h4>
+          <p class='hide-ul'>Um das aulas do curso da Trybe teve foco em Talentos, e foi questionado quais talentos enxergamos em nós mesmos, e para perguntarmos para 5 pessoas em diferentes ciclos sociais nossos os talentos que reconhecem nossos, os talentos que foram reconhecidos por conhecidos meus, são de amigos, colegas de trabalho, ex-colegas de trabalho e meu supervisor</p>
+      </div>
+      <div class='center-down'>
+        <h4 class='center-title'>HardSkills</h4>
+        <ul id='hardskills'>
+          <li class='hardskills-item'><img class='hardskills-img' src='./images/html-icon.webp' alt='html-icon'>Html</li>
+          <li class='hardskills-item'><img class='hardskills-img' src='./images/css-icon.webp' alt='css-icon'>Css</li>
+          <li class='hardskills-item'><img class='hardskills-img' src='./images/javascript-icon.webp' alt='javascript-icon'>JavaScript</li>
+          <li class='hardskills-item'><img class='hardskills-img' src='./images/git-icon.webp' alt='git-icon'>Git</li>
+          <li class='hardskills-item'><img class='hardskills-img' src='./images/github-icon.webp' alt='git-icon'>GitHub</li>
+          <li class='hardskills-item'><img class='hardskills-img' src='./images/php-icon.webp' alt='php-icon'>PhP</li>
         </ul>
       </div>
-    </aside>
+    </section>
+    <section id='project' class='container'>
+      <h3 class='center-title'>Projetos</h3>
+      <div id='project-div'>
+        <div class='project-item'>Color Guess<img class='project-img' src='./images/color-guess.png' alt='color-guess'></div>
+        <div class='project-item'>Pixel Art<img class='project-img' src='./images/pixels-art.png' alt='pixel-art'></div>
+        <div class='project-item'>To do List<img class='project-img' src='./images/to-do-list.png' alt='to-do-list'></div>
+        <div class='project-item'>Trybewarts<img class='project-img' src='./images/trybewarts.png' alt='trybewarts'></div>
+      </div>
+    </section>
+    <section id='contact' class='container'>
+      <form action="send.php" method="post">
+        <h3>Contate-me</h3>
+        <label for='name-contact'>Nome:<br>
+          <input id='name-contact' class='inputForm' name='name-contact' type='text' minlength='3' placeholder='Ex: Gabriel Pereira'>
+        </label>
+        <label for='email-contact'>E-mail:<br>
+          <input id='email-contact' class='inputForm' name='email-contact' type='email' minlength='3' placeholder='Ex: nome@exemplo.com'>
+        </label>
+        <label for='tel-contact'>Telefone:<br>
+          <input id='tel-contact' class='inputForm' name='tel-contact' type='text' minlength='10' maxlength='16' placeholder='Ex: (011) 91212-4343'>
+        </label>
+        <label for='time-contact'>Melhor horário para contato:<br>
+          <input id='time-contact' class='inputForm' name='time-contact' type='text' minlength='3' placeholder='Ex: 12h até 20h'>
+        </label>
+        <button id='send-contact' type='submit'>Enviar</button>
+      </form>
+    </section>
   </main>
-  <footer id="rodape">
-    <ul>
-      <li>Compilado por <b>Gabriel Benedicto</b></li>
-      <li>|</li>
-      <li><a href="https://github.com/BicaBenedicto" target="_blank">GitHub</a></li>
-      <li>|</li>
-      <li><a href="https://www.linkedin.com/in/gabrielbenedicto/" target="_blank">Linkedin</a></li>
-      <li>|</li>
-      <li>gabrielpbenedicto@gmail.com</li>
-    </ul>
+  <footer id='footer' class='container'>
+    <span>Criado por Gabriel Benedicto</span><a href='https://www.linkedin.com/in/gabrielbenedicto/' target='_blank'><img class='rede-social' src='./images/linkedin-icon.webp' alt='Linkedin'></a><a href='https://github.com/BicaBenedicto' target='_blank'><img class='rede-social git' src='./images/github-icon.webp' alt='GitHub'></a>
   </footer>
 </body>
 </html>
