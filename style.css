@@ -16,7 +16,7 @@ section {
   background-color: black;
   display: flex;
   color: white;
-  flex-flow: column;
+  flex-flow: row;
   justify-content: space-between;
   padding: 20px;
 }
@@ -47,6 +47,7 @@ section {
   flex-direction: column;
   justify-content: center;
   height: 650px;
+  width: 100%;
 }
 
 #home .home-word-p {
@@ -99,7 +100,8 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 20px;
+  margin: 40px auto;
+  width: 400px;
 }
 
 #contact input {
@@ -146,12 +148,22 @@ section {
   width: 50px;
 }
 
-.hide-ul li , p.hide-ul {
+.hide-ul {
   display: none;
+}
+
+.show-ul {
+  cursor: auto;
+  display: block;
+  font-weight: 300;
 }
 
 .hide-ul-title {
   border-bottom: 1px solid black;
+  cursor: pointer;
+  display: block!important;
+  font-size: 16px;
+  font-weight: 600;
   padding: 10px 0;
 }
 

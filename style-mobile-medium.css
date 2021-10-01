@@ -73,7 +73,7 @@ section {
   align-content: center;
   display: flex;
   flex-flow: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 #project-div .project-item {
@@ -146,12 +146,22 @@ section {
   width: 50px;
 }
 
-.hide-ul li , p.hide-ul {
+.hide-ul {
   display: none;
+}
+
+.show-ul {
+  cursor: auto;
+  display: block;
+  font-weight: 300;
 }
 
 .hide-ul-title {
   border-bottom: 1px solid black;
+  cursor: pointer;
+  display: block!important;
+  font-size: 16px;
+  font-weight: 600;
   padding: 10px 0;
 }
 

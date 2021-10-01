@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=0.9">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style-mobile-small.css" media="screen and (max-width: 450px)">
   <link rel="stylesheet" href="style-mobile-medium.css" media="screen and (min-width: 450px) and (max-width: 600px)">
   <link rel="stylesheet" href="style.css" media="screen and (min-width: 600px)">
@@ -32,11 +32,11 @@
       <p class='home-word-p'>Estudante de Análise e Desenvolvimento de Sistema na FMU</p>
     </section>
     <section id='about' class='container'>
-      <div class='aside-left'>
+      <div id='aside-left'>
         <h3>Sobre mim</h3>
-        <p>Me chamo Gabriel, tenho 23 anos atualmente, tive a oportunidade de re-ingressar na área da tecnologia, realizando o processo seletivo e conseguindo passar e entrar no <b>Curso da Trybe</b>, aproveitei para um complemento da <b>Faculdade de Análise e Desenvolvimento de Sistemas na FMU</b>.<br>Sou dedicado e focado no que quero, paciente, flexivel e adaptável, estou pronto para aprender novas linguagens, sistemas e até idiomas para conhecimento profissional/pessoal e aperfeiçoamento em minha carreira.</p>
+        <p>Me chamo Gabriel, tenho 23 anos atualmente, tive a oportunidade de re-ingressar na área da tecnologia, realizando o processo seletivo e conseguindo passar e entrar no Curso da <b>Trybe</b>, já estava cursando a <b>Faculdade de Análise e Desenvolvimento de Sistemas na FMU</b> quando entrei na Trybe.<br>Sou dedicado e focado no que quero, paciente, flexivel e adaptável, estou pronto para aprender novas linguagens, sistemas e até idiomas para crescimento em minha vida pessoal e carreira.</p>
       </div>
-      <div class='aside-right'>
+      <div id='aside-right'>
         <ul>
           <h3>SoftSkills</h3>
           <li>Facilidade de aprendizado</li>
@@ -54,7 +54,8 @@
           <li>Desenvolvimento pessoal / profissional</li>
         </ul>
         <h3>Talentos</h3>
-        <h4 class='hide-ul hide-ul-title'>Reconhecidos por mim</h4>
+        <div id='hide-section'>
+        <div class='hide-ul-title hide-ul'>Reconhecidos por mim
         <ul class='hide-ul'>
           <li>Adaptabilidade</li>
           <li>Analítico</li>
@@ -66,24 +67,27 @@
           <li>Estratégico</li>
           <li>Responsabilidade</li>
           <li>Restauração</li>
-        </ul>
-        <h4 class='hide-ul hide-ul-title'>Reconhecidos por conhecidos</h4>
+        </ul></div>
+        <div class='hide-ul-title hide-ul'>Reconhecidos por conhecidos
         <ul class='hide-ul'>
-          <li>Proativo</li>
+          <li>Administrador</li>
+          <li>Amavel</li>
+          <li>Calmo</li>
+          <li>Cauteloso e detalhista com algumas coisas que faz</li>
           <li>Curioso</li>
           <li>Desenvolvimento</li>
-          <li>Cauteloso e detalhista com algumas coisas que faz</li>
-          <li>Faz entrega do que é lhe passado e desafiado, sem deixar pendência</li>
-          <li>Administrador</li>
-          <li>Motivador</li>
-          <li>Visão crítica (Perfeccionista)</li>
-          <li>Persistência</li>
-          <li>Calmo</li>
           <li>Estudioso</li>
-          <li>Amavel</li>
-        </ul>
-        <h4 class='hide-ul hide-ul-title'>Entenda sobre os talentos</h4>
-          <p class='hide-ul'>Um das aulas do curso da Trybe teve foco em Talentos, e foi questionado quais talentos enxergamos em nós mesmos, e para perguntarmos para 5 pessoas em diferentes ciclos sociais nossos os talentos que reconhecem nossos, os talentos que foram reconhecidos por conhecidos meus, são de amigos, colegas de trabalho, ex-colegas de trabalho e meu supervisor</p>
+          <li>Faz entrega do que é lhe passado e desafiado, sem deixar pendência</li>
+          <li>Motivador</li>
+          <li>Persistência</li>
+          <li>Proativo</li>
+          <li>Visão crítica (Perfeccionista)</li>
+        </ul></div>
+        <div class='hide-ul-title hide-ul'>Entenda sobre os talentos
+          <div class='hide-ul'>
+          <p><i>Um das aulas do curso da Trybe teve foco em Talentos, e foi questionado quais talentos enxergamos em nós mesmos, e para perguntarmos para 5 pessoas em diferentes ciclos sociais nossos os talentos que reconhecem nossos, os talentos que foram reconhecidos por conhecidos meus, são de amigos, colegas de trabalho, ex-colegas de trabalho e meu supervisor</i></p>
+          </div></div>
+        </div>
       </div>
       <div class='center-down'>
         <h4 class='center-title'>HardSkills</h4>
@@ -126,7 +130,8 @@
     </section>
   </main>
   <footer id='footer' class='container'>
-    <span>Criado por Gabriel Benedicto</span><a href='https://www.linkedin.com/in/gabrielbenedicto/' target='_blank'><img class='rede-social' src='./images/linkedin-icon.webp' alt='Linkedin'></a><a href='https://github.com/BicaBenedicto' target='_blank'><img class='rede-social git' src='./images/github-icon.webp' alt='GitHub'></a>
+    <span>Criado por Gabriel Benedicto</span><a href='https://www.linkedin.com/in/gabrielbenedicto/' target='_blank'><img class='rede-social' src='./images/linkedin-icon.webp' alt='Linkedin'></a><a href='https://github.com/BicaBenedicto' target='_blank'><img class='rede-social git' src='./images/github-icon.webp' alt='GitHub'></a>contato@gabrielbenedicto.com
   </footer>
+  <script src='script.js'></script>
 </body>
 </html>

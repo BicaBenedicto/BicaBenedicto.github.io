@@ -99,6 +99,8 @@ section {
 }
 
 #project-div .project-item {
+  align-content: center;
+  align-items: center;
   border-radius: 20px;
   box-shadow: 2px 2px 5px black;
   display: flex;
@@ -170,12 +172,22 @@ section {
   width: 50px;
 }
 
-.hide-ul li , p.hide-ul {
+.hide-ul {
   display: none;
+}
+
+.show-ul {
+  cursor: auto;
+  display: block;
+  font-weight: 300;
 }
 
 .hide-ul-title {
   border-bottom: 1px solid black;
+  cursor: pointer;
+  display: block!important;
+  font-size: 16px;
+  font-weight: 600;
   padding: 10px 0;
 }
 
