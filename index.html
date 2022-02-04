@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=0.9">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-206678573-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-206678573-1');
+  </script>
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,121 +27,117 @@
 </head>
 <body>
   <header id='header-top'>
-    <img id='logo' src='./images/logo.webp' alt='logo'>
+    <h1 class="logo-title">{ Gabriel Benedicto }</h1>
     <nav id='header-menu'>
       <a class='nav-link' href='#home'>Home</a>|
-      <a class='nav-link' href='#about'>Sobre</a>|
       <a class='nav-link' href='#project'>Projetos</a>|
       <a class='nav-link' href='#contact'>Contato</a>
     </nav>
   </header>
   <main>
     <section id='home' class='container'>
-      <h2>Desenvolvedor Web | Front-End</h2>
-      <p class='home-word-p'>Estudante de Desenvolvimento Web na Tryber</p>
-      <p class='home-word-p'>Estudante de Análise e Desenvolvimento de Sistema na FMU</p>
+      <div>
+        <h2>Olá, me chamo Gabriel. </h2>
+        <h3>Sou desenvolvedor web e trabalho com criação e manutenção de websites.</h3>
+        <p class='home-word-p'>Tenho 24 anos, apaixonado por tecnologia desde sempre, iniciei em 2021 a Faculdade de Análise e Desenvolvimento de Sistemas na FMU. E no mesmo ano aproveitei a chance de ingressar na área, estudei muito e passei no processo seletivo muito disputado no Curso da Trybe, referência em formação e integração de profissionais ao mercado de trabalho, curso focado nas necessidades das empresas.</p>
+        <p class='home-word-p'>Comprometido, dedicado e focado, estou pronto para os desafios, quero aprender novas linguagens, sistemas e o que for preciso para atender as necessidades da empresa e crescer profissionalmente.</p>
+      </div>
+      <img src="./images/undraw_hello_re_3evm.svg" class="illustration"/>
     </section>
-    <section id='about' class='container'>
-      <div id='aside-left'>
-        <h3>Sobre mim</h3>
-        <p>Me chamo Gabriel, tenho 23 anos atualmente, tive a oportunidade de re-ingressar na área da tecnologia, realizando o processo seletivo e conseguindo passar e entrar no Curso da <b>Trybe</b>, já estava cursando a <b>Faculdade de Análise e Desenvolvimento de Sistemas na FMU</b> quando entrei na Trybe.<br>Sou dedicado e focado no que quero, paciente, flexivel e adaptável, estou pronto para aprender novas linguagens, sistemas e até idiomas para crescimento em minha vida pessoal e carreira.</p>
-      </div>
-      <div id='aside-right'>
-        <ul>
-          <h3>SoftSkills</h3>
-          <li>Facilidade de aprendizado</li>
-          <li>Comprometimento</li>
-          <li>Comunicação</li>
-          <li>Criativadade</li>
-          <li>Capacidade crítica</li>
-          <li>Capacidade análitica</li>
-          <li>Capacidade de adaptação</li>
-          <li>Estratégia</li>
-          <li>Administração</li>
-          <li>Pesquisa</li>
-          <li>Inteligência Emocional</li>
-          <li>Liderança</li>
-          <li>Desenvolvimento pessoal / profissional</li>
-        </ul>
-        <h3>Talentos</h3>
-        <div id='hide-section'>
-        <div class='hide-ul-title hide-ul'>Reconhecidos por mim
-        <ul class='hide-ul'>
-          <li>Adaptabilidade</li>
-          <li>Analítico</li>
-          <li>Comando</li>
-          <li>Desenvolvimento</li>
-          <li>Empatia</li>
-          <li>Imparcialidade</li>
-          <li>Intelecção</li>
-          <li>Estratégico</li>
-          <li>Responsabilidade</li>
-          <li>Restauração</li>
-        </ul></div>
-        <div class='hide-ul-title hide-ul'>Reconhecidos por conhecidos
-        <ul class='hide-ul'>
-          <li>Administrador</li>
-          <li>Amavel</li>
-          <li>Calmo</li>
-          <li>Cauteloso e detalhista com algumas coisas que faz</li>
-          <li>Curioso</li>
-          <li>Desenvolvimento</li>
-          <li>Estudioso</li>
-          <li>Faz entrega do que é lhe passado e desafiado, sem deixar pendência</li>
-          <li>Motivador</li>
-          <li>Persistência</li>
-          <li>Proativo</li>
-          <li>Visão crítica (Perfeccionista)</li>
-        </ul></div>
-        <div class='hide-ul-title hide-ul'>Entenda sobre os talentos
-          <div class='hide-ul'>
-          <p><i>Um das aulas do curso da Trybe teve foco em Talentos, e foi questionado quais talentos enxergamos em nós mesmos, e para perguntarmos para 5 pessoas em diferentes ciclos sociais nossos os talentos que reconhecem nossos, os talentos que foram reconhecidos por conhecidos meus, são de amigos, colegas de trabalho, ex-colegas de trabalho e meu supervisor</i></p>
-          </div></div>
-        </div>
-      </div>
-      <div class='center-down'>
+    <section id='skills'>
+      <img src="./images/undraw_programming_re_kg9v.svg" class="illustration"/>
+      <div class='center-down hard-skills'>
         <h4 class='center-title'>HardSkills</h4>
         <ul id='hardskills'>
-          <li class='hardskills-item'><img class='hardskills-img' src='./images/html-icon.webp' alt='html-icon'>Html</li>
-          <li class='hardskills-item'><img class='hardskills-img' src='./images/css-icon.webp' alt='css-icon'>Css</li>
-          <li class='hardskills-item'><img class='hardskills-img' src='./images/javascript-icon.webp' alt='javascript-icon'>JavaScript</li>
-          <li class='hardskills-item'><img class='hardskills-img' src='./images/git-icon.webp' alt='git-icon'>Git</li>
           <li class='hardskills-item'><img class='hardskills-img' src='./images/github-icon.webp' alt='git-icon'>GitHub</li>
-          <li class='hardskills-item'><img class='hardskills-img' src='./images/php-icon.webp' alt='php-icon'>PhP</li>
+          <li class='hardskills-item'><img class='hardskills-img' src='./images/git-icon.webp' alt='git-icon'>Git</li>
+          <li class='hardskills-item'><img class='hardskills-img' src='./images/html-icon.webp' alt='html-icon'>Html5</li>
+          <li class='hardskills-item'><img class='hardskills-img' src='./images/css-icon.webp' alt='css-icon'>Css3</li>
+          <li class='hardskills-item'><img class='hardskills-img' src='./images/javascript-icon.webp' alt='javascript-icon'>Javascript</li>
+          <li class='hardskills-item'><img class='hardskills-img' src='./images/bootstrap logo.png' alt='php-icon'>Bootstrap</li>
+          <li class='hardskills-item'><img class='hardskills-img' src='./images/tail wind css.png' alt='php-icon'>Tailwind CSS</li>
+          <li class='hardskills-item'><img class='hardskills-img' src='./images/sass logo.png' alt='php-icon'>SASS</li>
+          <li class='hardskills-item'><img class='hardskills-img' src='./images/php-icon.webp' alt='php-icon'>PHP</li>
+          <li class='hardskills-item'><img class='hardskills-img' src='./images/react.png' alt='php-icon'>React</li>
+          <li class='hardskills-item'><img class='hardskills-img' src='./images/redux.png' alt='php-icon'>Redux</li>
+          <li class='hardskills-item'><img class='hardskills-img' src='./images/docker logo.png' alt='php-icon'>Docker</li>
+          <li class='hardskills-item'><img class='hardskills-img' src='./images/mysql logo.png' alt='php-icon'>MySQL</li>
+
         </ul>
       </div>
     </section>
     <section id='project' class='container'>
       <h3 class='center-title'>Projetos</h3>
       <div id='project-div'>
-        <div class='project-item'>Color Guess<img class='project-img' src='./images/color-guess.png' alt='color-guess'></div>
-        <div class='project-item'>Pixel Art<img class='project-img' src='./images/pixels-art.png' alt='pixel-art'></div>
-        <div class='project-item'>To do List<img class='project-img' src='./images/to-do-list.png' alt='to-do-list'></div>
-        <div class='project-item'>Trybewarts<img class='project-img' src='./images/trybewarts.png' alt='trybewarts'></div>
+        <div class='project-item'>
+          <a href="https://github.com/BicaBenedicto/pixel-art" target="_blank" class="link-none">Pixel Art</a>
+          <img class='project-img' src='./images/pixels-art.png' alt='pixel-art'>
+        </div>
+        <div class='project-item'>
+          <a href="https://github.com/BicaBenedicto/todo-list" target="_blank" class="link-none">To do List</a>
+          <img class='project-img' src='./images/to-do-list.png' alt='to-do-list'>
+        </div>
+        <div class='project-item'>
+          <a href="https://github.com/BicaBenedicto/trybewarts" target="_blank" class="link-none">Trybewarts</a>
+          <img class='project-img' src='./images/trybewarts.png' alt='trybewarts'>
+        </div>
+        <div class='project-item'>
+          <a href="https://github.com/BicaBenedicto/front-end-online-store" target="_blank" class="link-none">Front-End Online Store</a>
+          <img class='project-img' src='./images/not-found-image.jpg' alt='shopping-cart'>
+        </div>
+        <div class='project-item'>
+          <a href="https://github.com/BicaBenedicto/trybewallet" target="_blank" class="link-none">Trybewallet</a>
+          <img class='project-img' src='./images/not-found-image.jpg' alt='trybewallet'>
+        </div>
+        <div class='project-item'>
+          <a href="https://github.com/BicaBenedicto/trybetunes" target="_blank" class="link-none" >TrybeTunes</a>
+          <img class='project-img' src='./images/not-found-image.jpg' alt='trybetunes'>
+        </div>
+        <div class='project-item'>
+          <a href="https://github.com/BicaBenedicto/trivia-react-redux" target="_blank" class="link-none" >Trivia</a>
+          <img class='project-img' src='./images/not-found-image.jpg' alt='trivia'>
+        </div>
+        <div class='project-item'>
+          <a href="https://github.com/BicaBenedicto/tryunfo" target="_blank" class="link-none" >Tryunfo</a>
+          <img class='project-img' src='./images/not-found-image.jpg' alt='tryunfo'>
+        </div>
+        <div class='project-item'>
+          <a href="https://davsom.com" target="_blank" class="link-none">Davsom</a>
+          <img class='project-img' src='./images/davsom.PNG' alt='Davsom'>
+        </div>
       </div>
     </section>
     <section id='contact' class='container'>
-      <form action="send.php" method="post">
-        <h3>Contate-me</h3>
-        <label for='name-contact'>Nome:<br>
-          <input id='name-contact' class='inputForm' name='name-contact' type='text' minlength='3' placeholder='Ex: Gabriel Pereira'>
-        </label>
-        <label for='email-contact'>E-mail:<br>
-          <input id='email-contact' class='inputForm' name='email-contact' type='email' minlength='3' placeholder='Ex: nome@exemplo.com'>
-        </label>
-        <label for='tel-contact'>Telefone:<br>
-          <input id='tel-contact' class='inputForm' name='tel-contact' type='text' minlength='10' maxlength='16' placeholder='Ex: (011) 91212-4343'>
-        </label>
-        <label for='time-contact'>Melhor horário para contato:<br>
-          <input id='time-contact' class='inputForm' name='time-contact' type='text' minlength='3' placeholder='Ex: 12h até 20h'>
-        </label>
-        <button id='send-contact' type='submit'>Enviar</button>
-      </form>
+      <h1>Contatos</h1>
+      <a href='https://api.whatsapp.com/send?phone=5511986629946' target='_blank'>
+        <img class='contact-icons' src='./images/whatslogo.png' alt='Whatsapp'>
+        +55 (11) 9.8662-9946
+      </a>
+      <a href='https://www.linkedin.com/in/gabrielbenedicto/' target='_blank'>
+        <img class='contact-icons' src='./images/linkedin-icon.webp' alt='Linkedin'>
+        https://www.linkedin.com/in/gabrielbenedicto/
+      </a>
+      <a href='https://github.com/BicaBenedicto' target='_blank'>
+        <img class='contact-icons' src='./images/github-icon.webp' alt='GitHub'>
+        https://github.com/BicaBenedicto
+      </a>
+      <a href="mailto:gabrielpbenedicto@gmail.com" target="_blank">
+        <img class='contact-icons' src='./images/maillogo.png' alt='E-mail'>
+        gabrielpbenedicto@gmail.com
+      </a>
     </section>
   </main>
   <footer id='footer' class='container'>
-    <span>Criado por Gabriel Benedicto</span><a href='https://www.linkedin.com/in/gabrielbenedicto/' target='_blank'><img class='rede-social' src='./images/linkedin-icon.webp' alt='Linkedin'></a><a href='https://github.com/BicaBenedicto' target='_blank'><img class='rede-social git' src='./images/github-icon.webp' alt='GitHub'></a>contato@gabrielbenedicto.com
+    <span>Criado por Gabriel Benedicto</span>
+    <a href='https://www.linkedin.com/in/gabrielbenedicto/' target='_blank'>
+      <img class='rede-social' src='./images/linkedin-icon.webp' alt='Linkedin'>
+    </a>
+    <a href='https://github.com/BicaBenedicto' target='_blank'>
+      <img class='rede-social git' src='./images/github-icon.webp' alt='GitHub'>
+    </a>
+    <a href="mailto:contato@gabrielbenedicto.com" class="link-none">
+      contato@gabrielbenedicto.com
+    </a>
   </footer>
-  <script src='script.js'></script>
 </body>
 </html>

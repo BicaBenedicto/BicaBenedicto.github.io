@@ -8,6 +8,15 @@ body {
   width: 100%;
 }
 
+canvas {
+  position: absolute;
+  top: -125px;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 120%;
+}
+
 main {
   padding: 10px;
 }
