@@ -145,9 +145,9 @@ section {
   z-index: 30;
 }
 
-#project-div .project-img {
-  height: 250px;
-  width: 400px;
+.project-img {
+  height: 250px !important;
+  width: 100% !important;
 }
 
 #contact {
@@ -225,4 +225,34 @@ section {
 .link-none {
   text-decoration: none;
   color: inherit
+}
+
+#project {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.slick-next {
+  background-color: rgba(0, 0, 0, 0.637) !important;
+  border-radius: 0 20px 20px 0;
+  transform: translateX(0px) translateY(-111px) !important;
+  height: 90% !important;
+  width: 40px !important;
+}
+
+.slick-prev {
+  background-color: rgba(0, 0, 0, 0.637) !important;
+  border-radius: 20px 0 0 20px;
+  transform: translateX(0px) translateY(-111px) !important;
+  height: 90% !important;
+  width: 40px !important;
+  z-index: 30;
+}
+
+.slick-next:hover, .slick-prev:hover {
+  background-color: rgba(0, 0, 0, 0.918) !important;
+}
+
+.slide.demo div {
+  text-align: center;
 }
