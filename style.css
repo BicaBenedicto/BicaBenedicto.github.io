@@ -65,6 +65,7 @@ section {
   align-items: center;
   display: flex;
   justify-content: center;
+  flex-direction: row-reverse;
   height: 650px;
   margin: 0 auto;
   position: relative;
