@@ -32,6 +32,7 @@ section {
 }
 
 #header-top #header-menu .nav-link {
+  border-bottom: 2px solid transparent;
   color: white;
   display: inline-block;
   font-weight: 600;
@@ -256,4 +257,77 @@ section {
 
 .slide.demo div {
   text-align: center;
+}
+
+.project-show {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.767);
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2000;
+}
+
+.project-show div {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 60%;
+}
+
+.project-show img {
+  transform: scale(0.7);
+  max-width: 60vw;
+  position: relative;
+}
+
+.project-show span {
+  display: block;
+  color: #6c63ff;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.project-show div p {
+  display: block;
+  position: relative;
+  color: white;
+  width: 60%;
+}
+
+.project-show div a {
+  color: magenta;
+  display: block;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+}
+
+.project-show div a:hover {
+  color: hsl(300, 100%, 80%);
+}
+
+.darkness {
+  filter: blur(20px);
+}
+
+.project-show-exit {
+  border: 1px solid lightgray;
+  border-radius: 100%;
+  color: lightgray;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.project-show-exit:hover {
+  border: 1px solid white;
+  color: white;
 }
