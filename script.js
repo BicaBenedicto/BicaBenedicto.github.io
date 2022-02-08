@@ -35,7 +35,7 @@ const PROJECTS = {
     rep: 'https://github.com/BicaBenedicto/trivia-react-redux',
   },
   Davsom: {
-    message: '',
+    message: 'Projeto realizado como trabalho freelancer de campanha publicitária de uma loja automotiva',
     site: 'https://davsom.com',
     rep: '',
   },
