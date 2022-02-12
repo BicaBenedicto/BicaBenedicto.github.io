@@ -13,6 +13,7 @@ import reduxIcon from '../images/redux.png';
 import dockerIcon from '../images/docker logo.png';
 import mysqlIcon from '../images/mysql logo.png';
 import illustration from '../images/undraw_Programming_re_kg9v.png';
+import '../css/Skills.css';
 
 export default function Skills() {
   return (

@@ -1,0 +1,57 @@
+#footer {
+  align-content: center;
+  align-items: center;
+  background-color: black;
+  bottom: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  font-size: 15px;
+  text-align: center;
+  padding: 0 5px;
+  width: 100%;
+}
+
+.git {
+  border-radius: 2px;
+  background-color: white;;
+}
+
+.rede-social {
+  margin: 10px 15px;
+  width: 25px;
+}
+
+.rede-social:hover {
+  transform: translateY(-5px);
+}
+
+.rede-social:active {
+  transform: translateY(5px);
+}
+
+@media only screen and (min-width: 1000px) {
+  #footer {
+    background-color: black;
+    bottom: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .rede-social {
+    margin: 0 15px;
+    width: 25px;
+  }
+  
+  .rede-social:hover {
+    transform: translateY(-5px);
+  }
+  
+  .rede-social:active {
+    transform: translateY(5px);
+  }
+}

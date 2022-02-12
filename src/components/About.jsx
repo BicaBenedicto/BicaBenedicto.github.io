@@ -1,5 +1,6 @@
 import React from 'react';
 import illustration from '../images/undraw_Hello_re_3evm.png';
+import '../css/About.css';
 
 
 export default function About() {

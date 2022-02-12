@@ -1,6 +1,7 @@
 import React from 'react';
 import linkedin from '../images/linkedin-icon.webp';
 import github from '../images/github-icon.webp';
+import '../css/Footer.css';
 
 export default function Footer() {
   return (

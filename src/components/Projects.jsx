@@ -7,6 +7,7 @@ import trybewallet from '../images/projetos/trybewallet-image.PNG';
 import trybeTunes from '../images/projetos/trybetunes-image.PNG';
 import trivia from '../images/projetos/trivia-image.PNG';
 import davsom from '../images/projetos/davsom.PNG';
+import '../css/Projects.css';
 
 export default function Projects() {
   return (
