@@ -11,7 +11,7 @@ export default function Contact() {
     <div
       className={hasShow ? 'project-show hasShow' : 'project-show hasHide'}
     >
-      <img src={ image } alt={ name } className=''/>
+      <img src={ image } alt={ name }/>
       <div>
         <span>{ name }</span>
         <p>{ PROJECTS[name].message }</p>
@@ -31,14 +31,15 @@ export default function Contact() {
           >
             Código
           </a>}
+          <button
+            type="button"
+            className='project-show-exit'
+            onClick={ () => projectToggleShow(false)}
+          >
+            X
+          </button>
       </div>
-      <button
-        type="button"
-        className='project-show-exit'
-        onClick={ () => projectToggleShow(false)}
-      >
-        X
-      </button>
+      <div/>
     </div>
   )
 };

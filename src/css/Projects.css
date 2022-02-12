@@ -41,7 +41,7 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.767);
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   position: fixed;
   top: 0;
@@ -92,6 +92,7 @@
 }
 
 .project-show-exit {
+  background-color: transparent;
   border: 1px solid lightgray;
   border-radius: 100%;
   color: lightgray;
@@ -199,6 +200,7 @@
     background-color: rgba(0, 0, 0, 0.767);
     display: flex;
     justify-content: center;
+    flex-direction: row;
     position: fixed;
     top: 0;
     height: 100%;
@@ -232,7 +234,7 @@
     display: block;
     position: relative;
     color: white;
-    width: 60%;
+    width: 100%;
   }
 
   .project-show div a {
@@ -248,14 +250,15 @@
   }
 
   .project-show-exit {
+    background-color: transparent;
     border: 1px solid lightgray;
     border-radius: 100%;
     color: lightgray;
     cursor: pointer;
     padding: 10px;
     position: absolute;
-    top: 0;
-    right: 20px;
+    top: 0px;
+    right: 0;
   }
 
   .project-show-exit:hover {
