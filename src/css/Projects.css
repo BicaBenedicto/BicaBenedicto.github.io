@@ -1,13 +1,15 @@
-#project-div {
+.project-div {
   align-items: center;
   align-content: center;
+  background-color: transparent;
+  border: none;
   display: flex;
   flex-flow: column;
   justify-content: center;
   width: 100%;
 }
 
-#project-div .project-item {
+.project-div .project-item {
   align-content: center;
   align-items: center;
   border-radius: 20px;
@@ -20,7 +22,7 @@
   width: 100%;
 }
 
-#project-div .project-img {
+.project-div .project-img {
   height: 100px;
   width: 100%;
 }
@@ -105,19 +107,31 @@
   color: white;
 }
 
+.hasShow {
+  transform: scale(1);
+  transition: 1s;
+}
+
+.hasHide {
+  transform: scale(0);
+  transition: 1s;
+}
+
 @media only screen and (min-width: 1000px) {
-  #project-div {
+  .project-div {
     align-items: stretch;
     align-content: center;
+    background-color: transparent;
+    border: none;
     display: flex;
     flex-flow: wrap;
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 500;
     justify-content: center;
     position: relative;
   }
   
-  #project-div .project-item {
+  .project-div .project-item {
     background-color: white;
     border-radius: 20px;
     box-shadow: 2px 2px 5px black;

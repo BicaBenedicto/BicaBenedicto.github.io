@@ -7,6 +7,7 @@ import trybewallet from '../images/projetos/trybewallet-image.PNG';
 import trybeTunes from '../images/projetos/trybetunes-image.PNG';
 import trivia from '../images/projetos/trivia-image.PNG';
 import davsom from '../images/projetos/davsom.PNG';
+import ProjectItem from './ProjectItem';
 import '../css/Projects.css';
 
 export default function Projects() {
@@ -14,38 +15,38 @@ export default function Projects() {
     <section id='project' className='container'>
       <h1 className='center-title'>Projetos</h1>
       <div className='slide demo'>
-        <div className="project-div">
-          <span className="link-none">Pixel Art</span>
-          <img className='project-img' src={ pixelArt } alt='Pixel Art'/>
-        </div>
-        <div className="project-div">
-          <span className="link-none">To do List</span>
-          <img className='project-img' src={ todoList } alt='to-do-list'/>
-        </div>
-        <div className="project-div">
-          <span className="link-none">Trybewarts</span>
-          <img className='project-img' src={ trybewarts } alt='trybewarts'/>
-        </div>
-        <div className="project-div">
-          <span className="link-none">E-commerce</span>
-          <img className='project-img' src={ eCommerce } alt='shopping-cart'/>
-        </div>
-        <div className="project-div">
-          <span className="link-none">Trybewallet</span>
-          <img className='project-img' src={ trybewallet } alt='trybewallet'/>
-        </div>
-        <div className="project-div">
-          <span className="link-none" >TrybeTunes</span>
-          <img className='project-img' src={ trybeTunes } alt='trybetunes'/>
-        </div>
-        <div className="project-div">
-          <span className="link-none" >Trivia</span>
-          <img className='project-img' src={ trivia } alt='trivia'/>
-        </div>
-        <div className="project-div">
-          <span className="link-none">Davsom</span>
-          <img className='project-img' src={ davsom } alt='Davsom'/>
-        </div>
+        <ProjectItem
+          name='Pixel Art'
+          image={ pixelArt }
+        />
+        <ProjectItem
+          name="To do List"
+          image={ todoList }
+        />
+        <ProjectItem
+          name="Trybewarts"
+          image={ trybewarts }
+        />
+        <ProjectItem
+          name="E-commerce"
+          image={ eCommerce }
+        />
+        <ProjectItem
+          name="Trybewallet"
+          image={ trybewallet }
+        />
+        <ProjectItem
+          name="TrybeTunes"
+          image={ trybeTunes }
+        />
+        <ProjectItem
+          name="Trivia"
+          image={ trivia }
+        />
+        <ProjectItem
+          name="Davsom"
+          image={ davsom }
+        />
       </div>
     </section>
   )

@@ -13,8 +13,14 @@ body {
   width: 100%;
 }
 
-.darkness {
+.blur {
   filter: blur(20px);
+  transition: 0.5s;
+}
+
+.not-blur {
+  filter: blur(0);
+  transition: 0.5s;
 }
 
 .illustration {
