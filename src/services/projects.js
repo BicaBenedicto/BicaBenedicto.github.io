@@ -1,4 +1,4 @@
-const PROJECTS = {
+export const PROJECTS = {
   'Pixel Art': {
     message: 'O projeto é um site de desenho, com algumas paletas de cores aleatórias que são geradas, podendo adicionar, remover ou alterar a cor das paletas conforme desejar, o quadro inicial é de 5 por 5, podendo chegar até 50 por 50 para fazer desenhos em pixel art da maneira que preferir.',
     site: 'https://bicabenedicto.github.io/pixel-art/',
@@ -40,65 +40,3 @@ const PROJECTS = {
     rep: '',
   },
 };
-
-const removeProjectShow = (e) => {
-  const projectDiv = e.target.classList.contains('project-show') ? e.target : e.target.closest('.project-show');
-  if(projectDiv) {
-    const main = document.querySelector('main');
-    main.classList.remove('darkness');
-
-    return projectDiv.remove();
-  }
-};
-
-const projectMain = document.getElementById('project');
-
-projectMain.addEventListener('click', (e) => {
-  const projectDiv = e.target.classList.contains('project-div') ? e.target : e.target.closest('.project-div');
-  if(projectDiv) {
-    const main = document.querySelector('main');
-    main.classList.add('darkness');
-
-    const exit = document.createElement('h1');
-    exit.innerText = 'X';
-    exit.className = 'project-show-exit';
-    exit.addEventListener('click', removeProjectShow);
-
-    const link = projectDiv.firstElementChild.cloneNode(true);
-    link.className = '';
-    const img = projectDiv.lastElementChild.cloneNode(true);
-    img.className = '';
-
-    const div1 = document.createElement('div');
-    const div2 = document.createElement('div');
-
-    const p = document.createElement('p');
-    p.innerText = PROJECTS[link.innerText].message;
-
-    const a1 = document.createElement('a');
-    a1.innerText = 'Preview';
-    a1.href = PROJECTS[link.innerText].site;
-    a1.target = '_blank';
-
-    const a2 = document.createElement('a');
-    a2.innerText = 'Código';
-    a2.href = PROJECTS[link.innerText].rep;
-    a2.target = '_blank';
-
-    const projectClone = document.createElement('div');
-    projectClone.className = 'project-show';
-
-    div1.appendChild(img);
-    div2.appendChild(link);
-    div2.appendChild(p);
-    if(PROJECTS[link.innerText].site !== '') div2.appendChild(a1);
-    if(PROJECTS[link.innerText].rep !== '') div2.appendChild(a2);
-    projectClone.appendChild(div1);
-    projectClone.appendChild(div2);
-    projectClone.appendChild(exit);
-    document.body.appendChild(projectClone);
-
-    console.log(img);
-    return console.log(link);
-  };
-});

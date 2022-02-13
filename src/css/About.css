@@ -1,0 +1,32 @@
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 650px;
+  padding-top: 50px;
+}
+
+#home h2 {
+  font-size: 20px;
+}
+
+#home .home-word-p {
+  font-size: 15px;
+}
+
+@media only screen and (min-width: 1000px) {
+  #home {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    height: 650px;
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
+  }
+  
+  #home .home-word-p {
+    font-size: 20px;
+  }
+}
