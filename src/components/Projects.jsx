@@ -1,4 +1,5 @@
 import React from 'react';
+import Slider from 'infinite-react-carousel';
 import pixelArt from '../images/projetos/pixels-art.png';
 import todoList from '../images/projetos/to-do-list.png';
 import trybewarts from '../images/projetos/trybewarts.png';
@@ -14,7 +15,20 @@ export default function Projects() {
   return (
     <section id='project' className='container'>
       <h1 className='center-title'>Projetos</h1>
-      <div className='slide demo'>
+      <Slider
+        arrowsScroll={ 3 }
+        autoplay
+        autoplayScroll={ 3 }
+        dots
+        dotsScroll={ 3 }
+        duration={ 300 }
+        overScan={ 2 }
+        pauseOnHover
+        rows={ 1 }
+        slidesToShow={ 3 }
+        wheel
+        wheelScroll={ 3 }
+        >
         <ProjectItem
           name='Pixel Art'
           image={ pixelArt }
@@ -47,7 +61,7 @@ export default function Projects() {
           name="Davsom"
           image={ davsom }
         />
-      </div>
+      </Slider>
     </section>
   )
 };
