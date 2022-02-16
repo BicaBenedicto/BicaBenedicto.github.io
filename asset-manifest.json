@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c31157cf.css",
+    "main.js": "/static/js/main.3bf2e8b2.js",
+    "static/js/787.72781b8e.chunk.js": "/static/js/787.72781b8e.chunk.js",
+    "static/media/trybewarts.png": "/static/media/trybewarts.22c1c2b744856055d80d.png",
+    "static/media/to-do-list.png": "/static/media/to-do-list.8b88382b17f0459d0f6f.png",
+    "static/media/trybetunes-image.PNG": "/static/media/trybetunes-image.eb4fa901560d7009638e.PNG",
+    "static/media/davsom.PNG": "/static/media/davsom.462dc81f90ac9b26bb1a.PNG",
+    "static/media/ecommerce-image.PNG": "/static/media/ecommerce-image.88144ebfeaa0218f07a0.PNG",
+    "static/media/trivia-image.PNG": "/static/media/trivia-image.f0f5fb6604b2ecb58f99.PNG",
+    "static/media/pixels-art.png": "/static/media/pixels-art.726a6d3f68bb5ad66819.png",
+    "static/media/react.png": "/static/media/react.283f9f863581bb226e65.png",
+    "static/media/trybewallet-image.PNG": "/static/media/trybewallet-image.060eb756336c091282d2.PNG",
+    "static/media/mysql logo.png": "/static/media/mysql logo.3697ea1184e22ba0b353.png",
+    "static/media/redux.png": "/static/media/redux.5de70b7bc0d2556a0958.png",
+    "static/media/undraw_Programming_re_kg9v.png": "/static/media/undraw_Programming_re_kg9v.0f393b9658995b77d179.png",
+    "static/media/undraw_Hello_re_3evm.png": "/static/media/undraw_Hello_re_3evm.7e2f6165470a2e87bcc5.png",
+    "static/media/php-icon.webp": "/static/media/php-icon.11b546a8535c2917f907.webp",
+    "static/media/bootstrap logo.png": "/static/media/bootstrap logo.4313772cd52f9ff8fce9.png",
+    "static/media/github-icon.webp": "/static/media/github-icon.1362c60d01c31e2ef77e.webp",
+    "static/media/linkedin-icon.webp": "/static/media/linkedin-icon.69c0e5de03d93d4f2e71.webp",
+    "static/media/html-icon.webp": "/static/media/html-icon.efd1464bacd6acef39fe.webp",
+    "static/media/javascript-icon.webp": "/static/media/javascript-icon.6830fd823597989e3459.webp",
+    "static/media/git-icon.webp": "/static/media/git-icon.3ff0c0e64eb436707bb9.webp",
+    "index.html": "/index.html",
+    "main.c31157cf.css.map": "/static/css/main.c31157cf.css.map",
+    "main.3bf2e8b2.js.map": "/static/js/main.3bf2e8b2.js.map",
+    "787.72781b8e.chunk.js.map": "/static/js/787.72781b8e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c31157cf.css",
+    "static/js/main.3bf2e8b2.js"
+  ]
+}
