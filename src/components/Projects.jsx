@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Slider from 'infinite-react-carousel';
 import pixelArt from '../images/projetos/pixels-art.png';
 import todoList from '../images/projetos/to-do-list.png';
