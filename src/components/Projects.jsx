@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Slider from 'infinite-react-carousel';
 import pixelArt from '../images/projetos/pixels-art.png';
 import todoList from '../images/projetos/to-do-list.png';
@@ -12,23 +12,36 @@ import ProjectItem from './ProjectItem';
 import '../css/Projects.css';
 
 export default function Projects() {
+  const screenSize = useRef(null);
+  const [slides, setSlideQuant] = useState(3);
+  
+  const onLoadComponent = () => {
+    const screenActual = Number(screenSize.current.offsetWidth);
+    if (screenActual < 400) return setSlideQuant(1);
+    return setSlideQuant(3);
+  };
+
   return (
-    <section id='project' className='container'>
+    <section
+      id='project'
+      className='container'
+      ref={ screenSize }
+      onLoad={ onLoadComponent }
+    >
       <h1 className='center-title'>Projetos</h1>
       <Slider
-        arrowsScroll={ 3 }
+        arrowsScroll={ slides }
         autoplay
-        autoplayScroll={ 3 }
+        autoplayScroll={ slides }
         dots
-        dotsScroll={ 3 }
+        dotsScroll={ slides }
         duration={ 300 }
-        overScan={ 2 }
         pauseOnHover
         rows={ 1 }
-        slidesToShow={ 3 }
+        slidesToShow={ slides }
         wheel
-        wheelScroll={ 3 }
-        >
+        wheelScroll={ slides }
+      >
         <ProjectItem
           name='Pixel Art'
           image={ pixelArt }
