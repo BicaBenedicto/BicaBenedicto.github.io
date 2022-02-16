@@ -2,6 +2,7 @@
   "name": "bicabenedicto",
   "version": "2.0.0",
   "author": "Gabriel Pereira Benedicto",
+  "homepage": "https://bicabenedicto.github.io",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
