@@ -1,0 +1,477 @@
+[33mcommit 252e7e8fed1291c4e1e9268e7d16bafb34eabcb1[m[33m ([m[1;36mHEAD -> [m[1;32mchange-library[m[33m)[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Wed Feb 16 18:49:59 2022 -0300
+
+    feat: adicionado biblioteca de icones bootstrap
+
+[33mcommit 7f28998e858afddcc109cb3bfedcc514a948daa1[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Wed Feb 16 18:20:42 2022 -0300
+
+    feat: adicionado responsividade nos slides do projeto
+
+[33mcommit 430ab69726a41a1c403f4208e1bb7671a0a2257f[m[33m ([m[1;31morigin/change-library[m[33m)[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Mon Feb 14 20:52:45 2022 -0300
+
+    feat: adiciona carousel com nova biblioteca
+
+[33mcommit 0d0ae6573e8feb56ba9a44e7a8651734a28ee2ea[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Mon Feb 14 20:34:52 2022 -0300
+
+    feat: remoção de dependencias antiga biblioteca carousel
+
+[33mcommit b33b08162bb3289532c1e432f4014bacf6c87d73[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Mon Feb 14 20:27:18 2022 -0300
+
+    feat: adicionado biblioteca de carousel infinite no react
+
+[33mcommit baa4cf4d3fdfdba884dd8ae06ffa1801f4814411[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Mon Feb 14 20:26:41 2022 -0300
+
+    feat: alterado versão do react de 17 para 16
+
+[33mcommit eef6d07dd0a97d51cb46b168eb2579b488e37839[m[33m ([m[1;33mtag: v2.0.0[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: 0083614 2eab7e3
+Author: Gabriel Pereira Benedicto <87337551+BicaBenedicto@users.noreply.github.com>
+Date:   Sat Feb 12 22:56:04 2022 -0300
+
+    Merge pull request #8 from BicaBenedicto/react-convertion
+    
+    [BREAKING CHANGE] v2.0.0 - React convertion
+
+[33mcommit 2eab7e33881e6962b42d3ab38cfe2fdda960da53[m[33m ([m[1;31morigin/react-convertion[m[33m, [m[1;32mreact-convertion[m[33m)[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 22:54:58 2022 -0300
+
+    BREAKING CHANGE: v2.0.0
+
+[33mcommit 45e9eecc0f82ea98313ffc91db7ab420b7c35002[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 22:52:18 2022 -0300
+
+    fix: removido linhas não usadas e arquivos default do react
+
+[33mcommit b63308e424de2e8624fbcaa810508fe549e4a17d[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 22:10:53 2022 -0300
+
+    fix: removido arquivos nao usados
+
+[33mcommit 3980c2047e37b65d486de64f07bb2ea9c5cdf218[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 20:32:53 2022 -0300
+
+    fix: conserto de ordem css em projeto exibido
+
+[33mcommit f36234cfc5086ea25a257238297bcf09f2c0b77b[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 19:33:12 2022 -0300
+
+    feat: transição de funções script.js para react components
+
+[33mcommit 39382ac919a953895e5e03d0b247f236bbb31982[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 18:09:01 2022 -0300
+
+    feat: transição de css para divisão de css por componentes
+
+[33mcommit 91625581a9b65e55589476a09f91f70ef2c2f435[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:48:38 2022 -0300
+
+    feat: Alterado pastas e favicon para public
+
+[33mcommit 73685c38b75dad488526da9eab835fb7086a53cc[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:48:01 2022 -0300
+
+    feat: alterado estrutura do index da pasta public
+
+[33mcommit 6c445f2cac1362c24b073281bbae3de117850982[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:41:53 2022 -0300
+
+    feat: adicionado conteudo a estrutura do footer
+
+[33mcommit 6967ffc6702ba3508363ec846bc2ec7c7ac26e87[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:38:32 2022 -0300
+
+    feat: adicionado conteudo a estrutura do projects
+
+[33mcommit ccf846f33b5b9dc6754220ed485d1034b580ba04[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:32:29 2022 -0300
+
+    feat: adicionado conteudo a estrutura do skills
+
+[33mcommit e5f41f46178808539d0caeeae2018bf03cd35b77[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:23:58 2022 -0300
+
+    fix: alterado class para className
+
+[33mcommit 26c7b676ba650336d1151bdbc888586316f64d7a[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:23:13 2022 -0300
+
+    feat: adicionado conteudo a estrutura do about
+
+[33mcommit 2c83df5cb149c5dbbd5c1d52122f94deb192335a[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:20:35 2022 -0300
+
+    feat: adicionado conteudo a estrutura do header
+
+[33mcommit 39b5609998ba40eb0c60ad0104b600207c38b061[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:15:11 2022 -0300
+
+    feat: adicionado componentes a estrutura do app
+
+[33mcommit 38f1e29459568e2afc31e83e499137efa5454de5[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:10:40 2022 -0300
+
+    feat: adicionado estrutura ao componente contact
+
+[33mcommit e62076f7c988904f91233cab260ba91b88664f04[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:10:26 2022 -0300
+
+    feat: adicionado componente contact
+
+[33mcommit bd9346d521523efae9d21933c5a2f8d69ce242c0[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:10:03 2022 -0300
+
+    feat: adicionado estrutura ao componente projects
+
+[33mcommit 2f41b948b29bd1bc348967551a2ec1f8612dd857[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:09:42 2022 -0300
+
+    feat: adicionado estrutura ao componente projects
+
+[33mcommit c2e4c636e69d42504ae3c9faba6fa4085c744ed9[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:09:13 2022 -0300
+
+    feat: adicionado estrutura ao componente skills
+
+[33mcommit 77c938c7c60805447ce2ee21fcbddea0d089c653[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:09:03 2022 -0300
+
+    feat: adicionado componente skills
+
+[33mcommit 2d08966c58746aa32f3dab3a043804727b3cd2f3[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:08:26 2022 -0300
+
+    feat: adicionado estrutura ao componente about
+
+[33mcommit 1af2c4c926c380aae06f471fdfedf36a89553713[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:08:04 2022 -0300
+
+    feat: adicionado componente about
+
+[33mcommit 47a0326a08dc217550a514df7108976bc722fdd4[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:07:25 2022 -0300
+
+    feat: adicionado estrutura ao componente footer
+
+[33mcommit 3b5b6a563648e7df5277b8a92ece7f64a4679359[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:07:10 2022 -0300
+
+    feat: adicionado componente footer
+
+[33mcommit a10069c3564507778cdd857297b8f7ffd483cb39[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:06:25 2022 -0300
+
+    feat: adicionado estrutura ao componente header
+
+[33mcommit 0737b2b6b72a4bbf6bdbe8d8502b4918745f1605[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 02:04:55 2022 -0300
+
+    feat: adicionado componente header
+
+[33mcommit bcaf6cf814c5ecd60bd91fb08f96c8ac2b437145[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sat Feb 12 01:47:24 2022 -0300
+
+    Adicionado react-app ao portifolio
+
+[33mcommit 008361426492c35bd5536422c9050e1bf0390052[m[33m ([m[1;33mtag: v1.0.0[m[33m)[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Tue Feb 8 06:36:25 2022 -0300
+
+    Estilizado projetos desktop e mobile
+
+[33mcommit 0c16a4e4709c6dc6c4007499b36bb906f0175791[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Tue Feb 8 06:35:26 2022 -0300
+
+    Estilizado projetos desktop e mobile
+
+[33mcommit 97d1dd6e40cb4194752f42a1d85f0bbf7efda138[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sun Feb 6 22:03:11 2022 -0300
+
+    Atualizado estilo mobile CSS
+
+[33mcommit 76a321c102fa9bc112397d920b5fa7f77b789a85[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Sun Feb 6 20:50:10 2022 -0300
+
+    Melhora de estilização desktop
+
+[33mcommit b6df31460a236db7188dd64888a271444b1547a3[m
+Author: Gabriel <gabrielpbenedicto@gmail.com>
+Date:   Fri Feb 4 07:33:36 2022 -0300
+
+    Alterado estilo da página
+
+[33mcommit 30c5f8bd6f92323d75808752d26728b612d2fe20[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Fri Oct 1 15:14:43 2021 -0300
+
+    Adicionado projeto Zoo functions, shopping cart, jest
+
+[33mcommit 58605be55d2054cffb246cafb4a43c39727d3cc9[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Thu Sep 9 03:40:27 2021 -0300
+
+    Alterado estilo pagina
+
+[33mcommit ceefcf384de91f896c30463a7812b8cbcdba3869[m
+Merge: ae9c539 6fa5d23
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Tue Sep 7 02:27:25 2021 -0300
+
+    Merge branch 'master' of github.com:BicaBenedicto/BicaBenedicto.github.io
+
+[33mcommit ae9c539fd2685ae2ee7b23523be76c18a8f9ef78[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Tue Sep 7 02:23:32 2021 -0300
+
+    Adicionado projeto Unit Tests
+
+[33mcommit 6fa5d23e375f17a82395d9312fb3154248fb5ee4[m
+Author: Gabriel Pereira Benedicto <87337551+BicaBenedicto@users.noreply.github.com>
+Date:   Fri Sep 3 04:38:30 2021 -0300
+
+    Delete projeto-teste directory
+
+[33mcommit 5af45b338d4b516b1371033be2c1a1bc5d0fe6f1[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Tue Aug 31 19:56:22 2021 -0300
+
+    Mobile css adicao responsividade menor que 200px
+
+[33mcommit cb3a769a3ed6716a0928e25dd8fbd3f95c085768[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Tue Aug 31 19:47:16 2021 -0300
+
+    Mobile Css ajuste nav
+
+[33mcommit 4255e68648bf82964f9ffdc31dab6535eb8492b2[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Tue Aug 31 19:25:24 2021 -0300
+
+    Mobile Css reajuste imagem
+
+[33mcommit fbfdd68c4cd0bdacae2d737b5bf4b3407ceab450[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Tue Aug 31 19:13:26 2021 -0300
+
+    Mobile Css correçao
+
+[33mcommit 0bc3f64eb49db01a7d6606e274059b45da745c4c[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Tue Aug 31 18:56:16 2021 -0300
+
+    Mobile Css
+
+[33mcommit ceddaba8208c5c9b1437c73c89da3213224e64f3[m
+Merge: 57de9c1 1dc4ab9
+Author: Gabriel Pereira Benedicto <87337551+BicaBenedicto@users.noreply.github.com>
+Date:   Mon Aug 30 18:48:24 2021 -0300
+
+    Merge pull request #7 from BicaBenedicto/freela
+    
+    Mudança form
+
+[33mcommit 1dc4ab93904d142074ac8cc194467178ed2a4b54[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Mon Aug 30 18:47:36 2021 -0300
+
+    Mudança form
+
+[33mcommit 57de9c1c594be88c1213ab7ca9aa5dae3ae13a84[m
+Merge: 8bc5674 f9f18cb
+Author: Gabriel Pereira Benedicto <87337551+BicaBenedicto@users.noreply.github.com>
+Date:   Mon Aug 30 14:05:33 2021 -0300
+
+    Merge pull request #6 from BicaBenedicto/freela
+    
+    Projeto teste
+
+[33mcommit f9f18cbfaa004f5f73d8c5e5ddd072aa838d216f[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Mon Aug 30 14:03:59 2021 -0300
+
+    Projeto teste
+
+[33mcommit 8bc5674404609ad29a3143b659baa49590b52a01[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Thu Aug 26 18:10:46 2021 -0300
+
+    Alterado tipo password
+
+[33mcommit 1df0fb2c7934ae0de0280b55e87effbb00d1f1cb[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Thu Aug 26 18:03:24 2021 -0300
+
+    Estilizado pagina 2
+
+[33mcommit 821390533c0af5591c58f96432826efe65905495[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Thu Aug 26 16:44:50 2021 -0300
+
+    Adicionado projeto Trybewarts
+
+[33mcommit f3694f75117228952c5f062233bb49799c0a85d3[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Mon Aug 23 12:22:16 2021 -0300
+
+    Readicionado projeto to do list
+
+[33mcommit 8c009f4d08d0e994a3688dcd8e23edc385e8f2b6[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Mon Aug 23 12:21:10 2021 -0300
+
+    Readicionado projeto mistery letter
+
+[33mcommit 746c03e0f7f55b1d684d6ef4f74309be601b7789[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Mon Aug 23 12:18:54 2021 -0300
+
+    Readicionado projetos
+
+[33mcommit 6c7704842a1f99576b5f118f5e35e0dc2a14bcaf[m
+Author: Gabriel Pereira Benedicto <87337551+BicaBenedicto@users.noreply.github.com>
+Date:   Wed Aug 18 05:06:30 2021 -0300
+
+    Update style.css
+
+[33mcommit 611a2839cf83397c872839febe6e757516cd9b3a[m
+Author: Gabriel Pereira Benedicto <87337551+BicaBenedicto@users.noreply.github.com>
+Date:   Wed Aug 18 05:05:36 2021 -0300
+
+    Update style.css
+
+[33mcommit 7964c1b9c20ff80e2f935708fa500884922a3d9d[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Wed Aug 18 04:54:04 2021 -0300
+
+    Realizado edição pessoal da aparência
+
+[33mcommit f664204b64df02c357652e4831898b65a6cf3fe5[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Mon Aug 16 00:00:34 2021 -0300
+
+    Adicionado projeto Pixels Art
+
+[33mcommit 85322f19c8117e1b6aae6fd49ad51555bdc4bd89[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Sun Aug 8 18:24:25 2021 -0300
+
+    Adicionado Projeto Playground Functions
+
+[33mcommit 3a078c4d944056c39ec499732349478fe3524164[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Sun Aug 1 02:51:01 2021 -0300
+
+    Adicionado projeto 1
+
+[33mcommit 4cd47df1d3d460c2d2529678956d3f0b985bac06[m
+Merge: 22bee47 593514e
+Author: Gabriel Pereira Benedicto <87337551+BicaBenedicto@users.noreply.github.com>
+Date:   Sun Aug 1 02:45:29 2021 -0300
+
+    Merge pull request #2 from BicaBenedicto/gabriel
+    
+    Atualização projeto lessons learned
+
+[33mcommit 593514eee698e1619054b2f094d751db82e0a3d3[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Sun Aug 1 02:44:38 2021 -0300
+
+    Atualização projeto lessons learned
+
+[33mcommit 22bee47f0f3439c4b51b31cf9ce3ce79b2b02e34[m
+Author: Gabriel Pereira Benedicto <87337551+BicaBenedicto@users.noreply.github.com>
+Date:   Thu Jul 29 18:58:35 2021 -0300
+
+    Delete projetos/lessons-learned directory
+
+[33mcommit f13fabedfb87cc0c68487181a6bb534e7d22c9cd[m
+Author: Gabriel Pereira Benedicto <87337551+BicaBenedicto@users.noreply.github.com>
+Date:   Wed Jul 28 12:57:02 2021 -0300
+
+    Update style.css
+
+[33mcommit 352509cbf6381275ef0cfcc6e14d6c94f02753e0[m
+Author: Gabriel Pereira Benedicto <87337551+BicaBenedicto@users.noreply.github.com>
+Date:   Wed Jul 28 12:51:09 2021 -0300
+
+    Delete README.md
+
+[33mcommit 71dc52f2794b4d85cabd530bf759551a70b77219[m
+Author: Gabriel Pereira Benedicto <87337551+BicaBenedicto@users.noreply.github.com>
+Date:   Wed Jul 28 12:49:11 2021 -0300
+
+    Delete README.md
+
+[33mcommit 9bb6779451af80493357ddec35826cc0f5bffd66[m
+Author: Gabriel Pereira Benedicto <87337551+BicaBenedicto@users.noreply.github.com>
+Date:   Wed Jul 28 12:47:24 2021 -0300
+
+    Update README.md
+
+[33mcommit cc4236b9937921423217159c57d7e212eec2a77f[m
+Merge: 7f04822 4217054
+Author: Gabriel Pereira Benedicto <87337551+BicaBenedicto@users.noreply.github.com>
+Date:   Wed Jul 28 05:13:51 2021 -0300
+
+    Merge pull request #1 from BicaBenedicto/gabriel
+    
+    Atualizado Portfolio
+
+[33mcommit 42170541362a4a79bb8d7289ce859064f14c5e1a[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Wed Jul 28 05:10:47 2021 -0300
+
+    Atualizaçao CSS e Organizaçao
+
+[33mcommit 85b27945f3ad191ba2723d7ce3b7a550c428096a[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Tue Jul 27 18:50:10 2021 -0300
+
+    Adicionado Projeto
+
+[33mcommit 7f04822e9806f601d01ffe5ee9e30190affb64b5[m
+Author: Gabriel Pereira Benedicto <gabrielpbenedicto@gmail.com>
+Date:   Wed Jul 21 19:18:06 2021 -0300
+
+    Adicionado index

@@ -118,6 +118,10 @@
   transition: 1s;
 }
 
+.carousel-arrow {
+  display: none;
+}
+
 @media only screen and (min-width: 1000px) {
   .project-div {
     align-items: stretch;
@@ -264,5 +268,28 @@
   .project-show-exit:hover {
     border: 1px solid white;
     color: white;
+  }
+
+  .carousel-arrow {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.541);
+  }
+  
+  .carousel-arrow:hover {
+    background-color: black;
+  }
+  
+  .carousel-arrow::before {
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%;
+    padding: 5px;
+  }
+  
+  .carousel-prev {
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .carousel-next {
+    border-radius: 0 5px 5px 0;
   }
 }
