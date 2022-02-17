@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
-import './App.css';
 import Home from './pages/Home';
 import Trybewallet from './projects/builds/trybewallet/App';
+import Trybetunes from './projects/builds/trybetunes/App';
 
 export default function App() {
 
@@ -10,6 +10,7 @@ export default function App() {
     <Switch>
       <Route exact path="/" component={ Home } />
       <Route path="/projects/trybewallet" component={ Trybewallet } />
+      <Route path="/projects/trybetunes" component={ Trybetunes } />
     </Switch>
   );
 }
