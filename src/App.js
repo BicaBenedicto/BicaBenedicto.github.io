@@ -1,29 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import { Route, Switch } from 'react-router';
 import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import About from './components/About';
-import Contact from './components/Contact';
-import Projects from './components/Projects';
-import Project from './components/Project';
-import Skills from './components/Skills';
-import Context from './services/Context';
+import Home from './pages/Home';
 
 export default function App() {
-  const { projects } = useContext(Context);
-  const { projectHasShow } = projects;
 
   return (
-    <>
-      <Header />
-      <main className={projectHasShow ? 'blur' : 'not-blur'}>
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
-      <Project />
-    </>
+    <Switch>
+      <Route exact path="/" component={ Home } />
+    </Switch>
   );
 }
