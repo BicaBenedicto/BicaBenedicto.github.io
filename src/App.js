@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Trybewallet from './projects/builds/trybewallet/App';
 import Trybetunes from './projects/builds/trybetunes/App';
 import Trivia from './projects/builds/trivia-react-redux/App';
+import DrinksAndFoods from './projects/builds/drinks-and-foods-recipes/App';
 
 export default function App() {
 
@@ -27,6 +28,11 @@ export default function App() {
       <Route path="/projects/trivia">
         <div id="trivia">
           <Trivia />
+        </div>
+      </Route>
+      <Route path="/projects/drinks-and-foods">
+        <div id="drinks-and-foods">
+          <DrinksAndFoods />
         </div>
       </Route>
     </Switch>
