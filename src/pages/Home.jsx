@@ -14,7 +14,7 @@ export default function Home() {
   const { projectHasShow } = projects;
 
   return (
-    <>
+    <div id="portfolio">
       <Header />
       <main className={projectHasShow ? 'blur' : 'not-blur'}>
         <About />
@@ -24,6 +24,6 @@ export default function Home() {
       </main>
       <Footer />
       <Project />
-    </>
+    </div>
   );
 }

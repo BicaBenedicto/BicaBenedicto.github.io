@@ -1,4 +1,4 @@
-body {
+#portfolio  {
   background-color: rgb(245, 245, 245);
   font-family: Montserrat, Monospace, Arial;
   font-size: 16px;
@@ -13,30 +13,30 @@ body {
   width: 100%;
 }
 
-.blur {
+#portfolio .blur {
   filter: blur(20px);
   transition: 0.5s;
 }
 
-.not-blur {
+#portfolio .not-blur {
   filter: blur(0);
   transition: 0.5s;
 }
 
-.illustration {
+#portfolio .illustration {
   width: 100%;
 }
 
-section {
+#portfolio section {
   margin: 0 10px;
 }
 
 @media only screen and (min-width: 1000px) {
-  .illustration {
+  #portfolio .illustration {
     width: 600px;
   }
 
-  section {
+  #portfolio section {
     margin: 0 20px;
   }
 }

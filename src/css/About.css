@@ -1,4 +1,4 @@
-#home {
+#portfolio #home {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,16 +6,16 @@
   padding-top: 50px;
 }
 
-#home h2 {
+#portfolio #home h2 {
   font-size: 20px;
 }
 
-#home .home-word-p {
+#portfolio #home .home-word-p {
   font-size: 15px;
 }
 
 @media only screen and (min-width: 1000px) {
-  #home {
+  #portfolio #home {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -26,7 +26,7 @@
     width: 90%;
   }
   
-  #home .home-word-p {
+  #portfolio #home .home-word-p {
     font-size: 20px;
   }
 }
