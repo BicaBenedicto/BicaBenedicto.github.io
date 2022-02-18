@@ -9,18 +9,26 @@ export default function App() {
 
   return (
     <Switch>
-      <div id="portfolio">
-        <Route exact path="/" component={ Home } />
-      </div>
-      <div id="trybewallet">
-        <Route path="/projects/trybewallet" component={ Trybetunes } />
-      </div>
-      <div id="trybetunes">
-        <Route path="/projects/trybetunes" component={ Trybetunes } />
-      </div>
-      <div id="trivia">
-        <Route path="/projects/trivia" component={ Trivia } />
-      </div>
+      <Route exact path="/">
+        <div id="portfolio">
+          <Home />
+        </div>
+      </Route>
+      <Route path="/projects/trybewallet">
+        <div id="trybewallet">
+          <Trybewallet />
+        </div>
+      </Route>
+      <Route path="/projects/trybetunes">
+        <div id="trybetunes">
+          <Trybetunes />
+        </div>
+      </Route>
+      <Route path="/projects/trivia">
+        <div id="trivia">
+          <Trivia />
+        </div>
+      </Route>
     </Switch>
   );
 }
