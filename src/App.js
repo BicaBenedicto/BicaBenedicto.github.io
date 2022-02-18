@@ -9,9 +9,15 @@ export default function App() {
 
   return (
     <Switch>
-      <Route exact path="/" component={ Home } />
-      <Route path="/projects/trybewallet" component={ Trybewallet } />
-      <Route path="/projects/trybetunes" component={ Trybetunes } />
+      <div id="portfolio">
+        <Route exact path="/" component={ Home } />
+      </div>
+      <div id="trybewallet">
+        <Route path="/projects/trybewallet" component={ Trybewallet } />
+      </div>
+      <div id="trybetunes">
+        <Route path="/projects/trybetunes" component={ Trybetunes } />
+      </div>
       {/* <Route path="/projects/trivia" component={ Trivia } /> */}
     </Switch>
   );
