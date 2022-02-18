@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router';
 import Home from './pages/Home';
 import Trybewallet from './projects/builds/trybewallet/App';
 import Trybetunes from './projects/builds/trybetunes/App';
-// import Trivia from './projects/builds/trivia-react-redux/App';
+import Trivia from './projects/builds/trivia-react-redux/App';
 
 export default function App() {
 
@@ -13,12 +13,14 @@ export default function App() {
         <Route exact path="/" component={ Home } />
       </div>
       <div id="trybewallet">
-        <Route path="/projects/trybewallet" component={ Trybewallet } />
+        <Route path="/projects/trybewallet" component={ Trybetunes } />
       </div>
       <div id="trybetunes">
         <Route path="/projects/trybetunes" component={ Trybetunes } />
       </div>
-      {/* <Route path="/projects/trivia" component={ Trivia } /> */}
+      <div id="trivia">
+        <Route path="/projects/trivia" component={ Trivia } />
+      </div>
     </Switch>
   );
 }
