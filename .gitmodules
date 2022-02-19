@@ -1,0 +1,33 @@
+[submodule "src/projects/repositories/trybewallet"]
+	path = src/projects/repositories/trybewallet
+	url = git@github.com:BicaBenedicto/trybewallet.git
+[submodule "src/projects/repositories/drinks-and-foods-recipes"]
+	path = src/projects/repositories/drinks-and-foods-recipes
+	url = git@github.com:BicaBenedicto/drinks-and-foods-recipes.git
+[submodule "src/projects/repositories/ecommerce"]
+	path = src/projects/repositories/ecommerce
+	url = git@github.com:BicaBenedicto/ecommerce.git
+[submodule "src/projects/repositories/netflix-inferface"]
+	path = src/projects/repositories/netflix-inferface
+	url = git@github.com:BicaBenedicto/Netflix-Interface.git
+[submodule "src/projects/repositories/front-end-online-store"]
+	path = src/projects/repositories/front-end-online-store
+	url = git@github.com:BicaBenedicto/front-end-online-store.git
+[submodule "src/projects/repositories/tryunfo"]
+	path = src/projects/repositories/tryunfo
+	url = git@github.com:BicaBenedicto/tryunfo.git
+[submodule "src/projects/repositories/trybetunes"]
+	path = src/projects/repositories/trybetunes
+	url = git@github.com:BicaBenedicto/trybetunes.git
+[submodule "src/projects/repositories/trybewarts"]
+	path = src/projects/repositories/trybewarts
+	url = git@github.com:BicaBenedicto/trybewarts.git
+[submodule "src/projects/repositories/pixel-art"]
+	path = src/projects/repositories/pixel-art
+	url = git@github.com:BicaBenedicto/pixel-art.git
+[submodule "src/projects/repositories/trivia-react-redux"]
+	path = src/projects/repositories/trivia-react-redux
+	url = git@github.com:BicaBenedicto/trivia-react-redux.git
+[submodule "src/projects/repositories/todo-list"]
+	path = src/projects/repositories/todo-list
+	url = git@github.com:BicaBenedicto/todo-list.git

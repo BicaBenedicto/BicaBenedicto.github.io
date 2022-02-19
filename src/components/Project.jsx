@@ -2,8 +2,10 @@ import React, { useContext } from 'react';
 import { PROJECTS } from '../services/projects.js';
 import '../css/Projects.css';
 import Context from '../services/Context.js';
+import { useHistory } from 'react-router-dom';
 
 export default function Contact() {
+  const history = useHistory();
   const { projects } = useContext(Context);
   const { projectName: name, projectImage: image, projectHasShow: hasShow, projectToggleShow } = projects;
 
@@ -15,8 +17,11 @@ export default function Contact() {
       <div>
         <span>{ name }</span>
         <p>{ PROJECTS[name].message }</p>
-        { PROJECTS[name].site
-          && <a
+        { !PROJECTS[name].site.includes('http')
+          ? <button className="button-preview" onClick={() => history.push(PROJECTS[name].site)}>
+            Preview
+          </button>
+          : <a
             href={ PROJECTS[name].site }
             target='_blank'
             rel="noreferrer"

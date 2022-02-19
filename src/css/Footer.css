@@ -1,4 +1,4 @@
-#footer {
+#portfolio #footer {
   align-content: center;
   align-items: center;
   background-color: black;
@@ -13,26 +13,26 @@
   width: 100%;
 }
 
-.git {
+#portfolio .git {
   border-radius: 2px;
   background-color: white;;
 }
 
-.rede-social {
+#portfolio .rede-social {
   margin: 10px 15px;
   width: 25px;
 }
 
-.rede-social:hover {
+#portfolio .rede-social:hover {
   transform: translateY(-5px);
 }
 
-.rede-social:active {
+#portfolio .rede-social:active {
   transform: translateY(5px);
 }
 
 @media only screen and (min-width: 1000px) {
-  #footer {
+  #portfolio #footer {
     background-color: black;
     bottom: 0;
     color: white;
@@ -42,16 +42,16 @@
     padding: 10px;
   }
 
-  .rede-social {
+  #portfolio .rede-social {
     margin: 0 15px;
     width: 25px;
   }
   
-  .rede-social:hover {
+  #portfolio .rede-social:hover {
     transform: translateY(-5px);
   }
   
-  .rede-social:active {
+  #portfolio .rede-social:active {
     transform: translateY(5px);
   }
 }
