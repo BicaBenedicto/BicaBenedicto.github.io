@@ -21,12 +21,12 @@ export const PROJECTS = {
   },
   Trybewallet: {
     message: 'O projeto é um site de cambio, utilizando uma API que informa os valores do cambio para Real, sendo possivel anotar os gastos em diversas moedas, e o valor é convertido para Real Brasileiro, ficando salvo em seu navegador e utilizando o cambio no momento atual que realizou a adição.',
-    site: '',
+    site: '/projects/trybewallet',
     rep: 'https://github.com/BicaBenedicto/trybewallet',
   },
   TrybeTunes: {
     message: 'O projeto é um site de música, onde é possivel escutar os primeiros 30 segundos de suas músicas favoritas, é utilizado a API do Itunes, com um simulador de sistema de login, podendo favoritas as músicas que mais gosta.',
-    site: '',
+    site: '/projects/trybetunes',
     rep: 'https://github.com/BicaBenedicto/trybetunes',
   },
   Trivia: {

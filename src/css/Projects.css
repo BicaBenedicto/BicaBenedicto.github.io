@@ -79,15 +79,18 @@
   width: 95%;
 }
 
-#portfolio .project-show div a {
+#portfolio .project-show div a, #portfolio .project-show .button-preview {
+  background-color: transparent;
+  border: none;
   color: magenta;
   display: block;
   font-weight: 600;
   text-decoration: none;
+  padding: 0;
   position: relative;
 }
 
-#portfolio .project-show div a:hover {
+#portfolio .project-show div a:hover, #portfolio .project-show .button-preview:hover {
   color: hsl(300, 100%, 80%);
 }
 
