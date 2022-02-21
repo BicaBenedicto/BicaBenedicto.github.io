@@ -17,7 +17,7 @@ export default function Contact() {
       <div>
         <span>{ name }</span>
         <p>{ PROJECTS[name].message }</p>
-        { !PROJECTS[name].site.includes('http')
+        { PROJECTS[name].site && (!PROJECTS[name].site.includes('http')
           ? <button className="button-preview" onClick={() => history.push(PROJECTS[name].site)}>
             Preview
           </button>
@@ -27,7 +27,7 @@ export default function Contact() {
             rel="noreferrer"
           >
             Preview
-          </a>}
+          </a>)}
           { PROJECTS[name].rep
           && <a
             href={ PROJECTS[name].rep }
