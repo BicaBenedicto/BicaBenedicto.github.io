@@ -6,11 +6,15 @@
   color: white;
   display: flex;
   justify-content: center;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   font-size: 15px;
   text-align: center;
   padding: 0 5px;
   width: 100%;
+}
+
+#portfolio #footer a {
+  color: white;
 }
 
 #portfolio .git {
@@ -37,6 +41,7 @@
     bottom: 0;
     color: white;
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     font-size: 15px;
     padding: 10px;

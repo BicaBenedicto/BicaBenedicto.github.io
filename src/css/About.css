@@ -2,8 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 650px;
-  padding-top: 50px;
 }
 
 #portfolio #home h2 {
@@ -14,19 +12,49 @@
   font-size: 15px;
 }
 
+#portfolio #home .home-word-p.display-show-more {
+  transform: scale(1) translateY(0px);
+  transition: 0.5s;
+}
+
+#portfolio #home .home-word-p.hidden-show-more {
+  transform: scale(1, 0) translateY(-200px);
+  transition: 0.5s;
+}
+
+#portfolio #home .show-more {
+  background-color: #6c63ff;
+  border: 1px solid #6c63ff;
+  border-radius: 10px;
+  display: block;
+  color: white;
+}
+
 @media only screen and (min-width: 1000px) {
   #portfolio #home {
     align-items: center;
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
-    height: 650px;
     margin: 0 auto;
+    padding-top: 70px;
     position: relative;
     width: 90%;
   }
   
   #portfolio #home .home-word-p {
     font-size: 20px;
+  }
+
+  #portfolio #home .home-word-p.display-show-more {
+    transform: scale(1);
+  }
+  
+  #portfolio #home .home-word-p.hidden-show-more {
+    transform: scale(1);
+  }
+
+  #portfolio #home .show-more {
+    display: none;
   }
 }
