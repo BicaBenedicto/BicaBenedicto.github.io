@@ -13,13 +13,12 @@
 }
 
 #portfolio #home .home-word-p.display-show-more {
-  transform: scale(1) translateY(0px);
-  transition: 0.5s;
+  animation: showAnimation 0.5s linear both;
+
 }
 
 #portfolio #home .home-word-p.hidden-show-more {
-  transform: scale(1, 0) translateY(-200px);
-  transition: 0.5s;
+  display: none;
 }
 
 #portfolio #home .show-more {
@@ -58,3 +57,14 @@
     display: none;
   }
 }
+
+@keyframes showAnimation {
+  0% { 
+    display: inline;
+    transform: scale(1, 0);
+  }
+  100% { 
+    display: inline;
+    transform: scale(1);
+  }
+};
