@@ -12,7 +12,7 @@ import reactIcon from '../images/react.png';
 import reduxIcon from '../images/redux.png';
 import dockerIcon from '../images/docker logo.png';
 import mysqlIcon from '../images/mysql logo.png';
-import illustration from '../images/undraw_Programming_re_kg9v.png';
+import illustration from '../images/undraw_programming_re_kg9v.svg';
 import '../css/Skills.css';
 
 export default function Skills() {

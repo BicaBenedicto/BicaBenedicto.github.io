@@ -36,7 +36,7 @@
     justify-content: center;
     flex-direction: row-reverse;
     margin: 0 auto;
-    padding-top: 70px;
+    padding-top: 100px;
     position: relative;
     width: 90%;
   }
@@ -46,10 +46,12 @@
   }
 
   #portfolio #home .home-word-p.display-show-more {
+    display: inline;
     transform: scale(1);
   }
   
   #portfolio #home .home-word-p.hidden-show-more {
+    display: inline;
     transform: scale(1);
   }
 
