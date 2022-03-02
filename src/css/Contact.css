@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 30%;
+  width: 90%;
 }
 
 #portfolio-contact form label {
@@ -59,4 +59,10 @@
 #portfolio-contact form svg {
   position: absolute;
   right: 0;
+}
+
+@media only screen and (min-width: 1000px) {
+  #portfolio-contact form {
+    width: 30%;
+  }
 }
