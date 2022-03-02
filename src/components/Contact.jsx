@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Spinner } from 'react-bootstrap';
 import '../css/Contact.css';
@@ -19,6 +19,8 @@ const ERROR_ICON = (
 </svg>
 );
 
+const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
 export default function Contact() {
   const form = useRef();
   const [email, setEmail] = useState('');
@@ -26,8 +28,21 @@ export default function Contact() {
   const [message, setMessage] = useState('');
   const [loading, hasLoading] = useState(false);
   const [status, setStatus] = useState(null);
+  const [isDisabled, changeDisabled] = useState(true);
 
   emailjs.init(USER_ID);
+
+  const validationForm = () => {
+    if(!email || !name || !message) return true;
+    if(name.length < 3) return true;
+    if(message.length < 10) return true;
+    if(!EMAIL_REGEX.test(email)) return true;
+    return false;
+  };
+
+  useEffect(() => {
+    changeDisabled(validationForm());
+  }, [email, name, message]);
 
   const sendForm = (e) => {
     e.preventDefault();
@@ -95,6 +110,7 @@ export default function Contact() {
           ? <Spinner animation="border" variant="primary" />
           : <button
               type="submit"
+              disabled={ isDisabled }
             >
               Enviar
             </button>}
