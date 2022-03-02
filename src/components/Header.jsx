@@ -8,7 +8,7 @@ export default function Header() {
       <nav id='header-menu'>
         <a className='nav-link' href='#home'>Home</a>|
         <a className='nav-link' href='#project'>Projetos</a>|
-        <a className='nav-link' href='#contact'>Contato</a>
+        <a className='nav-link' href='#footer'>Contato</a>
       </nav>
     </header>
   )

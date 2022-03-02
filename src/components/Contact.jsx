@@ -40,6 +40,13 @@ export default function Contact() {
         hasLoading(false);
         setStatus('ERROR');
       });
+    removeStatus();
+  };
+
+  const removeStatus = () => {
+    setTimeout(() => {
+      setStatus(null);
+    }, 10000);
   };
 
   const sendStatus = () => {
@@ -54,7 +61,8 @@ export default function Contact() {
   };
 
   return (
-    <section className="local-bootstrap">
+    <div id="portfolio-contact" className="local-bootstrap">
+      <h1 className='center-title'>Contato</h1>
       <form ref={ form } onSubmit={ sendForm }>
         <label>
           Nome: 
@@ -82,7 +90,7 @@ export default function Contact() {
             onChange={ (e) => setMessage(e.target.value) }
           />
         </label>
-        <div>
+        <div className="button-form-contact">
           {loading
           ? <Spinner animation="border" variant="primary" />
           : <button
@@ -93,6 +101,6 @@ export default function Contact() {
           { sendStatus() }
         </div>
       </form>
-    </section>
+    </div>
   )
 };
