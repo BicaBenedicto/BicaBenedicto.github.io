@@ -22,7 +22,7 @@ export default function FeaturedProjects() {
       ref={ screenSize }
       onLoad={ onLoadComponent }
     >
-      <h1 className='center-title'>Projetos</h1>
+      <h1 className='center-title'>Projetos Destaque</h1>
       <Slider
         arrowsScroll={ slides }
         autoplay
