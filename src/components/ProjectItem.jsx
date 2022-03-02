@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import '../css/Projects.css';
+import '../css/FeaturedProjects.css';
 import Context from '../services/Context.js';
 
 export default function ProjectItem({ name, image }) {

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { PROJECTS } from '../services/projects.js';
-import '../css/Projects.css';
+import '../css/FeaturedProjects.css';
 import Context from '../services/Context.js';
 import { useHistory } from 'react-router-dom';
 

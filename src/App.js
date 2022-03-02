@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
 import Home from './pages/Home';
+import Projects from './pages/Projects';
 import Trybewallet from './projects/builds/trybewallet/App';
 import Trybetunes from './projects/builds/trybetunes/App';
 import Trivia from './projects/builds/trivia-react-redux/App';
@@ -16,6 +17,11 @@ export default function App() {
       <Route exact path="/">
         <div id="portfolio">
           <Home />
+        </div>
+      </Route>
+      <Route exact path="/projects">
+        <div id="portfolio">
+          <Projects />
         </div>
       </Route>
       <Route path="/projects/trybewallet">

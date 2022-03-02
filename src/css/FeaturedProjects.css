@@ -1,0 +1,299 @@
+#portfolio .project-div {
+  align-items: center;
+  align-content: center;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 100%;
+}
+
+#portfolio .project-div .project-item {
+  align-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px black;
+  display: flex;
+  flex-flow: column;
+  height: 300px;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+#portfolio .project-div .project-img {
+  height: 100px;
+  width: 100%;
+}
+
+#portfolio .link-none {
+  color: black;
+  text-decoration: none;
+}
+
+#portfolio .project-img {
+  height: 250px !important;
+  width: 100% !important;
+}
+
+#portfolio .project-show {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.767);
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2000;
+}
+
+#portfolio .project-show div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+#portfolio .project-show img {
+  transform: scale(0.7);
+  max-width: 100vw;
+  position: relative;
+}
+
+#portfolio .project-show span {
+  display: block;
+  color: #6c63ff;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+#portfolio .project-show div p {
+  display: block;
+  position: relative;
+  color: white;
+  width: 95%;
+}
+
+#portfolio .project-show div a, #portfolio .project-show .button-preview {
+  background-color: transparent;
+  border: none;
+  color: magenta;
+  display: block;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0;
+  position: relative;
+}
+
+#portfolio .project-show div a:hover, #portfolio .project-show .button-preview:hover {
+  color: hsl(300, 100%, 80%);
+}
+
+#portfolio .project-show-exit {
+  background-color: transparent;
+  border: 1px solid lightgray;
+  border-radius: 100%;
+  color: lightgray;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+#portfolio .project-show-exit:hover {
+  border: 1px solid white;
+  color: white;
+}
+
+#portfolio .hasShow {
+  transform: scale(1);
+  transition: 1s;
+}
+
+#portfolio .hasHide {
+  transform: scale(0);
+  transition: 1s;
+}
+
+#portfolio .carousel-arrow {
+  display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+  #portfolio .project-div {
+    align-items: stretch;
+    align-content: center;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-flow: wrap;
+    font-size: 20px;
+    font-weight: 500;
+    justify-content: center;
+    position: relative;
+  }
+  
+  #portfolio .project-div .project-item {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px black;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    height: 330px;
+    margin: 30px;
+    width: 400px;
+    text-align: center;
+    transition: 1s;
+  }
+  
+  #portfolio .project-item:active {
+    transform: scale(2);
+    position: fixed;
+    margin: 0 auto;
+    top: 200px;
+    transition: 1s;
+    z-index: 30;
+  }
+  
+  #portfolio .project-img {
+    height: 250px !important;
+    width: 100% !important;
+  }
+
+  #portfolio .link-none {
+    text-decoration: none;
+    color: inherit
+  }
+
+  #portfolio #project {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  #portfolio .slick-next {
+    background-color: rgba(0, 0, 0, 0.637) !important;
+    border-radius: 0 20px 20px 0;
+    transform: translateX(0px) translateY(-111px) !important;
+    height: 90% !important;
+    width: 40px !important;
+  }
+
+  #portfolio .slick-prev {
+    background-color: rgba(0, 0, 0, 0.637) !important;
+    border-radius: 20px 0 0 20px;
+    transform: translateX(0px) translateY(-111px) !important;
+    height: 90% !important;
+    width: 40px !important;
+    z-index: 30;
+  }
+
+  #portfolio .slick-next:hover, .slick-prev:hover {
+    background-color: rgba(0, 0, 0, 0.918) !important;
+  }
+
+  #portfolio .slide.demo div {
+    text-align: center;
+  }
+
+  #portfolio .project-show {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.767);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2000;
+  }
+
+  #portfolio .project-show div {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 60%;
+  }
+
+  #portfolio .project-show img {
+    transform: scale(0.7);
+    max-width: 60vw;
+    position: relative;
+  }
+
+  #portfolio .project-show span {
+    display: block;
+    color: #6c63ff;
+    font-size: 40px;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+
+  #portfolio .project-show div p {
+    display: block;
+    position: relative;
+    color: white;
+    width: 100%;
+  }
+
+  #portfolio .project-show div a {
+    color: magenta;
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+  }
+
+  #portfolio .project-show div a:hover {
+    color: hsl(300, 100%, 80%);
+  }
+
+  #portfolio .project-show-exit {
+    background-color: transparent;
+    border: 1px solid lightgray;
+    border-radius: 100%;
+    color: lightgray;
+    cursor: pointer;
+    padding: 0 10px;
+    position: absolute;
+    top: 0px;
+    right: 0;
+  }
+
+  #portfolio .project-show-exit:hover {
+    border: 1px solid white;
+    color: white;
+  }
+
+  #portfolio .carousel-arrow {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.541);
+  }
+  
+  #portfolio .carousel-arrow:hover {
+    background-color: black;
+  }
+  
+  #portfolio .carousel-arrow::before {
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%;
+    padding: 5px;
+  }
+  
+  #portfolio .carousel-prev {
+    border-radius: 5px 0 0 5px;
+  }
+  
+  #portfolio .carousel-next {
+    border-radius: 0 5px 5px 0;
+  }
+}
