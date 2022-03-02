@@ -13,9 +13,9 @@ export default function Projects() {
 
   return (
     <>
-      <Header />
+      <Header isRoot={ false } />
       <main className={projectHasShow ? 'blur projects-portfolio' : 'not-blur projects-portfolio'}>
-        <FeaturedProjects />
+        <FeaturedProjects lookAll={ false }/>
         <h1 className='center-title'>Projetos</h1>
         <ProjectsComponent />
       </main>

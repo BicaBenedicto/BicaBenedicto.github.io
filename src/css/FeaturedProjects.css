@@ -125,6 +125,19 @@
   display: none;
 }
 
+#portfolio .look-all {
+  display: block;
+  color: #6c63ff;
+  text-align: end;
+  text-decoration: none;
+  width: 100%;
+}
+
+#portfolio .look-all:hover {
+  filter: brightness(0.6);
+  font-weight: 600;
+}
+
 @media only screen and (min-width: 1000px) {
   #portfolio .project-div {
     align-items: stretch;

@@ -15,11 +15,11 @@ export default function Home() {
 
   return (
     <>
-      <Header />
+      <Header isRoot={ true } />
       <main className={projectHasShow ? 'blur' : 'not-blur'}>
         <About />
         <Skills />
-        <FeaturedProjects />
+        <FeaturedProjects lookAll={ true} />
         <Contact />
       </main>
       <Footer />

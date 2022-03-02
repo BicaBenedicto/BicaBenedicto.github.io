@@ -3,8 +3,9 @@ import Slider from 'infinite-react-carousel';
 import ProjectItem from './ProjectItem';
 import { FEATURED_PROJECTS } from '../assets/data';
 import '../css/FeaturedProjects.css';
+import { Link } from 'react-router-dom';
 
-export default function FeaturedProjects() {
+export default function FeaturedProjects({ lookAll }) {
   const screenSize = useRef(null);
   const [slides, setSlideQuant] = useState(3);
   
@@ -23,6 +24,7 @@ export default function FeaturedProjects() {
       onLoad={ onLoadComponent }
     >
       <h1 className='center-title'>Projetos Destaque</h1>
+      {lookAll && <Link to='/projects' className="look-all">Mostrar todos</Link>}
       <Slider
         arrowsScroll={ slides }
         autoplay
