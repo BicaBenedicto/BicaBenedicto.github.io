@@ -15,6 +15,17 @@
   width: 50%;
 }
 
+#portfolio #projects .project-div span {
+  background-color: #b4b0ff;
+  border-radius:  5px 5px 0 0;
+  margin-top: 20px;
+  width: 100%;
+}
+
+#portfolio #projects .project-div img {
+  border-radius: 0 0 5px 5px;
+}
+
 @media only screen and (min-width: 500px) {
   #portfolio #projects .project-div {
     height: 100%;
