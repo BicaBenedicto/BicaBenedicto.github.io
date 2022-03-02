@@ -10,7 +10,8 @@ export default function FeaturedProjects() {
   
   const onLoadComponent = () => {
     const screenActual = Number(screenSize.current.offsetWidth);
-    if (screenActual < 400) return setSlideQuant(1);
+    if (screenActual < 600) return setSlideQuant(1);
+    if (screenActual > 600 && screenActual < 1000) return setSlideQuant(2);
     return setSlideQuant(3);
   };
 
