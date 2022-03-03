@@ -24,7 +24,6 @@ export default function Contact() {
           </button>
           : <a
             href={ PROJECT[name].site }
-            target='_blank'
             rel="noreferrer"
           >
             Preview
