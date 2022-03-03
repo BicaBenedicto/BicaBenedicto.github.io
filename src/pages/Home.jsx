@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import About from '../components/About';
 import Contact from '../components/Contact';
-import Projects from '../components/Projects';
+import FeaturedProjects from '../components/FeaturedProjects';
 import Project from '../components/Project';
 import Skills from '../components/Skills';
 import Context from '../services/Context';
@@ -15,11 +15,11 @@ export default function Home() {
 
   return (
     <>
-      <Header />
+      <Header isRoot={ true } />
       <main className={projectHasShow ? 'blur' : 'not-blur'}>
         <About />
         <Skills />
-        <Projects />
+        <FeaturedProjects lookAll={ true} />
         <Contact />
       </main>
       <Footer />

@@ -1,0 +1,68 @@
+#portfolio-contact {
+  background: linear-gradient(0deg, rgba(31,31,31,0) 0%, rgba(230,230,230,1) 20%, rgba(230,230,230,1) 80%, rgba(54,54,54,0) 100%);
+  padding: 20px;
+  width: 100%;
+}
+
+#portfolio-contact form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 90%;
+}
+
+#portfolio-contact form label {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#portfolio-contact form input, #portfolio-contact form textarea {
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+}
+
+#portfolio-contact form textarea {
+  height: 200px;
+}
+
+#portfolio-contact form div.button-form-contact {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  position: relative;
+  width: 100%;
+}
+
+#portfolio-contact form button {
+  background-color: #6c63ff;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  margin: 0 20px;
+  width: 50%;
+}
+
+#portfolio-contact form button:disabled {
+  opacity: 0.2;
+}
+
+#portfolio-contact form button:hover {
+  opacity: 0.5;
+}
+
+#portfolio-contact form svg {
+  position: absolute;
+  right: 0;
+}
+
+@media only screen and (min-width: 1000px) {
+  #portfolio-contact form {
+    width: 30%;
+  }
+}
