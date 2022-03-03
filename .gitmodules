@@ -31,3 +31,66 @@
 [submodule "src/projects/repositories/todo-list"]
 	path = src/projects/repositories/todo-list
 	url = git@github.com:BicaBenedicto/todo-list.git
+[submodule "meme-generator"]
+	path = meme-generator
+	url = git@github.com:BicaBenedicto/meme-generator.git
+[submodule "src/projects/repositories/meme-generator"]
+	path = src/projects/repositories/meme-generator
+	url = git@github.com:BicaBenedicto/meme-generator.git
+[submodule "src/projects/repositories/color-guess"]
+	path = src/projects/repositories/color-guess
+	url = git@github.com:BicaBenedicto/color-guess.git
+[submodule "src/projects/repositories/shopping-cart"]
+	path = src/projects/repositories/shopping-cart
+	url = git@github.com:BicaBenedicto/shopping-cart.git
+[submodule "src/projects/repositories/store-manager"]
+	path = src/projects/repositories/store-manager
+	url = git@github.com:BicaBenedicto/store-manager.git
+[submodule "src/projects/repositories/spotitrybe"]
+	path = src/projects/repositories/spotitrybe
+	url = git@github.com:BicaBenedicto/spotitrybe.git
+[submodule "src/projects/repositories/talker-manager"]
+	path = src/projects/repositories/talker-manager
+	url = git@github.com:BicaBenedicto/talker-manager.git
+[submodule "src/projects/repositories/mysql-one-for-all"]
+	path = src/projects/repositories/mysql-one-for-all
+	url = git@github.com:BicaBenedicto/mysql-one-for-all.git
+[submodule "src/projects/repositories/mysql-all-for-one"]
+	path = src/projects/repositories/mysql-all-for-one
+	url = git@github.com:BicaBenedicto/mysql-all-for-one.git
+[submodule "src/projects/repositories/docker-todo-list"]
+	path = src/projects/repositories/docker-todo-list
+	url = git@github.com:BicaBenedicto/docker-todo-list.git
+[submodule "src/projects/repositories/mistery-letter"]
+	path = src/projects/repositories/mistery-letter
+	url = git@github.com:BicaBenedicto/mistery-letter.git
+[submodule "src/projects/repositories/react-testing-library"]
+	path = src/projects/repositories/react-testing-library
+	url = git@github.com:BicaBenedicto/react-testing-library.git
+[submodule "src/projects/repositories/starwars-planets-search"]
+	path = src/projects/repositories/starwars-planets-search
+	url = git@github.com:BicaBenedicto/starwars-planets-search.git
+[submodule "src/projects/repositories/js-unit-tests"]
+	path = src/projects/repositories/js-unit-tests
+	url = git@github.com:BicaBenedicto/js-unit-tests.git
+[submodule "src/projects/repositories/lessons-learned"]
+	path = src/projects/repositories/lessons-learned
+	url = git@github.com:BicaBenedicto/lessons-learned.git
+[submodule "src/projects/repositories/movie-cards-library"]
+	path = src/projects/repositories/movie-cards-library
+	url = git@github.com:BicaBenedicto/movie-cards-library.git
+[submodule "src/projects/repositories/jest"]
+	path = src/projects/repositories/jest
+	url = git@github.com:BicaBenedicto/jest.git
+[submodule "src/projects/repositories/zoo-functions"]
+	path = src/projects/repositories/zoo-functions
+	url = git@github.com:BicaBenedicto/zoo-functions.git
+[submodule "src/projects/repositories/playground-functions"]
+	path = src/projects/repositories/playground-functions
+	url = git@github.com:BicaBenedicto/playground-functions.git
+[submodule "src/projects/repositories/netflix-interface"]
+	path = src/projects/repositories/netflix-interface
+	url = git@github.com:BicaBenedicto/Netflix-Interface.git
+[submodule "src/projects/repositories/teste-de-conhecimento"]
+	path = src/projects/repositories/teste-de-conhecimento
+	url = git@github.com:BicaBenedicto/teste-de-conhecimento.git
