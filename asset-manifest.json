@@ -1,17 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.dd7f6a80.css",
-    "main.js": "/static/js/main.42dcd182.js",
+    "main.css": "/static/css/main.0714e4a1.css",
+    "main.js": "/static/js/main.a563eced.js",
     "static/js/787.72781b8e.chunk.js": "/static/js/787.72781b8e.chunk.js",
+    "static/media/netflix-interface.PNG": "/static/media/netflix-interface.1dd128b579bff34b0f88.PNG",
+    "static/media/meme-generator.PNG": "/static/media/meme-generator.0af5fc0a9c8cc2637749.PNG",
     "static/media/trybewarts.png": "/static/media/trybewarts.22c1c2b744856055d80d.png",
     "static/media/to-do-list.png": "/static/media/to-do-list.8b88382b17f0459d0f6f.png",
     "static/media/trybetunes-image.PNG": "/static/media/trybetunes-image.eb4fa901560d7009638e.PNG",
+    "static/media/color-guess.PNG": "/static/media/color-guess.cb864e2606e862e0326e.PNG",
     "static/media/davsom.PNG": "/static/media/davsom.462dc81f90ac9b26bb1a.PNG",
+    "static/media/shopping-cart.PNG": "/static/media/shopping-cart.4d0ce740eeb6f916a5fa.PNG",
+    "static/media/lessons-learned.PNG": "/static/media/lessons-learned.13fd56cd4e6b2373fe9b.PNG",
+    "static/media/spotitrybe.PNG": "/static/media/spotitrybe.b0fecd618726688ca123.PNG",
     "static/media/ecommerce-image.PNG": "/static/media/ecommerce-image.88144ebfeaa0218f07a0.PNG",
     "static/media/trivia-image.PNG": "/static/media/trivia-image.f0f5fb6604b2ecb58f99.PNG",
     "static/media/pixels-art.png": "/static/media/pixels-art.726a6d3f68bb5ad66819.png",
     "static/media/react.png": "/static/media/react.283f9f863581bb226e65.png",
     "static/media/trybewallet-image.PNG": "/static/media/trybewallet-image.060eb756336c091282d2.PNG",
+    "static/media/mistery-letter.PNG": "/static/media/mistery-letter.bd50d9dd3951dd1ec2a6.PNG",
     "static/media/mysql logo.png": "/static/media/mysql logo.3697ea1184e22ba0b353.png",
     "static/media/redux.png": "/static/media/redux.5de70b7bc0d2556a0958.png",
     "static/media/trivia.png": "/static/media/trivia.7e9181d35c0b06d5abc0.png",
@@ -34,12 +41,12 @@
     "static/media/git-icon.webp": "/static/media/git-icon.3ff0c0e64eb436707bb9.webp",
     "static/media/rockGlass.svg": "/static/media/rockGlass.5664c67efadc4f525eae1bbc24c09968.svg",
     "index.html": "/index.html",
-    "main.dd7f6a80.css.map": "/static/css/main.dd7f6a80.css.map",
-    "main.42dcd182.js.map": "/static/js/main.42dcd182.js.map",
+    "main.0714e4a1.css.map": "/static/css/main.0714e4a1.css.map",
+    "main.a563eced.js.map": "/static/js/main.a563eced.js.map",
     "787.72781b8e.chunk.js.map": "/static/js/787.72781b8e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd7f6a80.css",
-    "static/js/main.42dcd182.js"
+    "static/css/main.0714e4a1.css",
+    "static/js/main.a563eced.js"
   ]
 }
