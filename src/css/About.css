@@ -34,11 +34,26 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    flex-direction: row-reverse;
+    flex-direction: column;
     margin: 0 auto;
     padding-top: 100px;
     position: relative;
     width: 90%;
+  }
+
+  #portfolio #home .text-body-1 {
+    align-items:  center;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 20px 0;
+    width: 80%;
+  }
+
+  #portfolio #home .text-body-2 {
+    align-items:  center;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
   }
   
   #portfolio #home .home-word-p {
@@ -46,12 +61,12 @@
   }
 
   #portfolio #home .home-word-p.display-show-more {
-    display: inline;
+    display: block;
     transform: scale(1);
   }
   
   #portfolio #home .home-word-p.hidden-show-more {
-    display: inline;
+    display: block;
     transform: scale(1);
   }
 
