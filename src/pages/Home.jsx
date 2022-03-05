@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Header isRoot={ true } />
-      <main className={projectHasShow ? 'blur' : 'not-blur'}>
+      <main className={projectHasShow ? 'blur' : 'not-blur'} style={{ 'margin': '0 auto','max-width': '1700px' }}>
         <About />
         <Skills />
         <FeaturedProjects lookAll={ true} />
