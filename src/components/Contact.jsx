@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Spinner } from 'react-bootstrap';
+import linkedin from '../images/icons/linkedin.svg';
+import github from '../images/icons/github.svg';
+import whatsapp from '../images/icons/whatsapp.svg';
+import telegram from '../images/icons/telegram.svg';
 import '../css/Contact.css';
 
 const SERVICE_ID = 'service_b4xnyht';
@@ -78,45 +82,61 @@ export default function Contact() {
   return (
     <div id="portfolio-contact" className="local-bootstrap">
       <h1 className='center-title'>Contato</h1>
-      <form ref={ form } onSubmit={ sendForm }>
-        <label>
-          Nome: 
-          <input
-            type="text"
-            name="name"
-            value={ name }
-            onChange={ (e) => setName(e.target.value) }
-          />
-        </label>
-        <label>
-          E-mail: 
-          <input
-            type="email"
-            name="email"
-            value={ email }
-            onChange={ (e) => setEmail(e.target.value) }
-          />
-        </label>
-        <label>
-          Mensagem: 
-          <textarea
-            name="message"
-            value={ message }
-            onChange={ (e) => setMessage(e.target.value) }
-          />
-        </label>
-        <div className="button-form-contact">
-          {loading
-          ? <Spinner animation="border" variant="primary" />
-          : <button
-              type="submit"
-              disabled={ isDisabled }
-            >
-              Enviar
-            </button>}
-          { sendStatus() }
+      <div>
+        <form ref={ form } onSubmit={ sendForm }>
+          <label>
+            Nome: 
+            <input
+              type="text"
+              name="name"
+              value={ name }
+              onChange={ (e) => setName(e.target.value) }
+            />
+          </label>
+          <label>
+            E-mail: 
+            <input
+              type="email"
+              name="email"
+              value={ email }
+              onChange={ (e) => setEmail(e.target.value) }
+            />
+          </label>
+          <label>
+            Mensagem: 
+            <textarea
+              name="message"
+              value={ message }
+              onChange={ (e) => setMessage(e.target.value) }
+            />
+          </label>
+          <div className="button-form-contact">
+            {loading
+            ? <Spinner animation="border" variant="primary" />
+            : <button
+                type="submit"
+                disabled={ isDisabled }
+              >
+                Enviar
+              </button>}
+            { sendStatus() }
+          </div>
+        </form>
+        <div>
+          <a href='' target='_blank' rel="noreferrer">
+            <img className='rede-social' src={ whatsapp } alt='Whatsapp'/>
+          </a>
+          <a href='' target='_blank' rel="noreferrer">
+            <img className='rede-social' src={ telegram } alt='Telegram'/>
+          </a>
+          <a href='https://www.linkedin.com/in/gabrielbenedicto/' target='_blank' rel="noreferrer">
+            <img className='rede-social' src={ linkedin } alt='Linkedin'/>
+          </a>
+          <a href='https://github.com/BicaBenedicto' target='_blank' rel="noreferrer">
+            <img className='rede-social git' src={ github } alt='GitHub'/>
+          </a>
         </div>
-      </form>
+      </div>
     </div>
   )
 };

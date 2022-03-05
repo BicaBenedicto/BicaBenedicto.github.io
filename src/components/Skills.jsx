@@ -2,7 +2,7 @@ import React from 'react';
 import githubIcon from '../images/github-icon.webp';
 import gitIcon from '../images/git-icon.webp';
 import htmlIcon from '../images/html-icon.webp';
-import cssIcon from '../images/html-icon.webp';
+import cssIcon from '../images/css-icon.webp';
 import javascriptIcon from '../images/javascript-icon.webp';
 import bootstrapIcon from '../images/bootstrap logo.png';
 import tailwindIcon from '../images/tail wind css.png';
