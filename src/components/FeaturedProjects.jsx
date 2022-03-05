@@ -23,7 +23,7 @@ export default function FeaturedProjects({ lookAll }) {
       ref={ screenSize }
       onLoad={ onLoadComponent }
     >
-      <h1 className='center-title'>Projetos Destaque</h1>
+      <h1 className='center-title'>Meus projetos favoritos</h1>
       {lookAll && <Link to='/projects' className="look-all">Mostrar todos</Link>}
       <Slider
         arrowsScroll={ slides }
