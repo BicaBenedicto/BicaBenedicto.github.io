@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
 }
 
 #portfolio-contact form label {
@@ -60,6 +60,39 @@
 #portfolio-contact form svg {
   position: absolute;
   right: 0;
+}
+
+#portfolio-contact .contact-body {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+
+#portfolio-contact .contact-body .contact-body-others {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 35%;
+}
+
+#portfolio-contact .contact-body .contact-body-others img {
+  width: 30px;
+}
+
+#portfolio-contact .contact-body .contact-body-others a {
+  align-items: center;
+  display: flex;
+  color: black;
+  font-size: 17px;
+  font-weight: 400;
+  text-decoration: none;
+  margin: 20px 0;
+  width: 100%;
+}
+
+#portfolio-contact .contact-body .contact-body-others a img {
+  margin-right: 10px;
 }
 
 @media only screen and (min-width: 1000px) {

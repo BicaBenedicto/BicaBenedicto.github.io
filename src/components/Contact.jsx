@@ -81,8 +81,8 @@ export default function Contact() {
 
   return (
     <div id="portfolio-contact" className="local-bootstrap">
-      <h1 className='center-title'>Contato</h1>
-      <div>
+      <h1 className='center-title'>Contatos</h1>
+      <div className="contact-body">
         <form ref={ form } onSubmit={ sendForm }>
           <label>
             Nome: 
@@ -122,18 +122,19 @@ export default function Contact() {
             { sendStatus() }
           </div>
         </form>
-        <div>
+        <div className="contact-body-others">
+          <h2 className='center-title'>Agora é com você, estou á disposição para conversar sobre o que você precisa</h2>
           <a href='' target='_blank' rel="noreferrer">
-            <img className='rede-social' src={ whatsapp } alt='Whatsapp'/>
+            <img src={ whatsapp } alt='Whatsapp'/> Whatsapp
           </a>
           <a href='' target='_blank' rel="noreferrer">
-            <img className='rede-social' src={ telegram } alt='Telegram'/>
+            <img src={ telegram } alt='Telegram'/> Telegram
           </a>
           <a href='https://www.linkedin.com/in/gabrielbenedicto/' target='_blank' rel="noreferrer">
-            <img className='rede-social' src={ linkedin } alt='Linkedin'/>
+            <img src={ linkedin } alt='Linkedin'/> Linkedin
           </a>
           <a href='https://github.com/BicaBenedicto' target='_blank' rel="noreferrer">
-            <img className='rede-social git' src={ github } alt='GitHub'/>
+            <img src={ github } alt='GitHub'/> GitHub
           </a>
         </div>
       </div>
