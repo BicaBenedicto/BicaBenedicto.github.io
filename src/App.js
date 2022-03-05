@@ -9,6 +9,7 @@ import DrinksAndFoods from './projects/builds/drinks-and-foods-recipes/App';
 import ButtonBackToHome from './components/ButtonBackToHome';
 import './assets/output.css';
 import './App.css';
+import NotFound from './pages/NotFound';
 
 export default function App() {
 
@@ -46,6 +47,11 @@ export default function App() {
         <div id="drinks-and-foods" className="local-bootstrap">
           <ButtonBackToHome />
           <DrinksAndFoods />
+        </div>
+      </Route>
+      <Route path="*">
+        <div id="portfolio">
+          <NotFound />
         </div>
       </Route>
     </Switch>
