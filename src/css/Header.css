@@ -1,7 +1,7 @@
 #portfolio #header-top {
   align-content: center;
   align-items: center;
-  background-color: black;
+  background-color: hsl(0, 0%, 40%);
   display: flex;
   color: white;
   flex-flow: column;
@@ -16,7 +16,7 @@
 }
 
 #portfolio #header-top .logo-title {
-  color: #6c63ff;
+  color: var(--purple);
 }
 
 #portfolio #header-menu {
@@ -36,15 +36,9 @@
 
 @media only screen and (min-width: 1000px) {
   #portfolio #header-top {
-    align-content: center;
-    align-items: center;
-    background-color: hsl(0, 0%, 0%);
-    display: flex;
-    color: white;
     flex-flow: row;
     justify-content: space-between;
     position: fixed;
-    width: 100%;
     z-index: 30;
   }
   
@@ -65,7 +59,7 @@
   }
   
   #portfolio #header-top #header-menu .nav-link:hover {
-    border-bottom: 2px solid #6c63ff;
+    border-bottom: 2px solid var(--purple);
   }
   
   #portfolio #logo {

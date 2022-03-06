@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import illustration from '../images/undraw_programming_re_kg9v.svg';
+import illustration from '../images/eu.jpeg';
 import illustration2 from '../images/undraw_hello_re_3evm.svg';
 import '../css/About.css';
 
@@ -29,7 +29,7 @@ export default function About() {
         </div>
       </div>
       <div className="text-body-2">
-        <img src={ illustration } className="illustration" alt="illustration"/>
+        <img src={ illustration } className="eu" alt="illustration"/>
         <p
           className={aboutMore ? 'home-word-p display-show-more' : 'home-word-p hidden-show-more'}
         >

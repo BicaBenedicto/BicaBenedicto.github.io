@@ -22,11 +22,18 @@
 }
 
 #portfolio #home .show-more {
-  background-color: #6c63ff;
-  border: 1px solid #6c63ff;
+  background-color: var(--purple);
+  border: 1px solid var(--purple);
   border-radius: 10px;
   display: block;
   color: white;
+}
+
+#portfolio #home .eu {
+  border-radius: 100%;
+  filter: saturate(1.5);
+  height: 400px;
+  margin: 0 20px;
 }
 
 @media only screen and (min-width: 1000px) {

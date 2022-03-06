@@ -1,5 +1,5 @@
 #portfolio-contact {
-  background: linear-gradient(0deg, rgba(31,31,31,0) 0%, rgba(230,230,230,1) 20%, rgba(230,230,230,1) 80%, rgba(54,54,54,0) 100%);
+  background: var(--transition-linear-light);
   padding: 20px;
   padding-top: 100px;
   width: 100%;
@@ -40,7 +40,7 @@
 }
 
 #portfolio-contact form button {
-  background-color: #6c63ff;
+  background-color: var(--purple);
   border: none;
   border-radius: 10px;
   color: white;
@@ -50,6 +50,7 @@
 }
 
 #portfolio-contact form button:disabled {
+  cursor: not-allowed;
   opacity: 0.2;
 }
 
@@ -83,7 +84,7 @@
 #portfolio-contact .contact-body .contact-body-others a {
   align-items: center;
   display: flex;
-  color: black;
+  color: inherit;
   font-size: 17px;
   font-weight: 400;
   text-decoration: none;
