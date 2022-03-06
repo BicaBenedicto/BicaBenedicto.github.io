@@ -1,7 +1,7 @@
 #portfolio #header-top {
   align-content: center;
   align-items: center;
-  background-color: hsl(0, 0%, 40%);
+  background-color: var(--header-light);
   display: flex;
   color: white;
   flex-flow: column;
