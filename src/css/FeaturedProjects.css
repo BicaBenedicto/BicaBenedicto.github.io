@@ -121,7 +121,7 @@
   transition: 1s;
 }
 
-#portfolio .carousel-arrow {
+#portfolio #project .carousel-arrow {
   display: none;
 }
 
@@ -287,26 +287,26 @@
     color: white;
   }
 
-  #portfolio .carousel-arrow {
+  #portfolio #project .carousel-arrow {
     display: flex;
     background-color: rgba(0, 0, 0, 0.541);
   }
   
-  #portfolio .carousel-arrow:hover {
+  #portfolio #project .carousel-arrow:hover {
     background-color: black;
   }
   
-  #portfolio .carousel-arrow::before {
+  #portfolio #project .carousel-arrow::before {
     background-color: rgb(255, 255, 255);
     border-radius: 100%;
     padding: 5px;
   }
   
-  #portfolio .carousel-prev {
+  #portfolio #project .carousel-prev {
     border-radius: 5px 0 0 5px;
   }
   
-  #portfolio .carousel-next {
+  #portfolio #project .carousel-next {
     border-radius: 0 5px 5px 0;
   }
 }

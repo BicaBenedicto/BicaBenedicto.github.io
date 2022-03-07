@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import Slider from 'infinite-react-carousel';
 import ProjectItem from './ProjectItem';
 import { FEATURED_PROJECTS } from '../assets/data';
-import '../css/FeaturedProjects.css';
+import '../sass/FeaturedProjects.scss';
 import { Link } from 'react-router-dom';
 
 export default function FeaturedProjects({ lookAll }) {

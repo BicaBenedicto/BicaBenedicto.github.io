@@ -1,0 +1,134 @@
+@import './variables.scss';
+
+#portfolio {
+	.project-show {
+		align-items: center;
+		background-color: rgba(0, 0, 0, 0.767);
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: center;
+		position: fixed;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 2000;
+		div {
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			position: relative;
+			width: 100%;
+			p {
+				display: block;
+				position: relative;
+				color: $text-dark;
+				width: 95%;
+      }
+    }
+		img {
+			transform: scale(0.7);
+			max-width: 100vw;
+			position: relative;
+    }
+		span {
+			display: block;
+			color: $purple-dark;
+			font-size: 40px;
+			font-weight: 600;
+    }
+  }
+	.project-show-exit {
+		background-color: transparent;
+		border: 1px solid $text-dark;
+		border-radius: 100%;
+		color: $text-dark;
+		cursor: pointer;
+		padding: 10px;
+		position: absolute;
+		top: 0;
+		right: 20px;
+		&:hover {
+			filter: brightness(1.5);
+    }
+  }
+	.hasShow {
+		transform: scale(1);
+		transition: 1s;
+  }
+	.hasHide {
+		transform: scale(0);
+		transition: 1s;
+  }
+}
+
+#portfolio .project-show div a, #portfolio .project-show .button-preview {
+	background-color: transparent;
+	border: none;
+	color: $project-link;
+	display: block;
+	font-weight: 600;
+	text-decoration: none;
+	padding: 0;
+	position: relative;
+}
+
+#portfolio .project-show div a:hover, #portfolio .project-show .button-preview:hover {
+	filter: brightness(1.5);
+}
+
+@media only screen and (min-width: 1000px) {
+  #portfolio {
+    .project-show {
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.767);
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      position: fixed;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 2000;
+      div {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        width: 60%;
+        p {
+          display: block;
+          position: relative;
+          width: 100%;
+        }
+        a {
+          display: block;
+          font-weight: 600;
+          text-decoration: none;
+          position: relative;
+        }
+      }
+      img {
+        transform: scale(0.7);
+        max-width: 60vw;
+        position: relative;
+      }
+      span {
+        display: block;
+        font-size: 40px;
+        font-weight: 600;
+        margin: 10px 0;
+      }
+    }
+    .project-show-exit {
+      background-color: transparent;
+      border-radius: 100%;
+      cursor: pointer;
+      padding: 0 10px;
+      position: absolute;
+      top: 0px;
+      right: 0;
+    }
+  }
+}

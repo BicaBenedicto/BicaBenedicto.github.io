@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import illustration from '../images/eu.jpeg';
 import illustration2 from '../images/undraw_hello_re_3evm.svg';
-import '../css/About.css';
+import '../sass/About.scss';
 
 
 export default function About() {

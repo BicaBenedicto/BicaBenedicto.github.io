@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { PROJECTS } from '../assets/data';
-import '../css/FeaturedProjects.css';
+import '../sass/Project.scss';
 import Context from '../services/Context.js';
 import { useHistory } from 'react-router-dom';
 

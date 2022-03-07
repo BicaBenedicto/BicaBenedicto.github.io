@@ -1,11 +1,4 @@
-#portfolio #hardskills {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 0;
-}
-
-#portfolio #hardskills li {
+#portfolio .hardskills-item {
   align-items: center;
   align-content: center;
   display: flex;
@@ -52,22 +45,40 @@
     margin: 10px;
   }
   
-  #portfolio #hardskills {
+  #portfolio .hardskills {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-flow: wrap;
     padding: 0;
+    position: relative;
     margin: 0 auto;
-    width: 50%;
   }
   
-  #portfolio #hardskills li {
+  #portfolio .hardskills-item {
     align-items: center;
     align-content: center;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: flex-end;
-    margin: 20px;
+    transition: 1s;
+    position: absolute;
+    top: 50px;
+    right: 50%;
+  }
+
+  #portfolio .hardskills-item.showing{
+    animation: showing 1s ease-in-out both;
+  }
+
+  #portfolio .hardskills-item.shadow-left{
+    animation: shadow-left 1s ease-in-out both;
+  }
+
+  #portfolio .hardskills-item.shadow-right{
+    animation: shadow-right 1s ease-in-out both;
+  }
+
+  #portfolio .hardskills-item.shadow{
+    animation: shadow 1s ease-in-out both;
   }
 
   #portfolio .hardskills-img {
@@ -77,5 +88,41 @@
 
   #portfolio .center-title {
     text-align: center;
+  }
+}
+
+@keyframes shadow-left {
+  0% {
+    transform: scale(2)  translateX(0);
+  }
+  100% {
+    transform: scale(1.5)  translateX(-100px);
+  }
+}
+
+@keyframes showing {
+  0% {
+    transform: scale(1.5) translateX(100px);
+  }
+  100% {
+    transform: scale(2) translateX(0);
+  }
+}
+
+@keyframes shadow-right {
+  0% {
+    transform: scale(0)  translateX(200px);
+  }
+  100% {
+    transform: scale(1.5)  translateX(100px);
+  }
+}
+
+@keyframes shadow {
+  0% {
+    transform: scale(1.5)  translateX(-100px);
+  }
+  100% {
+    transform: scale(0)  translateX(0);
   }
 }

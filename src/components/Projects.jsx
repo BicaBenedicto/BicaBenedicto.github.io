@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectItem from './ProjectItem';
 import { PROJECTS } from '../assets/data';
-import '../css/Projects.css';
+import '../sass/Projects.scss';
 
 export default function Projects() {
   return (

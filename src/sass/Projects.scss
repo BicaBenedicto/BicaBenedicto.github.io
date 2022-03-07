@@ -1,0 +1,40 @@
+@import './variables.scss';
+
+#portfolio {
+	#projects {
+		align-items: center;
+		background: $transition-linear-light;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0;
+		padding: 0 10px;
+		margin-bottom: 50px;
+		width: 100%;
+		.project-div {
+			height: 200px;
+			width: 50%;
+			span {
+				background-color: $purple-light;
+				border-radius: 5px 5px 0 0;
+				margin-top: 20px;
+				width: 100%;
+      }
+			img {
+				border-radius: 0 0 5px 5px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  #portfolio #projects .project-div {
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #portfolio #projects .project-div {
+    width: 25%;
+  }
+}

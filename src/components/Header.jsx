@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Header.css';
+import '../sass/Header.scss';
 
 export default function Header({ isRoot = true }) {
   return (

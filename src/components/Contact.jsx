@@ -5,7 +5,7 @@ import linkedin from '../images/icons/linkedin.svg';
 import github from '../images/icons/github.svg';
 import whatsapp from '../images/icons/whatsapp.svg';
 import telegram from '../images/icons/telegram.svg';
-import '../css/Contact.css';
+import '../sass/Contact.scss';
 
 const SERVICE_ID = 'service_b4xnyht';
 const TEMPLATE_ID = 'template_a7eg9en';

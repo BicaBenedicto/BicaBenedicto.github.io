@@ -1,0 +1,39 @@
+@import './variables.scss';
+
+.button-back-to-home {
+	background-color: $button-light;
+	border: none;
+	border-radius: 100%;
+	color: $button-text;
+	filter: opacity(0.5);
+	font-size: 20px;
+	font-weight: 700;
+	left: 50px;
+	padding: 10px 15px;
+	position: fixed;
+	overflow-x: hidden;
+	top: 50px;
+	width: 50px;
+	z-index: 20000;
+	&:hover {
+		border-radius: 20px;
+		filter: opacity(1);
+		width: 300px;
+		&::before {
+			content: '';
+    }
+		&::after {
+			content: 'Voltar para portfolio';
+    }
+  }
+	&::before {
+		content: '<';
+  }
+}
+
+@media  only screen and (max-width: 400px) {
+  .button-back-to-home {
+    left: 10px;
+    top: 10px;
+  }
+}
