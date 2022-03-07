@@ -8,7 +8,7 @@ export default function Header({ isRoot = true }) {
       <nav id='header-menu'>
         <a className='nav-link' href={isRoot ? '#home' : '/#home'}>Home</a>|
         <a className='nav-link' href={isRoot ? '#project' : '/#project'}>Projetos</a>|
-        <a className='nav-link' href={isRoot ? '#footer' : '/#footer'}>Contato</a>
+        <a className='nav-link' href={isRoot ? '#portfolio-contact' : '/#portfolio-contact'}>Contato</a>
       </nav>
     </header>
   )
