@@ -33,6 +33,7 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.4.1",
     "sass": "^1.45.0",
+    "styled-components": "^5.3.3",
     "web-vitals": "^2.1.2",
     "websocket-extensions": ">=0.1.4"
   },
