@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import '../css/App.css';
+import '../sass/Home.scss';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import About from '../components/About';

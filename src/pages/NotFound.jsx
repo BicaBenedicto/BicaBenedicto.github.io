@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import "@lottiefiles/lottie-player";
-import '../css/NotFound.css';
+import '../sass/NotFound.scss';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FeaturedProjects from '../components/FeaturedProjects';
