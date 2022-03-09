@@ -26,6 +26,7 @@
 @media only screen and (min-width: 1000px) {
   #portfolio {
     #skills {
+      align-items: center;
       background: $transition-linear-light;
       display: flex;
       justify-content: space-around;
@@ -33,34 +34,49 @@
       margin: 0 auto;
       padding: 100px 80px;
       position: relative;
-    }
-    .hardskills {
-      display: flex;
-      flex-flow: wrap;
-      padding: 0;
-      position: relative;
-      margin: 0 auto;
-    }
-    .hardskills-item {
-      align-items: center;
-      align-content: center;
-      display: flex !important;
-      flex-direction: column;
-      justify-content: flex-end;
-      transition: 1s;
-      position: absolute;
-      top: 50px;
-      right: 50%;
-      &.shadow {
-        animation: shadow 1s ease-in-out both;
+      .hardskills {
+        display: flex;
+        flex-flow: wrap;
+        position: relative;
+        padding-top: 200px;
+        margin: 0 auto;
       }
-    }
-    .hardskills-img {
-      margin-bottom: 10px;
-      width: 50px;
-    }
-    .center-title {
-      text-align: center;
+      .hardskills-item {
+        align-items: center;
+        align-content: center;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-end;
+        transition: 1s;
+        position: absolute;
+        top: 50px;
+        right: 50%;
+        &.shadow {
+          animation: shadow 1s ease-in-out both;
+        }
+      }
+      .hardskills-img {
+        margin-bottom: 10px;
+        width: 50px;
+      }
+      .center-title {
+        text-align: center;
+        &.top {
+          position: absolute;
+          right: 50%;
+          top: 150px;
+        }
+        &.bottom {
+          bottom: 150px;
+          color: $purple-dark;
+          display: block;
+          position: absolute;
+          text-align: center;
+          font-style: italic;
+          margin: 0 auto;
+          width: 50%;
+        }
+      }
     }
   }
 }

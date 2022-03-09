@@ -61,15 +61,16 @@ function Skills() {
 
   return (
     <section id='skills'>
-      <img src={ illustration } className="illustration" alt="illustration"/>
       <div className='' style={{ 'width': '100%'}}>
-        <h4 className='center-title'></h4>
-      <ul
-        className="hardskills"
-      >
-          {carouselShowing(arrActual)}
-      </ul>
+        <h3 className='center-title top'>Algumas das linguagens, bibliotecas e ferramentas que utilizo</h3>
+        <ul
+          className="hardskills"
+        >
+            {carouselShowing(arrActual)}
+        </ul>
+        <h2 className='center-title bottom'>Fique tranquilo vou selecionar a ideal para o seu projeto</h2>
       </div>
+      <img src={ illustration } className="illustration" alt="illustration"/>
     </section>
   )
 };
