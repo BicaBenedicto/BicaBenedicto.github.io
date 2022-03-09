@@ -116,7 +116,7 @@
           transform: scale(($sides -$i - 1) * $size)  translateX(50px);
         } @else {
           @if $i == ($sides - 1) {
-            transform: scale(($sides - $i) * $size)  translateX($i * -45px);
+            transform: scale(($sides - $i + 1) * $size)  translateX(($sides - 1) * -43px);
           } @else {
             transform: scale(($sides -$i - 1) * $size)  translateX($i * 50px);
           }
