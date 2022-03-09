@@ -32,14 +32,7 @@
       flex-direction: row;
       margin: 0 auto;
       padding: 100px 80px;
-      .soft-skills {
-        display: flex;
-        list-style: none;
-        li {
-          display: block;
-          margin: 10px;
-        }
-      }
+      position: relative;
     }
     .hardskills {
       display: flex;
@@ -58,15 +51,6 @@
       position: absolute;
       top: 50px;
       right: 50%;
-      &.showing {
-        animation: showing 1s ease-in-out both;
-      }
-      &.shadow-left {
-        animation: shadow-left 1s ease-in-out both;
-      }
-      &.shadow-right {
-        animation: shadow-right 1s ease-in-out both;
-      }
       &.shadow {
         animation: shadow 1s ease-in-out both;
       }
@@ -81,36 +65,62 @@
   }
 }
 
-@keyframes shadow-left {
-  0% {
-    transform: scale(2)  translateX(0);
+@for $i from 1 through $sides {
+  li.shadow-left-#{$i} {
+    animation: shadow-left-#{$i} 1s ease-in-out both;
   }
-  100% {
-    transform: scale(1.5)  translateX(-100px);
+  li.shadow-right-#{$i} {
+    animation: shadow-right-#{$i} 1s ease-in-out both;
   }
-}
-
-@keyframes showing {
-  0% {
-    transform: scale(1.5) translateX(100px);
-  }
-  100% {
-    transform: scale(2) translateX(0);
-  }
-}
-
-@keyframes shadow-right {
-  0% {
-    transform: scale(0)  translateX(200px);
-  }
-  100% {
-    transform: scale(1.5)  translateX(100px);
+  
+  @if $i < $sides {
+    @keyframes shadow-left-#{$i} {
+      0% {
+        @if $i == 1 {
+          transform: scale(($sides -$i) * 0.3)  translateX(0);
+          opacity: 1;
+        } @else {
+          transform: scale(($sides -$i) * 0.3)  translateX(($i - 1) * -50px);
+          opacity: ($i * 0.1);
+        }
+        z-index: ($skills - $i);
+      }
+      100% {
+        transform: scale(($sides - $i - 1) * 0.3)  translateX($i * -50px);
+        opacity: $i * 0.1;
+        z-index: ($skills - $i);
+      }
+    }
+    @keyframes shadow-right-#{$i} {
+      0% {
+        @if $i == 1 {
+          transform: scale(($sides -$i - 1) * 0.3)  translateX(50px);
+        } @else {
+          @if $i == ($sides - 1) {
+            transform: scale(($sides - $i) * 0.3)  translateX($i * -45px);
+          } @else {
+            transform: scale(($sides -$i - 1) * 0.3)  translateX($i * 50px);
+          }
+        }
+        opacity: ($i * 0.1);
+        z-index: ($skills - $i);
+      }
+      100% {
+        @if $i == 1 { 
+          opacity: 1;
+        } @else {
+          opacity: ($i * 0.1);
+        }
+        transform: scale(($sides - $i) * 0.3)  translateX(($i - 1) * 50px);
+        z-index: ($skills - $i);
+      }
+    }
   }
 }
 
 @keyframes shadow {
   0% {
-    transform: scale(1.5)  translateX(-100px);
+    transform: scale(($sides - 5) * 0.3)  translateX(4 * -50px);
   }
   100% {
     transform: scale(0)  translateX(0);

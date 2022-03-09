@@ -1,6 +1,6 @@
 import React from 'react';
-import linkedin from '../images/linkedin-icon.webp';
-import github from '../images/github-icon.webp';
+import linkedin from '../images/icons/linkedin.svg';
+import github from '../images/icons/github.svg';
 import '../sass/Footer.scss';
 
 export default function Footer() {

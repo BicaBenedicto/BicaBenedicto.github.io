@@ -14,7 +14,7 @@ import sass from '../images/icons/sass.svg';
 import tailwindcss from '../images/icons/tailwindcss.svg';
 import typescript from '../images/icons/typescript.svg';
 
-export default {
+const hardskills = {
   bootstrap: {
     name: 'Bootstrap',
     image: bootstrap,
@@ -91,3 +91,5 @@ export default {
     message: '',
   },
 };
+
+export default hardskills;
