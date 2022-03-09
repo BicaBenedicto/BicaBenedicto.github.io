@@ -22,6 +22,7 @@ import testingLibrary from '../images/icons/testing-library.svg';
 import styledComponents from '../images/icons/styled-components.svg';
 import mochajs from '../images/icons/mochajs.svg';
 import chaijs from '../images/icons/chaijs.svg';
+import sinonjs from '../images/icons/sinonjs.svg';
 
 const hardskills = {
   bootstrap: {
@@ -142,6 +143,11 @@ const hardskills = {
   chaijs: {
     name: 'Chai.js',
     image: chaijs,
+    message: '',
+  },
+  sinonjs: {
+    name: 'Sinon.js',
+    image: sinonjs,
     message: '',
   },
 };

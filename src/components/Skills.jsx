@@ -52,7 +52,7 @@ function Skills() {
       const classActual = classesAnimation[object[index]] || 'shadow';
       return (
         <li className={`hardskills-item ${classActual}`} key={ name }>
-          <img className='hardskills-img' src={ image } alt={ `${name}-icon` }/>
+          <img className={ `hardskills-img ${name === 'Sinon.js' ? 'sinonjs' : ''}` } src={ image } alt={ `${name}-icon` }/>
           {name}
         </li>
       );
@@ -62,13 +62,13 @@ function Skills() {
   return (
     <section id='skills'>
       <div className='' style={{ 'width': '100%'}}>
-        <h3 className='center-title top'>Algumas das linguagens, bibliotecas e ferramentas que utilizo</h3>
         <ul
           className="hardskills"
         >
+        <h3 className='center-title top'>Algumas das linguagens, bibliotecas e ferramentas que utilizo</h3>
             {carouselShowing(arrActual)}
-        </ul>
         <h2 className='center-title bottom'>Fique tranquilo vou selecionar a ideal para o seu projeto</h2>
+        </ul>
       </div>
       <img src={ illustration } className="illustration" alt="illustration"/>
     </section>

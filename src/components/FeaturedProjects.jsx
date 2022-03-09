@@ -37,6 +37,7 @@ export default function FeaturedProjects({ lookAll }) {
         slidesToShow={ slides }
         wheel
         wheelScroll={ slides }
+        onResize={ onLoadComponent }
       >
         {FEATURED_PROJECTS.map(({name, image}) => (
           <ProjectItem

@@ -126,24 +126,30 @@ export default function Contact() {
         </form>
         <div className="contact-body-others">
           <h2 className='center-title'>Agora é com você, estou á disposição para conversar sobre o que você precisa</h2>
-          <a href='https://api.whatsapp.com/send?phone=5511986629946' target='_blank' rel="noreferrer">
-            <img src={ whatsapp } alt='Whatsapp'/> Whatsapp
-          </a>
-          <a href='https://t.me/gabrielbenedicto' target='_blank' rel="noreferrer">
-            <img src={ telegram } alt='Telegram'/> Telegram
-          </a>
-          <a href='https://www.linkedin.com/in/gabrielbenedicto/' target='_blank' rel="noreferrer">
-            <img src={ linkedin } alt='Linkedin'/> Linkedin
-          </a>
-          <a href='https://github.com/BicaBenedicto' target='_blank' rel="noreferrer">
-            <img src={ github } alt='GitHub'/> GitHub
-          </a>
-          <a href='https://www.instagram.com/gabrielbenedicto/' target='_blank' rel="noreferrer">
-            <img src={ instagram } alt='instagram'/> Instagram
-          </a>
-          <a href='mailto:gabrielpbenedicto@gmail.com' rel="noreferrer">
-            <img src={ gmail } alt='Gmail'/> Gmail
-          </a>
+          <div className="other-contacts">
+            <div>
+              <a href='https://api.whatsapp.com/send?phone=5511986629946' target='_blank' rel="noreferrer">
+                <img src={ whatsapp } alt='Whatsapp'/> Whatsapp
+              </a>
+              <a href='https://t.me/gabrielbenedicto' target='_blank' rel="noreferrer">
+                <img src={ telegram } alt='Telegram'/> Telegram
+              </a>
+              <a href='https://www.linkedin.com/in/gabrielbenedicto/' target='_blank' rel="noreferrer">
+                <img src={ linkedin } alt='Linkedin'/> Linkedin
+              </a>
+            </div>
+            <div className="right-side">
+              <a href='https://github.com/BicaBenedicto' target='_blank' rel="noreferrer">
+                <img src={ github } alt='GitHub'/> GitHub
+              </a>
+              <a href='https://www.instagram.com/gabrielbenedicto/' target='_blank' rel="noreferrer">
+                <img src={ instagram } alt='instagram'/> Instagram
+              </a>
+              <a href='mailto:gabrielpbenedicto@gmail.com' rel="noreferrer">
+                <img src={ gmail } alt='Gmail'/> Gmail
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

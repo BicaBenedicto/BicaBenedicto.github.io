@@ -1,25 +1,133 @@
 @import './variables.scss';
 
 #portfolio {
-	.hardskills-item {
-		align-items: center;
-		align-content: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		margin: 10px;
+  #skills {
+    align-items: center;
+    background: $transition-linear-light;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 100px 0;
+    position: relative;
+    div {
+      width: 100%;
+      .hardskills {
+        display: flex;
+        flex-flow: wrap;
+        position: relative;
+        padding-top: 200px;
+        margin: 0 auto;
+        width: 100%;
+      }
+      li.hardskills-item {
+        align-items: center;
+        align-content: center;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-end;
+        transition: 1s;
+        position: absolute;
+        height: 30px;
+        top: 130px;
+        left: 0;
+        width: 100%;
+        &.shadow {
+          animation: shadow 1s ease-in-out both;
+        }
+      }
+      .hardskills-img {
+        margin-bottom: 10px;
+        width: 50px;
+      }
+      .center-title {
+        display: block;
+        position: absolute;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        margin: 0 auto;
+        width: 100%;
+        &.top {
+          top: 0;
+          left: 0;
+        }
+        &.bottom {
+          color: $purple-dark;
+          font-style: italic;
+          left: 0;
+          bottom: 0;
+          transform: translateY(40px);
+        }
+      }
+    }
+    .illustration {
+      display: none;
+    }
   }
-	.center-title {
-		text-align: center;
-  }
-	.hardskills-img {
-		margin-bottom: 10px;
-		width: 50px;
-  }
-	#skills {
-		display: flex;
-		flex-direction: column;
-		margin: 20px 0;
+}
+
+@for $i from 1 through $skills-mobile {
+  
+  @if $i < $sides-mobile {
+    li.shadow-left-#{$i} {
+      animation: shadow-left-#{$i} 1s ease-in-out both;
+    }
+    li.shadow-right-#{$i} {
+      animation: shadow-right-#{$i} 1s ease-in-out both;
+    }
+    @keyframes shadow-left-#{$i} {
+      0% {
+        @if $i == 1 {
+          color: black;
+          transform: scale(($sides-mobile -$i) * $size-mobile)  translateX(0);
+          font-weight: 500;
+          opacity: 1;
+        } @else {
+          transform: scale(($sides-mobile -$i) * $size-mobile)  translateX(($i - 1) * -50px);
+          opacity: ($i * 0.05);
+        }
+        z-index: ($skills-mobile - $i);
+      }
+      100% {
+        transform: scale(($sides-mobile - $i - 1) * $size-mobile)  translateX($i * -50px);
+        opacity: $i * 0.05;
+        z-index: ($skills-mobile - $i);
+      }
+    }
+    @keyframes shadow-right-#{$i} {
+      0% {
+        @if $i == 1 {
+          transform: scale(($sides-mobile -$i - 1) * $size-mobile)  translateX(50px);
+        } @else {
+          @if $i == ($sides-mobile - 1) {
+            transform: scale(($sides-mobile - $i + 1) * $size-mobile)  translateX(($sides-mobile - 1) * -43px);
+          } @else {
+            transform: scale(($sides-mobile -$i - 1) * $size-mobile)  translateX($i * 50px);
+          }
+        }
+        opacity: ($i * 0.05);
+        z-index: ($skills-mobile - $i);
+      }
+      100% {
+        @if $i == 1 { 
+          color: black;
+          font-weight: 500;
+          opacity: 1;
+        } @else {
+          opacity: ($i * 0.05);
+        }
+        transform: scale(($sides-mobile - $i) * $size-mobile)  translateX(($i - 1) * 50px);
+        z-index: ($skills-mobile - $i);
+      }
+    }
+  } @else {
+    li.shadow-left-#{$i} {
+      transform: scale(0);
+    }
+    li.shadow-right-#{$i} {
+      transform: scale(0);
+    }
   }
 }
 
@@ -62,78 +170,101 @@
       }
       .center-title {
         text-align: center;
+        font-size: 25px;
         &.top {
+          display: block;
           position: absolute;
-          right: 50%;
-          top: 150px;
+          transform: translateY(-280px);
+          margin: 0 auto;
+          width: 100%;
         }
         &.bottom {
-          bottom: 150px;
           color: $purple-dark;
           display: block;
           position: absolute;
-          text-align: center;
           font-style: italic;
+          transform: translateY(30px);
           margin: 0 auto;
-          width: 50%;
+          width: 100%;
         }
       }
+      .illustration {
+        display: block;
+      }
     }
+    
   }
-}
 
-@for $i from 1 through $sides {
-  li.shadow-left-#{$i} {
-    animation: shadow-left-#{$i} 1s ease-in-out both;
-  }
-  li.shadow-right-#{$i} {
-    animation: shadow-right-#{$i} 1s ease-in-out both;
-  }
-  
-  @if $i < $sides {
-    @keyframes shadow-left-#{$i} {
-      0% {
-        @if $i == 1 {
-          color: black;
-          transform: scale(($sides -$i) * $size)  translateX(0);
-          font-weight: 500;
-          opacity: 1;
-        } @else {
-          transform: scale(($sides -$i) * $size)  translateX(($i - 1) * -50px);
-          opacity: ($i * 0.05);
-        }
-        z-index: ($skills - $i);
-      }
-      100% {
-        transform: scale(($sides - $i - 1) * $size)  translateX($i * -50px);
-        opacity: $i * 0.05;
-        z-index: ($skills - $i);
-      }
+  @for $i from 1 through $skills {
+    li.shadow-left-#{$i} {
+      animation: shadow-left-#{$i} 1s ease-in-out both;
     }
-    @keyframes shadow-right-#{$i} {
-      0% {
-        @if $i == 1 {
-          transform: scale(($sides -$i - 1) * $size)  translateX(50px);
-        } @else {
-          @if $i == ($sides - 1) {
-            transform: scale(($sides - $i + 1) * $size)  translateX(($sides - 1) * -43px);
+    li.shadow-right-#{$i} {
+      animation: shadow-right-#{$i} 1s ease-in-out both;
+    }
+    
+    @if $i < $sides {
+      @keyframes shadow-left-#{$i} {
+        0% {
+          @if $i == 1 {
+            color: black;
+            transform: scale(($sides -$i) * $size)  translateX(0);
+            font-weight: 500;
+            opacity: 1;
           } @else {
-            transform: scale(($sides -$i - 1) * $size)  translateX($i * 50px);
+            transform: scale(($sides -$i) * $size)  translateX(($i - 1) * -50px);
+            opacity: ($i * 0.05);
           }
+          z-index: ($skills - $i);
         }
-        opacity: ($i * 0.05);
-        z-index: ($skills - $i);
+        100% {
+          transform: scale(($sides - $i - 1) * $size)  translateX($i * -50px);
+          opacity: $i * 0.05;
+          z-index: ($skills - $i);
+        }
       }
-      100% {
-        @if $i == 1 { 
-          color: black;
-          font-weight: 500;
-          opacity: 1;
-        } @else {
+      @keyframes shadow-right-#{$i} {
+        0% {
+          @if $i == 1 {
+            transform: scale(($sides -$i - 1) * $size)  translateX(50px);
+          } @else {
+            @if $i == ($sides - 1) {
+              transform: scale(($sides - $i + 1) * $size)  translateX(($sides - 1) * -43px);
+            } @else {
+              transform: scale(($sides -$i - 1) * $size)  translateX($i * 50px);
+            }
+          }
           opacity: ($i * 0.05);
+          z-index: ($skills - $i);
         }
-        transform: scale(($sides - $i) * $size)  translateX(($i - 1) * 50px);
-        z-index: ($skills - $i);
+        100% {
+          @if $i == 1 { 
+            color: black;
+            font-weight: 500;
+            opacity: 1;
+          } @else {
+            opacity: ($i * 0.05);
+          }
+          transform: scale(($sides - $i) * $size)  translateX(($i - 1) * 50px);
+          z-index: ($skills - $i);
+        }
+      }
+    } @else {
+      @keyframes shadow-right-#{$i} {
+        0% {
+          transform: scale(0)  translateX(0);
+        }
+        100% {
+          transform: scale(0)  translateX(0);
+        }
+      }
+      @keyframes shadow-left-#{$i} {
+        0% {
+          transform: scale(0)  translateX(0);
+        }
+        100% {
+          transform: scale(0)  translateX(0);
+        }
       }
     }
   }

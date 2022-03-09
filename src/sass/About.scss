@@ -27,7 +27,7 @@
 		.eu {
 			border-radius: 100%;
 			filter: saturate(1.5);
-			height: 400px;
+			height: 300px;
 			margin: 0 20px;
     }
   }
@@ -70,6 +70,9 @@
       }
       .show-more {
         display: none;
+      }
+      .eu {
+        height: 400px;
       }
     }
   }

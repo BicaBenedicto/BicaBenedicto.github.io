@@ -1,42 +1,45 @@
 @import './variables.scss';
 
 #portfolio {
-  .project-div {
-		align-items: center;
-		align-content: center;
-		background-color: transparent;
-		border: none;
-		display: flex;
-		flex-flow: column;
-		justify-content: center;
-		width: 100%;
-		.project-img {
-			height: 100px;
-			width: 100%;
+  #project {
+    text-align: center;
+    .project-div {
+      align-items: center;
+      align-content: center;
+      background-color: transparent;
+      border: none;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      width: 100%;
+      .project-img {
+        height: 100px;
+        width: 100%;
+      }
     }
-  }
-	.link-none {
-		color: black;
-		text-decoration: none;
-  }
-	.project-img {
-		height: 250px !important;
-		width: 100% !important;
-  }
-	#project {
-		.carousel-arrow {
-			display: none;
+    .link-none {
+      color: black;
+      text-decoration: none;
     }
-  }
-	.look-all {
-		display: block;
-		color: $purple-dark;
-		text-align: end;
-		text-decoration: none;
-		width: 100%;
-		&:hover {
-			filter: brightness(0.6);
-			font-weight: 600;
+    .project-img {
+      height: 250px !important;
+      width: 100% !important;
+    }
+    #project {
+      .carousel-arrow {
+        display: none;
+      }
+    }
+    .look-all {
+      display: block;
+      color: $purple-dark;
+      text-align: end;
+      text-decoration: none;
+      width: 100%;
+      &:hover {
+        filter: brightness(0.6);
+        font-weight: 600;
+      }
     }
   }
 }
