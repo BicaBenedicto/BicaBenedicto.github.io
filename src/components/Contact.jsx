@@ -5,6 +5,8 @@ import linkedin from '../images/icons/linkedin.svg';
 import github from '../images/icons/github.svg';
 import whatsapp from '../images/icons/whatsapp.svg';
 import telegram from '../images/icons/telegram.svg';
+import instagram from '../images/icons/instagram.svg';
+import gmail from '../images/icons/gmail.svg';
 import '../sass/Contact.scss';
 
 const SERVICE_ID = 'service_b4xnyht';
@@ -124,10 +126,10 @@ export default function Contact() {
         </form>
         <div className="contact-body-others">
           <h2 className='center-title'>Agora é com você, estou á disposição para conversar sobre o que você precisa</h2>
-          <a href='' target='_blank' rel="noreferrer">
+          <a href='https://api.whatsapp.com/send?phone=5511986629946' target='_blank' rel="noreferrer">
             <img src={ whatsapp } alt='Whatsapp'/> Whatsapp
           </a>
-          <a href='' target='_blank' rel="noreferrer">
+          <a href='https://t.me/gabrielbenedicto' target='_blank' rel="noreferrer">
             <img src={ telegram } alt='Telegram'/> Telegram
           </a>
           <a href='https://www.linkedin.com/in/gabrielbenedicto/' target='_blank' rel="noreferrer">
@@ -135,6 +137,12 @@ export default function Contact() {
           </a>
           <a href='https://github.com/BicaBenedicto' target='_blank' rel="noreferrer">
             <img src={ github } alt='GitHub'/> GitHub
+          </a>
+          <a href='https://www.instagram.com/gabrielbenedicto/' target='_blank' rel="noreferrer">
+            <img src={ instagram } alt='instagram'/> Instagram
+          </a>
+          <a href='mailto:gabrielpbenedicto@gmail.com' rel="noreferrer">
+            <img src={ gmail } alt='Gmail'/> Gmail
           </a>
         </div>
       </div>

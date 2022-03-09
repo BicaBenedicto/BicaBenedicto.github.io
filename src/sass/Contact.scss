@@ -59,6 +59,7 @@
 			align-items: flex-start;
 			display: flex;
 			flex-direction: column;
+			flex-wrap: wrap;
 			justify-content: flex-start;
 			width: 35%;
 			img {
@@ -66,16 +67,24 @@
       }
 			a {
 				align-items: center;
-				display: flex;
+				border-radius: 10px;
 				color: inherit;
+				display: flex;
 				font-size: 17px;
 				font-weight: 400;
 				text-decoration: none;
 				margin: 20px 0;
-				width: 100%;
+				width: 0;
 				img {
 					margin-right: 10px;
         }
+
+				&:hover {
+					background-color: $purple-light;
+					font-weight: 600;
+					transition: 1s;
+					width: 50%;
+				}
       }
     }
   }
