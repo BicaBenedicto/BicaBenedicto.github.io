@@ -2,32 +2,40 @@
 
 #portfolio {
   #project {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    .project-div {
-      align-items: center;
-      align-content: center;
-      background-color: transparent;
-      border: none;
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+    .slider-div {
       width: 100%;
-      .project-img {
-        height: 100px;
+      .project-div {
+        align-items: center;
+        align-content: center;
+        background-color: transparent;
+        border: none;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
         width: 100%;
+        .project-img {
+          height: 100px;
+          width: 100%;
+        }
       }
-    }
-    .link-none {
-      color: black;
-      text-decoration: none;
-    }
-    .project-img {
-      height: 250px !important;
-      width: 100% !important;
-    }
-    #project {
-      .carousel-arrow {
-        display: none;
+      .link-none {
+        color: black;
+        text-decoration: none;
+      }
+      .project-img {
+        height: 250px !important;
+        width: 100% !important;
+      }
+      #project {
+        .carousel-arrow {
+          display: none;
+        }
       }
     }
     .look-all {
@@ -46,67 +54,69 @@
 
 @media only screen and (min-width: 1000px) {
   #portfolio {
-    .project-div {
-      align-items: stretch;
-      align-content: center;
-      background-color: transparent;
-      border: none;
-      display: flex;
-      flex-flow: wrap;
-      font-size: 20px;
-      font-weight: 500;
-      justify-content: center;
-      position: relative;
-    }
-    .project-img {
-      height: 250px !important;
-      width: 100% !important;
-    }
-    .link-none {
-      text-decoration: none;
-      color: inherit;
-    }
     #project {
       margin: 0 auto;
       width: 90%;
-      .carousel-arrow {
-        display: flex;
-        background-color: rgba(0, 0, 0, 0.541);
-        &:hover {
-          background-color: black;
+      .slider-div {
+        .project-div {
+          align-items: stretch;
+          align-content: center;
+          background-color: transparent;
+          border: none;
+          display: flex;
+          flex-flow: wrap;
+          font-size: 20px;
+          font-weight: 500;
+          justify-content: center;
+          position: relative;
         }
-        &::before {
-          background-color: rgb(255, 255, 255);
-          border-radius: 100%;
-          padding: 5px;
+        .project-img {
+          height: 250px !important;
+          width: 100% !important;
+        }
+        .link-none {
+          text-decoration: none;
+          color: inherit;
+        }
+        .carousel-arrow {
+          display: flex;
+          background-color: rgba(0, 0, 0, 0.541);
+          &:hover {
+            background-color: black;
+          }
+          &::before {
+            background-color: rgb(255, 255, 255);
+            border-radius: 100%;
+            padding: 5px;
+          }
+        }
+        .carousel-prev {
+          border-radius: 5px 0 0 5px;
+        }
+        .carousel-next {
+          border-radius: 0 5px 5px 0;
         }
       }
-      .carousel-prev {
-        border-radius: 5px 0 0 5px;
+      .slick-next {
+        background-color: rgba(0, 0, 0, 0.637) !important;
+        border-radius: 0 20px 20px 0;
+        transform: translateX(0px) translateY(-111px) !important;
+        height: 90% !important;
+        width: 40px !important;
       }
-      .carousel-next {
-        border-radius: 0 5px 5px 0;
+      .slick-prev {
+        background-color: rgba(0, 0, 0, 0.637) !important;
+        border-radius: 20px 0 0 20px;
+        transform: translateX(0px) translateY(-111px) !important;
+        height: 90% !important;
+        width: 40px !important;
+        z-index: 30;
       }
-    }
-    .slick-next {
-      background-color: rgba(0, 0, 0, 0.637) !important;
-      border-radius: 0 20px 20px 0;
-      transform: translateX(0px) translateY(-111px) !important;
-      height: 90% !important;
-      width: 40px !important;
-    }
-    .slick-prev {
-      background-color: rgba(0, 0, 0, 0.637) !important;
-      border-radius: 20px 0 0 20px;
-      transform: translateX(0px) translateY(-111px) !important;
-      height: 90% !important;
-      width: 40px !important;
-      z-index: 30;
-    }
-    .slide {
-      &.demo {
-        div {
-          text-align: center;
+      .slide {
+        &.demo {
+          div {
+            text-align: center;
+          }
         }
       }
     }

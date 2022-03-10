@@ -125,7 +125,7 @@ export default function Contact() {
           </div>
         </form>
         <div className="contact-body-others">
-          <h2 className='center-title'>Agora é com você, estou á disposição para conversar sobre o que você precisa</h2>
+          <h2 className='center-title'>Agora é com você, estou à disposição para conversar sobre o que você precisa</h2>
           <div className="other-contacts">
             <div>
               <a href='https://api.whatsapp.com/send?phone=5511986629946' target='_blank' rel="noreferrer">

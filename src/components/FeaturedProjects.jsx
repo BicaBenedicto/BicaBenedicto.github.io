@@ -29,6 +29,7 @@ export default function FeaturedProjects({ lookAll }) {
         arrowsScroll={ slides }
         autoplay
         autoplayScroll={ slides }
+        className="slider-div"
         dots
         dotsScroll={ slides }
         duration={ 300 }
