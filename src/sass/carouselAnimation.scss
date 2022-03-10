@@ -1,0 +1,83 @@
+@mixin carouselAnimation($skills, $sides, $size) {
+  @for $i from 1 through $skills {
+    li.shadow-left-#{$i} {
+      animation: shadow-left-#{$i} 1s ease-in-out both;
+    }
+    li.shadow-right-#{$i} {
+      animation: shadow-right-#{$i} 1s ease-in-out both;
+    }
+    
+    @if $i < $sides {
+      @keyframes shadow-left-#{$i} {
+        0% {
+          @if $i == 1 {
+            color: black;
+            transform: scale(($sides -$i) * $size)  translateX(0);
+            font-weight: 500;
+            opacity: 1;
+          } @else {
+            transform: scale(($sides -$i) * $size)  translateX(($i - 1) * -50px);
+            opacity: ($i * 0.05);
+          }
+          z-index: ($skills - $i);
+        }
+        100% {
+          transform: scale(($sides - $i - 1) * $size)  translateX($i * -50px);
+          opacity: $i * 0.05;
+          z-index: ($skills - $i);
+        }
+      }
+      @keyframes shadow-right-#{$i} {
+        0% {
+          @if $i == 1 {
+            transform: scale(($sides -$i - 1) * $size)  translateX(50px);
+          } @else {
+            @if $i == ($sides - 1) {
+              transform: scale(($sides - $i + 1) * $size)  translateX(($sides - 1) * -43px);
+            } @else {
+              transform: scale(($sides -$i - 1) * $size)  translateX($i * 50px);
+            }
+          }
+          opacity: ($i * 0.05);
+          z-index: ($skills - $i);
+        }
+        100% {
+          @if $i == 1 { 
+            color: black;
+            font-weight: 500;
+            opacity: 1;
+          } @else {
+            opacity: ($i * 0.05);
+          }
+          transform: scale(($sides - $i) * $size)  translateX(($i - 1) * 50px);
+          z-index: ($skills - $i);
+        }
+      }
+    } @else {
+      @keyframes shadow-right-#{$i} {
+        0% {
+          transform: scale(0)  translateX(0);
+        }
+        100% {
+          transform: scale(0)  translateX(0);
+        }
+      }
+      @keyframes shadow-left-#{$i} {
+        0% {
+          transform: scale(0)  translateX(0);
+        }
+        100% {
+          transform: scale(0)  translateX(0);
+        }
+      }
+    }
+  }
+  @keyframes shadow {
+    0% {
+      transform: scale(($sides - 5) * $size)  translateX(4 * -50px);
+    }
+    100% {
+      transform: scale(0)  translateX(0);
+    }
+  }
+}

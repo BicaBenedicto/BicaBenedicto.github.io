@@ -1,6 +1,10 @@
 @import './variables.scss';
 
 #portfolio {
+		h1.center-title {
+			display: block;
+			text-align: center;
+		}
 	#projects {
 		align-items: center;
 		background: $transition-linear-light;

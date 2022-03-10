@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './carouselAnimation.scss';
 
 #portfolio {
   #skills {
@@ -35,6 +36,10 @@
         &.shadow {
           animation: shadow 1s ease-in-out both;
         }
+        .sinonjs {
+          background-color: white;
+          border-radius: 100%;
+        }
       }
       .hardskills-img {
         margin-bottom: 10px;
@@ -67,69 +72,7 @@
   }
 }
 
-@for $i from 1 through $skills-mobile {
-  
-  @if $i < $sides-mobile {
-    li.shadow-left-#{$i} {
-      animation: shadow-left-#{$i} 1s ease-in-out both;
-    }
-    li.shadow-right-#{$i} {
-      animation: shadow-right-#{$i} 1s ease-in-out both;
-    }
-    @keyframes shadow-left-#{$i} {
-      0% {
-        @if $i == 1 {
-          color: black;
-          transform: scale(($sides-mobile -$i) * $size-mobile)  translateX(0);
-          font-weight: 500;
-          opacity: 1;
-        } @else {
-          transform: scale(($sides-mobile -$i) * $size-mobile)  translateX(($i - 1) * -50px);
-          opacity: ($i * 0.05);
-        }
-        z-index: ($skills-mobile - $i);
-      }
-      100% {
-        transform: scale(($sides-mobile - $i - 1) * $size-mobile)  translateX($i * -50px);
-        opacity: $i * 0.05;
-        z-index: ($skills-mobile - $i);
-      }
-    }
-    @keyframes shadow-right-#{$i} {
-      0% {
-        @if $i == 1 {
-          transform: scale(($sides-mobile -$i - 1) * $size-mobile)  translateX(50px);
-        } @else {
-          @if $i == ($sides-mobile - 1) {
-            transform: scale(($sides-mobile - $i + 1) * $size-mobile)  translateX(($sides-mobile - 1) * -43px);
-          } @else {
-            transform: scale(($sides-mobile -$i - 1) * $size-mobile)  translateX($i * 50px);
-          }
-        }
-        opacity: ($i * 0.05);
-        z-index: ($skills-mobile - $i);
-      }
-      100% {
-        @if $i == 1 { 
-          color: black;
-          font-weight: 500;
-          opacity: 1;
-        } @else {
-          opacity: ($i * 0.05);
-        }
-        transform: scale(($sides-mobile - $i) * $size-mobile)  translateX(($i - 1) * 50px);
-        z-index: ($skills-mobile - $i);
-      }
-    }
-  } @else {
-    li.shadow-left-#{$i} {
-      transform: scale(0);
-    }
-    li.shadow-right-#{$i} {
-      transform: scale(0);
-    }
-  }
-}
+@include carouselAnimation($skills-mobile, $sides-mobile, $size-mobile);
 
 @media only screen and (min-width: 1000px) {
   #portfolio {
@@ -169,112 +112,26 @@
         width: 50px;
       }
       .center-title {
+        display: block;
+        position: absolute;
         text-align: center;
-        font-size: 25px;
+        margin: 0 auto;
+        font-size: 25px!important;
+        width: 100%;
         &.top {
-          display: block;
-          position: absolute;
-          transform: translateY(-280px);
-          margin: 0 auto;
-          width: 100%;
+          transform: translateY(-80px);
         }
         &.bottom {
           color: $purple-dark;
-          display: block;
-          position: absolute;
           font-style: italic;
           transform: translateY(30px);
-          margin: 0 auto;
-          width: 100%;
         }
       }
       .illustration {
         display: block;
       }
     }
-    
   }
+  @include carouselAnimation($skills, $sides, $size);
 
-  @for $i from 1 through $skills {
-    li.shadow-left-#{$i} {
-      animation: shadow-left-#{$i} 1s ease-in-out both;
-    }
-    li.shadow-right-#{$i} {
-      animation: shadow-right-#{$i} 1s ease-in-out both;
-    }
-    
-    @if $i < $sides {
-      @keyframes shadow-left-#{$i} {
-        0% {
-          @if $i == 1 {
-            color: black;
-            transform: scale(($sides -$i) * $size)  translateX(0);
-            font-weight: 500;
-            opacity: 1;
-          } @else {
-            transform: scale(($sides -$i) * $size)  translateX(($i - 1) * -50px);
-            opacity: ($i * 0.05);
-          }
-          z-index: ($skills - $i);
-        }
-        100% {
-          transform: scale(($sides - $i - 1) * $size)  translateX($i * -50px);
-          opacity: $i * 0.05;
-          z-index: ($skills - $i);
-        }
-      }
-      @keyframes shadow-right-#{$i} {
-        0% {
-          @if $i == 1 {
-            transform: scale(($sides -$i - 1) * $size)  translateX(50px);
-          } @else {
-            @if $i == ($sides - 1) {
-              transform: scale(($sides - $i + 1) * $size)  translateX(($sides - 1) * -43px);
-            } @else {
-              transform: scale(($sides -$i - 1) * $size)  translateX($i * 50px);
-            }
-          }
-          opacity: ($i * 0.05);
-          z-index: ($skills - $i);
-        }
-        100% {
-          @if $i == 1 { 
-            color: black;
-            font-weight: 500;
-            opacity: 1;
-          } @else {
-            opacity: ($i * 0.05);
-          }
-          transform: scale(($sides - $i) * $size)  translateX(($i - 1) * 50px);
-          z-index: ($skills - $i);
-        }
-      }
-    } @else {
-      @keyframes shadow-right-#{$i} {
-        0% {
-          transform: scale(0)  translateX(0);
-        }
-        100% {
-          transform: scale(0)  translateX(0);
-        }
-      }
-      @keyframes shadow-left-#{$i} {
-        0% {
-          transform: scale(0)  translateX(0);
-        }
-        100% {
-          transform: scale(0)  translateX(0);
-        }
-      }
-    }
-  }
-}
-
-@keyframes shadow {
-  0% {
-    transform: scale(($sides - 5) * $size)  translateX(4 * -50px);
-  }
-  100% {
-    transform: scale(0)  translateX(0);
-  }
 }
