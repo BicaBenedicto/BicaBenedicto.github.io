@@ -1,18 +1,18 @@
 import pixelArt from '../images/projetos/pixels-art.png';
 import todoList from '../images/projetos/to-do-list.png';
 import trybewarts from '../images/projetos/trybewarts.png';
-import eCommerce from '../images/projetos/ecommerce-image.PNG';
-import trybewallet from '../images/projetos/trybewallet-image.PNG';
-import trybeTunes from '../images/projetos/trybetunes-image.PNG';
-import trivia from '../images/projetos/trivia-image.PNG';
-import davsom from '../images/projetos/davsom.PNG';
-import spotitrybe from '../images/projetos/spotitrybe.PNG';
-import misteryLetter from '../images/projetos/mistery-letter.PNG';
-import lessonsLearned from '../images/projetos/lessons-learned.PNG';
-import shoppingCart from '../images/projetos/shopping-cart.PNG';
-import colorGuess from '../images/projetos/color-guess.PNG';
-import memeGenerator from '../images/projetos/meme-generator.PNG';
-import netflixInterface from '../images/projetos/netflix-interface.PNG';
+// import eCommerce from '../images/projetos/ecommerce-image.png';
+import trybewallet from '../images/projetos/trybewallet.png';
+import trybeTunes from '../images/projetos/trybetunes.png';
+// import trivia from '../images/projetos/trivia-image.png';
+import davsom from '../images/projetos/davsom.png';
+import spotitrybe from '../images/projetos/spotitrybe.png';
+import misteryLetter from '../images/projetos/mistery-letter.png';
+import lessonsLearned from '../images/projetos/lessons-learned.png';
+import shoppingCart from '../images/projetos/shopping-cart.png';
+import colorGuess from '../images/projetos/color-guess.png';
+import memeGenerator from '../images/projetos/meme-generator.png';
+import netflixInterface from '../images/projetos/netflix-interface.png';
 
 const PROJETO_DESTAQUE = ['Pixel Art', 'To do List', 'Trybewarts', 'E-commerce', 'Trybewallet',
 'TrybeTunes', 'Trivia', 'Davsom'];
@@ -48,16 +48,16 @@ export const PROJECTS = [
       rep: 'https://github.com/BicaBenedicto/trybewarts',
     },
   },
-  {
-    name: 'E-commerce',
-    image: eCommerce,
-    technologies: ['react', 'css3', 'reactRouter', 'redux', 'nodejs', 'typescript', 'express'],
-    'E-commerce': {
-      message: 'Projeto desenvolvido como conclusão do Bootcamp de Front-End Developer do banco Inter, com um front-end que realiza a comunicação ao back-end e é gerenciado por um banco de dados.',
-      site: '',
-      rep: 'https://github.com/BicaBenedicto/ecommerce',
-    },
-  },
+  // {
+  //   name: 'E-commerce',
+  //   image: eCommerce,
+  //   technologies: ['react', 'css3', 'reactRouter', 'redux', 'nodejs', 'typescript', 'express'],
+  //   'E-commerce': {
+  //     message: 'Projeto desenvolvido como conclusão do Bootcamp de Front-End Developer do banco Inter, com um front-end que realiza a comunicação ao back-end e é gerenciado por um banco de dados.',
+  //     site: '',
+  //     rep: 'https://github.com/BicaBenedicto/ecommerce',
+  //   },
+  // },
   {
     name: 'Trybewallet',
     image: trybewallet,
@@ -78,16 +78,16 @@ export const PROJECTS = [
       rep: 'https://github.com/BicaBenedicto/trybetunes',
     },
   },
-  {
-    name: 'Trivia',
-    image: trivia,
-    technologies: ['react', 'css3', 'reactRouter', 'redux'],
-    Trivia: {
-      message: 'O projeto é um jogo de perguntas e respostas, onde apenas 1 resposta é a correta, foi realizado em grupo de 5 pessoas utilizando uma API que traz as perguntas, ao iniciar o jogo você começa com o score de 0, e ao acertar as perguntas é somado a pontuação dependendo o nivel da pergunta (fácil, médio e díficil) e o tempo que levou para responder, ao final do jogo possui uma tele dos resultados informando a quantidade de acertos e a pontuação final, tambem possui uma tela de "Ranking" onde é possivel competir e ver quem acerta mais.',
-      site: '',
-      rep: 'https://github.com/BicaBenedicto/trivia-react-redux',
-    },
-  },
+  // {
+  //   name: 'Trivia',
+  //   image: trivia,
+  //   technologies: ['react', 'css3', 'reactRouter', 'redux'],
+  //   Trivia: {
+  //     message: 'O projeto é um jogo de perguntas e respostas, onde apenas 1 resposta é a correta, foi realizado em grupo de 5 pessoas utilizando uma API que traz as perguntas, ao iniciar o jogo você começa com o score de 0, e ao acertar as perguntas é somado a pontuação dependendo o nivel da pergunta (fácil, médio e díficil) e o tempo que levou para responder, ao final do jogo possui uma tele dos resultados informando a quantidade de acertos e a pontuação final, tambem possui uma tela de "Ranking" onde é possivel competir e ver quem acerta mais.',
+  //     site: '',
+  //     rep: 'https://github.com/BicaBenedicto/trivia-react-redux',
+  //   },
+  // },
   {
     name: 'Davsom',
     image: davsom,

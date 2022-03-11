@@ -11,6 +11,7 @@
     margin: 0 auto;
     padding: 100px 0;
     position: relative;
+    width: 100%;
     div {
       width: 100%;
       .hardskills {
@@ -31,8 +32,8 @@
         position: absolute;
         height: 30px;
         top: 130px;
-        left: 0;
-        width: 100%;
+        left: 25%;
+        width: 52%;
         &.shadow {
           animation: shadow 1s ease-in-out both;
         }
@@ -133,5 +134,8 @@
     }
   }
   @include carouselAnimation($skills, $sides, $size);
-
+  @media only screen and (max-width: 1250px) {
+    $size-middle: 0.11;
+    @include carouselAnimation($skills, $sides, $size-middle);
+  }
 }

@@ -19,6 +19,7 @@
     }
 		.logo-title {
 			color: $purple-light;
+      font-size: 30px;
     }
   }
 	#header-menu {
@@ -54,6 +55,9 @@
           &:hover {
             border-bottom: 2px solid $purple-light;
           }
+        }
+        .logo-title {
+          font-size: unset();
         }
       }
     }

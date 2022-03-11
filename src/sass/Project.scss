@@ -27,8 +27,7 @@
       }
     }
 		img {
-			transform: scale(0.7);
-			max-width: 100vw;
+			max-width: 50%;
 			position: relative;
     }
 		span {
@@ -53,12 +52,12 @@
     }
   }
 	.hasShow {
-		transform: scale(1);
-		transition: 1s;
+    transform: translateX(0) scale(1);
+    transition: 1s;
   }
 	.hasHide {
-		transform: scale(0);
-		transition: 1s;
+    transform: translateX(-100%) scale(0, 1);
+    transition: 1s;
   }
 }
 
