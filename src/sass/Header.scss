@@ -17,9 +17,13 @@
 				padding: 5px 20px;
       }
     }
-		.logo-title {
-			color: $purple-light;
-      font-size: 30px;
+    .button-logo {
+      background-color: transparent;
+      border: none;
+      .logo-title {
+        color: $purple-light;
+        font-size: 30px;
+      }
     }
   }
 	#header-menu {
@@ -56,6 +60,8 @@
             border-bottom: 2px solid $purple-light;
           }
         }
+      }
+      .button-logo {
         .logo-title {
           font-size: unset();
         }
