@@ -13,6 +13,7 @@ import shoppingCart from '../images/projetos/shopping-cart.png';
 import colorGuess from '../images/projetos/color-guess.png';
 import memeGenerator from '../images/projetos/meme-generator.png';
 import netflixInterface from '../images/projetos/netflix-interface.png';
+import codeImage from '../images/projetos/code.png';
 
 const PROJETO_DESTAQUE = ['Pixel Art', 'To do List', 'Trybewarts', 'E-commerce', 'Trybewallet',
 'TrybeTunes', 'Trivia', 'Davsom'];
@@ -51,7 +52,7 @@ export const PROJECTS = [
   // {
   //   name: 'E-commerce',
   //   image: eCommerce,
-  //   technologies: ['react', 'css3', 'reactRouter', 'redux', 'nodejs', 'typescript', 'express', 'git', 'github'],
+  //   technologies: ['react', 'css3', 'reactRouter', 'redux', 'nodejs', 'typescript', 'express', 'git', 'github', 'mysql'],
   //   'E-commerce': {
   //     message: 'Projeto desenvolvido como conclusão do Bootcamp de Front-End Developer do banco Inter, com um front-end que realiza a comunicação ao back-end e é gerenciado por um banco de dados.',
   //     site: '',
@@ -166,6 +167,116 @@ export const PROJECTS = [
       message: 'Projeto é uma página com a interface do Netflix, com aparência similar e utilizando API de filmes para os gêneros.',
       site: 'https://bicabenedicto.github.io/Netflix-Interface/',
       rep: 'https://github.com/BicaBenedicto/Netflix-Interface',
+    },
+  },
+  {
+    name: 'Docker Todo List',
+    image: codeImage,
+    technologies: ['docker', 'git', 'github'],
+    'Docker Todo List': {
+      message: 'Projeto de unificação de Front-end, Back-end e testes, utilizando o Docker em aplicação já pronta.',
+      site: '',
+      rep: 'https://github.com/BicaBenedicto/docker-todo-list',
+    },
+  },
+  {
+    name: 'Jest',
+    image: codeImage,
+    technologies: ['jest','javascript', 'git', 'github'],
+    'Jest': {
+      message: 'Testes unitários para código já criado anteriormente com testes assíncronos e mockagem de resultados utilizando o Jest.',
+      site: '',
+      rep: 'https://github.com/BicaBenedicto/jest',
+    },
+  },
+  {
+    name: 'Js Unit Tests',
+    image: codeImage,
+    technologies: ['jest','javascript', 'git', 'github'],
+    'Js Unit Tests': {
+      message: 'Códigos em javascript completando pequenos desafios com testes unitários com implementação de testes unitários em códigos já feitos.',
+      site: '',
+      rep: 'https://github.com/BicaBenedicto/js-unit-tests',
+    },
+  },
+  {
+    name: 'MySql All for One',
+    image: codeImage,
+    technologies: ['mysql', 'git', 'github'],
+    'MySql All for One': {
+      message: 'Resolução de desafios em interação com banco de dados utilizando Mysql.',
+      site: '',
+      rep: 'https://github.com/BicaBenedicto/mysql-all-for-one',
+    },
+  },
+  {
+    name: 'MySql One for All',
+    image: codeImage,
+    technologies: ['mysql', 'git', 'github'],
+    'MySql One for All': {
+      message: 'Resolução de desafios em interação, manipulação e criação de banco de dados utilizando Mysql.',
+      site: '',
+      rep: 'https://github.com/BicaBenedicto/mysql-one-for-all',
+    },
+  },
+  {
+    name: 'Playground Functions',
+    image: codeImage,
+    technologies: ['javascript', 'git', 'github'],
+    'Playground Functions': {
+      message: 'Códigos em javascript completando diversos desafios.',
+      site: '',
+      rep: 'https://github.com/BicaBenedicto/playground-functions',
+    },
+  },
+  {
+    name: 'React Testing Library',
+    image: codeImage,
+    technologies: ['testingLibrary', 'git', 'github'],
+    'React Testing Library': {
+      message: 'Realização de testes unitário com RTL em aplicação React já pronta.',
+      site: '',
+      rep: 'https://github.com/BicaBenedicto/react-testing-library',
+    },
+  },
+  {
+    name: 'Store Manager',
+    image: codeImage,
+    technologies: ['nodejs', 'expressjs', 'mochajs', 'sinonjs', 'chaijs', 'jest', 'git', 'github', 'mysql'],
+    'Store Manager': {
+      message: 'Criação de API, utilizando Node.js e a biblioteca Express, para gerenciamento de vendas e produtos, com diversas rotas para o gerenciamento e validações. Com testes unitários',
+      site: '',
+      rep: 'https://github.com/BicaBenedicto/store-manager',
+    },
+  },
+  {
+    name: 'Talker Manager',
+    image: codeImage,
+    technologies: ['nodejs', 'expressjs', 'git', 'github', 'mysql'],
+    'Talker Manager': {
+      message: 'Criação de API utilizando Node.js e Express com middlewares de validação e tratamento de erro e manipulação de arquivos e leitura.',
+      site: '',
+      rep: 'https://github.com/BicaBenedicto/talker-manager',
+    },
+  },
+  {
+    name: 'Teste de conhecimento',
+    image: codeImage,
+    technologies: ['javascript', 'git', 'github', 'mysql'],
+    'Teste de conhecimento': {
+      message: 'Questões de lógica e desafios diversos, manipulação de arquivos, tratamento, filtro, entre diversos outros',
+      site: '',
+      rep: 'https://github.com/BicaBenedicto/teste-de-conhecimento',
+    },
+  },
+  {
+    name: 'Zoo Functions',
+    image: codeImage,
+    technologies: ['jest','javascript', 'git', 'github'],
+    'Zoo Functions': {
+      message: 'Códigos em javascript completando pequenos desafios com testes unitários e funções',
+      site: '',
+      rep: 'https://github.com/BicaBenedicto/zoo-functions',
     },
   },
 ];

@@ -115,7 +115,7 @@ const hardskills = {
     image: kanban,
     message: '',
   },
-  express: {
+  expressjs: {
     name: 'Express.js',
     image: express,
     message: '',
