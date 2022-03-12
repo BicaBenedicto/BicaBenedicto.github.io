@@ -40,6 +40,21 @@
           padding: 0;
           position: relative;
         }
+        &.project-technologies {
+          justify-content: space-evenly;
+          div {
+            align-items: center;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            img {
+              height: 3vh;
+            }
+            p {
+              font-size: 12px;
+            }
+          }
+        }
       }
     }
     button.image-show {
@@ -52,24 +67,26 @@
       }
     }
 		span {
-			display: block;
+      align-items: center;
+			display: flex;
 			color: $purple-dark;
 			font-size: 40px;
 			font-weight: 600;
-    }
-  }
-	.project-show-exit {
-		background-color: transparent;
-		border: 1px solid $text-dark;
-		border-radius: 100%;
-		color: $text-dark;
-		cursor: pointer;
-		padding: 0 10px;
-		position: absolute;
-		top: -40px;
-		right: 20px;
-		&:hover {
-			filter: brightness(1.5);
+      justify-content: space-around;
+      width: 100%;
+      .project-show-exit {
+        background-color: transparent;
+        border: 1px solid $text-dark;
+        border-radius: 100%;
+        color: $text-dark;
+        cursor: pointer;
+        font-size: initial;
+        padding: 0 10px;
+        position: relative;
+        &:hover {
+          filter: brightness(1.5);
+        }
+      }
     }
   }
 	.hasShow {
@@ -134,6 +151,18 @@
               color: $project-link-hover;
               transition: 1s;
             }
+            &.project-technologies {
+              justify-content: space-evenly;
+              div {
+                align-items: center;
+                display: flex;
+                text-align: center;
+                flex-direction: column;
+                img {
+                  height: 5vh;
+                }
+              }
+            }
           }
         }
       }
@@ -160,16 +189,16 @@
         font-size: 40px;
         font-weight: 600;
         margin: 10px 0;
+        .project-show-exit {
+          background-color: transparent;
+          border-radius: 100%;
+          cursor: pointer;
+          padding: 0 10px;
+          position: absolute;
+          top: -20px;
+          right: -20px;
+        }
       }
-    }
-    .project-show-exit {
-      background-color: transparent;
-      border-radius: 100%;
-      cursor: pointer;
-      padding: 0 10px;
-      position: absolute;
-      top: -20px;
-      right: -20px;
     }
   }
 }

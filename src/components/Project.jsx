@@ -1,5 +1,6 @@
 import React, { useContext, useRef, useState } from 'react';
 import { PROJECTS } from '../assets/data';
+import HARDSKILLS from '../assets/data-hardskills';
 import '../sass/Project.scss';
 import Context from '../services/Context.js';
 import { useHistory } from 'react-router-dom';
@@ -15,7 +16,6 @@ export default function Contact() {
   const onClickImage = () => {
     setIsShowingImage(!isShowingImage);
   };
-
   return (
     <div
       className={hasShow ? 'project-show hasShow' : 'project-show hasHide'}
@@ -24,8 +24,25 @@ export default function Contact() {
         <img src={ image } alt={ name } className={ isShowingImage ? 'exhibition' : '' }/>
       </button>
       <div className={ isShowingImage ? "project-show-body not-exhibition" : "project-show-body yes-exhibition"}>
-        <span>{ name }</span>
+        <span>
+          { name }
+          <button
+            type="button"
+            className='project-show-exit'
+            onClick={ () => projectToggleShow(false)}
+          >
+            X
+          </button>
+        </span>
         <p>{ PROJECT[name].message }</p>
+        <div className="project-technologies">
+          { PROJECT.technologies && PROJECT.technologies.map((tech) => (
+            <div>
+              <img src={ HARDSKILLS[tech].image } alt={ HARDSKILLS[tech].name }/>
+              <p>{HARDSKILLS[tech].name}</p>
+            </div>
+          )) }
+        </div>
         <div>
           { PROJECT[name].site && (!PROJECT[name].site.includes('http')
             ? <button className="button-preview" onClick={() => history.push(PROJECT[name].site)}>
@@ -48,13 +65,6 @@ export default function Contact() {
               Código
             </a>}
           </div>
-          <button
-            type="button"
-            className='project-show-exit'
-            onClick={ () => projectToggleShow(false)}
-          >
-            X
-          </button>
       </div>
     </div>
   )
