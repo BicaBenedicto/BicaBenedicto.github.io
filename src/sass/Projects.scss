@@ -1,21 +1,30 @@
 @import './variables.scss';
 
 #portfolio {
-		h1.center-title {
+	h1.center-title {
+		display: block;
+		text-align: center;
+	}
+	main {
+		padding-top: 80px;
+		.filter-projects-select {
 			display: block;
-			text-align: center;
+			margin: 0 auto;
 		}
+	}
 	#projects {
 		align-items: center;
+		align-content: flex-start;
 		background: $transition-linear-light;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		margin: 0;
 		margin-bottom: 50px;
+		min-height: 100vh;
+		height: 100%;
 		width: 100%;
 		.project-div {
-			height: 150px;
 			position: relative;
 			background-color: transparent;
 			border: none;
@@ -44,14 +53,12 @@
 
 @media only screen and (min-width: 500px) {
   #portfolio #projects .project-div {
-		margin: 9% 0;
     width: 45%;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   #portfolio #projects .project-div {
-		margin: 2.5% 0;
     width: 20%;
   }
 }

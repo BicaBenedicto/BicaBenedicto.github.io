@@ -36,8 +36,8 @@ export default function Contact() {
         </span>
         <p>{ PROJECT[name].message }</p>
         <div className="project-technologies">
-          { PROJECT.technologies && PROJECT.technologies.map((tech) => (
-            <div>
+          { PROJECT.technologies && PROJECT.technologies.map((tech, index) => (
+            <div key={ index }>
               <img src={ HARDSKILLS[tech].image } alt={ HARDSKILLS[tech].name }/>
               <p>{HARDSKILLS[tech].name}</p>
             </div>
