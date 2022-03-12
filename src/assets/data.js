@@ -15,8 +15,8 @@ import memeGenerator from '../images/projetos/meme-generator.png';
 import netflixInterface from '../images/projetos/netflix-interface.png';
 import codeImage from '../images/projetos/code.png';
 
-const PROJETO_DESTAQUE = ['Pixel Art', 'To do List', 'Trybewarts', 'E-commerce', 'Trybewallet',
-'TrybeTunes', 'Trivia', 'Davsom'];
+const PROJETO_DESTAQUE = ['Store Manager', 'To do List', 'Trybewarts', 'SpotiTrybe', 'Trybewallet',
+'React Testing Library', 'TrybeTunes', 'Davsom', 'Docker Todo List'];
 
 export const PROJECTS = [
   {
