@@ -1,42 +1,78 @@
-import React from 'react';
-import githubIcon from '../images/github-icon.webp';
-import gitIcon from '../images/git-icon.webp';
-import htmlIcon from '../images/html-icon.webp';
-import cssIcon from '../images/html-icon.webp';
-import javascriptIcon from '../images/javascript-icon.webp';
-import bootstrapIcon from '../images/bootstrap logo.png';
-import tailwindIcon from '../images/tail wind css.png';
-import sassIcon from '../images/sass logo.png';
-import phpIcon from '../images/php-icon.webp';
-import reactIcon from '../images/react.png';
-import reduxIcon from '../images/redux.png';
-import dockerIcon from '../images/docker logo.png';
-import mysqlIcon from '../images/mysql logo.png';
-import illustration from '../images/undraw_programming_re_kg9v.svg';
-import '../css/Skills.css';
+import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import hardskills from '../assets/data-hardskills.js'
+import eu from '../images/eu.jpeg'
 
-export default function Skills() {
+import illustration from '../images/undraw_programming_re_kg9v.svg';
+import '../sass/Skills.scss';
+
+const quantifyShow = Object.values(hardskills).length;
+
+function Skills() {
+  const [arrActual, setArrActual] = useState(Object.values(hardskills));
+  const [indexG, setIndex] = useState(0);
+  const [object, setObject] = useState({});
+  let indexGlobal = 0;
+
+  useEffect(
+    () => {
+      const id = setInterval(() => {
+        if(indexGlobal >= arrActual.length - 1) {
+          indexGlobal = 0;
+        } else {
+          indexGlobal += 1;
+        }
+        setIndex(indexGlobal);
+      }, 1500);
+      return () => {
+        clearInterval(id);
+      };
+    },
+    [] // empty dependency array
+  );
+
+  useEffect(() => {
+    const newObject = arrActual.reduce((acc, _value, index, array) => {
+      return {...acc, [index]: (indexG + index >= array.length ? (indexG + index) - (array.length) : indexG + index)};
+  } ,{});
+  setObject(newObject);
+  }, [indexG]);
+
+  const classesAnimation = {};
+
+  for(let i = 0; i < quantifyShow; i += 1) {
+    classesAnimation[i] = (i <= (quantifyShow / 2)
+      ? `shadow-right-${Math.floor(quantifyShow / 2) - i + 1}`
+      : `shadow-left-${i - Math.floor(quantifyShow / 2)}`
+    )
+  }
+
+  const carouselShowing = (arr) => {
+    return arr.map(({name, image}, index) => {
+      const classActual = classesAnimation[object[index]] || 'shadow';
+      return (
+        <li className={`hardskills-item ${classActual}`} key={ name }>
+          <img className={ `hardskills-img ${name === 'Sinon.js' ? 'sinonjs' : ''}` } src={ image } alt={ `${name}-icon` }/>
+          {name}
+        </li>
+      );
+    });
+  };
+
   return (
     <section id='skills'>
-      <img src={ illustration } className="illustration" alt="illustration"/>
-      <div className='center-down hard-skills'>
-        <h4 className='center-title'>HardSkills</h4>
-        <ul id='hardskills'>
-          <li className='hardskills-item'><img className='hardskills-img' src={ githubIcon } alt='git-icon'/>GitHub</li>
-          <li className='hardskills-item'><img className='hardskills-img' src={ gitIcon } alt='git-icon'/>Git</li>
-          <li className='hardskills-item'><img className='hardskills-img' src={ htmlIcon } alt='html-icon'/>Html5</li>
-          <li className='hardskills-item'><img className='hardskills-img' src={ cssIcon } alt='css-icon'/>Css3</li>
-          <li className='hardskills-item'><img className='hardskills-img' src={ javascriptIcon } alt='javascript-icon'/>Javascript</li>
-          <li className='hardskills-item'><img className='hardskills-img' src={ bootstrapIcon } alt='php-icon'/>Bootstrap</li>
-          <li className='hardskills-item'><img className='hardskills-img' src={ tailwindIcon } alt='php-icon'/>Tailwind CSS</li>
-          <li className='hardskills-item'><img className='hardskills-img' src={ sassIcon } alt='php-icon'/>SASS</li>
-          <li className='hardskills-item'><img className='hardskills-img' src={ phpIcon } alt='php-icon'/>PHP</li>
-          <li className='hardskills-item'><img className='hardskills-img' src={ reactIcon } alt='php-icon'/>React</li>
-          <li className='hardskills-item'><img className='hardskills-img' src={ reduxIcon } alt='php-icon'/>Redux</li>
-          <li className='hardskills-item'><img className='hardskills-img' src={ dockerIcon } alt='php-icon'/>Docker</li>
-          <li className='hardskills-item'><img className='hardskills-img' src={ mysqlIcon } alt='php-icon'/>MySQL</li>
+      <div className='' style={{ 'width': '100%'}}>
+        <ul
+          className="hardskills"
+        >
+        <h3 className='center-title top'>Algumas das linguagens, bibliotecas e ferramentas que utilizo</h3>
+            {carouselShowing(arrActual)}
+        <h2 className='center-title bottom'>Fique tranquilo vou selecionar a ideal para o seu projeto</h2>
         </ul>
       </div>
+      <img src={ illustration } className="illustration" alt="illustration"/>
     </section>
   )
 };
+
+export default Skills;

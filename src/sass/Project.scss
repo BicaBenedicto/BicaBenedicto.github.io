@@ -1,0 +1,204 @@
+@import './variables.scss';
+
+#portfolio {
+	.project-show {
+		align-items: center;
+		background-color: rgba(0, 0, 0, 0.767);
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: center;
+		position: fixed;
+		top: 0;
+		height: 100vh;
+		width: 100%;
+		z-index: 2000;
+		div.project-show-body {
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			position: relative;
+      transition: 1s;
+			p {
+				display: block;
+				position: relative;
+				color: $text-dark;
+        margin: 20px 0;
+				width: 95%;
+      }
+      div {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        .button-preview {
+          background-color: transparent;
+          border: none;
+          color: $project-link;
+          display: block;
+          font-weight: 600;
+          text-decoration: none;
+          padding: 0;
+          position: relative;
+        }
+        &.project-technologies {
+          justify-content: space-evenly;
+          div {
+            align-items: center;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            img {
+              height: 3vh;
+            }
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+    button.image-show {
+      background-color: transparent;
+      border: none;
+      img {
+        max-width: 100%;
+        margin: 20px 0;
+        position: relative;
+      }
+    }
+		span {
+      align-items: center;
+			display: flex;
+			color: $purple-dark;
+			font-size: 40px;
+			font-weight: 600;
+      justify-content: space-around;
+      width: 100%;
+      .project-show-exit {
+        background-color: transparent;
+        border: 1px solid $text-dark;
+        border-radius: 100%;
+        color: $text-dark;
+        cursor: pointer;
+        font-size: initial;
+        padding: 0 10px;
+        position: relative;
+        &:hover {
+          filter: brightness(1.5);
+        }
+      }
+    }
+  }
+	.hasShow {
+    transform: translateX(0) scale(1);
+    transition: 1s;
+  }
+	.hasHide {
+    transform: translateX(-100%) scale(0, 1);
+    transition: 1s;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  #portfolio {
+    .project-show {
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.767);
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      position: fixed;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 2000;
+      div.project-show-body {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        transition: 1s;
+        &.yes-exhibition {
+          transform: scale(1) translateX(0);
+          width: 40vw;
+        }
+        &.not-exhibition {
+          width: 0vw !important;
+          transform: scale(0) translateX(2000px);
+        }
+        p {
+          display: block;
+          position: relative;
+          width: 100%;
+        }
+        div {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          .button-preview {
+            background-color: transparent;
+            border: 1px solid transparent;
+            color: $project-link;
+            display: block;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 1s;
+            padding: 0;
+            position: relative;
+            &:hover {
+              border-bottom: 1px solid $project-link;
+              color: $project-link-hover;
+              transition: 1s;
+            }
+            &.project-technologies {
+              justify-content: space-evenly;
+              div {
+                align-items: center;
+                display: flex;
+                text-align: center;
+                flex-direction: column;
+                img {
+                  height: 5vh;
+                }
+              }
+            }
+          }
+        }
+      }
+      button.image-show {
+        background-color: transparent;
+        border: none;
+        img {
+          max-width: 40vw;
+          margin: 0 20px;
+          position: relative;
+          &.exhibition {
+            position: relative;
+            top: 0;
+            left: 0;
+            transition: 1s;
+            max-width: 100%;
+            margin: 0;
+            width: 100%;
+          }
+        }
+      }
+      span {
+        display: block;
+        font-size: 40px;
+        font-weight: 600;
+        margin: 10px 0;
+        .project-show-exit {
+          background-color: transparent;
+          border-radius: 100%;
+          cursor: pointer;
+          padding: 0 10px;
+          position: absolute;
+          top: -20px;
+          right: -20px;
+        }
+      }
+    }
+  }
+}

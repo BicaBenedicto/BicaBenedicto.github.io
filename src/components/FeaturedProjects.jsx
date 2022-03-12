@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import Slider from 'infinite-react-carousel';
 import ProjectItem from './ProjectItem';
 import { FEATURED_PROJECTS } from '../assets/data';
-import '../css/FeaturedProjects.css';
+import '../sass/FeaturedProjects.scss';
 import { Link } from 'react-router-dom';
 
 export default function FeaturedProjects({ lookAll }) {
@@ -23,12 +23,13 @@ export default function FeaturedProjects({ lookAll }) {
       ref={ screenSize }
       onLoad={ onLoadComponent }
     >
-      <h1 className='center-title'>Projetos Destaque</h1>
+      <h1 className='center-title'>Meus projetos favoritos</h1>
       {lookAll && <Link to='/projects' className="look-all">Mostrar todos</Link>}
       <Slider
         arrowsScroll={ slides }
         autoplay
         autoplayScroll={ slides }
+        className="slider-div"
         dots
         dotsScroll={ slides }
         duration={ 300 }
@@ -37,6 +38,7 @@ export default function FeaturedProjects({ lookAll }) {
         slidesToShow={ slides }
         wheel
         wheelScroll={ slides }
+        onResize={ onLoadComponent }
       >
         {FEATURED_PROJECTS.map(({name, image}) => (
           <ProjectItem

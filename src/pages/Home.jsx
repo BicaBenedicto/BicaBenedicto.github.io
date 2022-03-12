@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import '../css/App.css';
+import '../sass/Home.scss';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import About from '../components/About';
@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Header isRoot={ true } />
-      <main className={projectHasShow ? 'blur' : 'not-blur'}>
+      <main className={projectHasShow ? 'blur' : 'not-blur'} style={{ 'margin': '0 auto','maxWidth': '1700px' }}>
         <About />
         <Skills />
         <FeaturedProjects lookAll={ true} />

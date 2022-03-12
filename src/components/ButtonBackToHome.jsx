@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import '../css/ButtonBackToHome.css';
+import '../sass/ButtonBackToHome.scss';
 
 export default function ButtonBackToHome() {
   const history = useHistory();

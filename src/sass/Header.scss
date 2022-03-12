@@ -1,0 +1,82 @@
+@import './variables.scss';
+
+#portfolio {
+	#header-top {
+		align-content: center;
+		align-items: center;
+		background-color: $header-light;
+		display: flex;
+		color: $header-text;
+		flex-flow: column;
+		justify-content: center;
+		padding: 10px 0;
+		width: 100%;
+		#header-menu {
+			.nav-link {
+				display: inline-block;
+				padding: 5px 20px;
+      }
+    }
+    .button-logo {
+      background-color: transparent;
+      border: none;
+      .logo-title {
+        color: $purple-light;
+        font-size: 30px;
+      }
+    }
+  }
+	#header-menu {
+		display: none;
+  }
+	#logo {
+		border-radius: 100%;
+		margin-bottom: 10px;
+		width: 50px;
+  }
+}
+
+.nav-link {
+	color: $header-text;
+	text-decoration: none;
+}
+
+
+@media only screen and (min-width: 1000px) {
+  #portfolio {
+    #header-top {
+      flex-flow: row;
+      justify-content: space-between;
+      position: fixed;
+      z-index: 30;
+      #header-menu {
+        .nav-link {
+          border-bottom: 2px solid transparent;
+          color: $header-text;
+          display: inline-block;
+          font-weight: 600;
+          padding: 0 50px;
+          &:hover {
+            border-bottom: 2px solid $purple-light;
+          }
+        }
+      }
+      .button-logo {
+        .logo-title {
+          font-size: unset();
+        }
+      }
+    }
+    #header-menu {
+      display: block;
+    }
+    #logo {
+      border-radius: 100%;
+      width: 50px;
+    }
+  }
+
+  #portfolio #header-top h1, #header-top nav {
+    margin: 20px 40px;
+  }
+}

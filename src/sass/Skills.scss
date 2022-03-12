@@ -1,0 +1,141 @@
+@import './variables.scss';
+@import './carouselAnimation.scss';
+
+#portfolio {
+  #skills {
+    align-items: center;
+    background: $transition-linear-light;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 100px 0;
+    position: relative;
+    width: 100%;
+    div {
+      width: 100%;
+      .hardskills {
+        display: flex;
+        flex-flow: wrap;
+        position: relative;
+        padding-top: 200px;
+        margin: 0 auto;
+        width: 100%;
+      }
+      li.hardskills-item {
+        align-items: center;
+        align-content: center;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-end;
+        transition: 1s;
+        position: absolute;
+        height: 30px;
+        top: 130px;
+        left: 25%;
+        width: 52%;
+        &.shadow {
+          animation: shadow 1s ease-in-out both;
+        }
+        .sinonjs {
+          background-color: white;
+          border-radius: 100%;
+        }
+      }
+      .hardskills-img {
+        margin-bottom: 10px;
+        width: 50px;
+      }
+      .center-title {
+        display: block;
+        position: absolute;
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+        margin: 0 auto;
+        width: 100%;
+        &.top {
+          top: 0;
+          left: 0;
+        }
+        &.bottom {
+          color: $purple-dark;
+          font-style: italic;
+          left: 0;
+          bottom: 0;
+          transform: translateY(40px);
+        }
+      }
+    }
+    .illustration {
+      display: none;
+    }
+  }
+}
+
+@include carouselAnimation($skills-mobile, $sides-mobile, $size-mobile);
+
+@media only screen and (min-width: 1000px) {
+  #portfolio {
+    #skills {
+      align-items: center;
+      background: $transition-linear-light;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+      margin: 0 auto;
+      padding: 100px 80px;
+      position: relative;
+      .hardskills {
+        display: flex;
+        flex-flow: wrap;
+        position: relative;
+        padding-top: 200px;
+        margin: 0 auto;
+      }
+      li.hardskills-item {
+        align-items: center;
+        align-content: center;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-end;
+        transition: 1s;
+        position: absolute;
+        height: 30px;
+        top: 130px;
+        right: 50%;
+        &.shadow {
+          animation: shadow 1s ease-in-out both;
+        }
+      }
+      .hardskills-img {
+        margin-bottom: 10px;
+        width: 50px;
+      }
+      .center-title {
+        display: block;
+        position: absolute;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 25px!important;
+        width: 100%;
+        &.top {
+          transform: translateY(-80px);
+        }
+        &.bottom {
+          color: $purple-dark;
+          font-style: italic;
+          transform: translateY(30px);
+        }
+      }
+      .illustration {
+        display: block;
+      }
+    }
+  }
+  @include carouselAnimation($skills, $sides, $size);
+  @media only screen and (max-width: 1250px) {
+    $size-middle: 0.11;
+    @include carouselAnimation($skills, $sides, $size-middle);
+  }
+}

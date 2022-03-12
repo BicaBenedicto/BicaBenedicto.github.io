@@ -1,7 +1,7 @@
 import React from 'react';
-import linkedin from '../images/linkedin-icon.webp';
-import github from '../images/github-icon.webp';
-import '../css/Footer.css';
+import linkedin from '../images/icons/linkedin.svg';
+import github from '../images/icons/github.svg';
+import '../sass/Footer.scss';
 
 export default function Footer() {
   return (
@@ -12,7 +12,7 @@ export default function Footer() {
           <img className='rede-social' src={ linkedin } alt='Linkedin'/>
         </a>
         <a href='https://github.com/BicaBenedicto' target='_blank' rel="noreferrer">
-          <img className='rede-social git' src={ github } alt='GitHub'/>
+          <img className='rede-social' src={ github } alt='GitHub'/>
         </a>
       </div>
       <a href="mailto:gabrielpbenedicto@gmail.com" className="link-none">
