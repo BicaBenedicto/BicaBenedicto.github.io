@@ -23,6 +23,8 @@ import styledComponents from '../images/icons/styled-components.svg';
 import mochajs from '../images/icons/mochajs.svg';
 import chaijs from '../images/icons/chaijs.svg';
 import sinonjs from '../images/icons/sinonjs.svg';
+import sequelizejs from '../images/icons/sequelizejs.svg';
+import jwt from '../images/icons/jwt.svg';
 
 const hardskills = {
   bootstrap: {
@@ -148,6 +150,16 @@ const hardskills = {
   sinonjs: {
     name: 'Sinon.js',
     image: sinonjs,
+    message: '',
+  },
+  sequelizejs: {
+    name: 'Sequelize.js',
+    image: sequelizejs,
+    message: '',
+  },
+  jwt: {
+    name: 'JSON Web Tokens',
+    image: jwt,
     message: '',
   },
 };

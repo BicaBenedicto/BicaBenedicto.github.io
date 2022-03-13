@@ -279,6 +279,16 @@ export const PROJECTS = [
       rep: 'https://github.com/BicaBenedicto/zoo-functions',
     },
   },
+  {
+    name: 'Blogs API',
+    image: codeImage,
+    technologies: ['nodejs', 'expressjs', 'sequelizejs', 'jwt', 'git', 'github'],
+    'Blogs API': {
+      message: 'Back-end criação de API de Blog, com token e validação de tokens, criação de usuário, post, categorias, utilizando o Node.js, Express, Sequelize e JWT',
+      site: '',
+      rep: 'https://github.com/BicaBenedicto/blogs-api',
+    },
+  },
 ];
 
 export const FEATURED_PROJECTS = PROJECTS.filter((item) => PROJETO_DESTAQUE.some((name) => item.name === name));
