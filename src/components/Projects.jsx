@@ -1,11 +1,24 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import ProjectItem from './ProjectItem';
 import { PROJECTS } from '../assets/data';
 import '../sass/Projects.scss';
+import Context from '../services/Context';
+import styled from 'styled-components';
 
 export default function Projects({ search }) {
+  const { theme } = useContext(Context);
+
+  const Section = styled.section`
+    background: ${props => props.theme[`transitionLinear${theme}`]};
+    .project {
+      span {
+        background-color: ${props => props.theme[`purple${theme}`]};
+      }
+    }
+  `;
+
   return (
-    <section
+    <Section
       id='projects'
     >
       {PROJECTS.filter(({name, technologies}) => {
@@ -32,6 +45,6 @@ export default function Projects({ search }) {
         if(search === 'Todos') return true;
         return name.includes(search) || technologies.some((tech) => tech === search)})
       && (<h1>Poxa, ainda estou trabalhando com essa tecnologia, o projeto ainda não está pronto</h1>)}
-    </section>
+    </Section>
   )
 };

@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import hardskills from '../assets/data-hardskills.js'
-import eu from '../images/eu.jpeg'
-
+import Context from '../services/Context';
 import illustration from '../images/undraw_programming_re_kg9v.svg';
 import '../sass/Skills.scss';
 
 const quantifyShow = Object.values(hardskills).length;
 
 function Skills() {
-  const [arrActual, setArrActual] = useState(Object.values(hardskills));
+  const { theme } = useContext(Context);
+  const [arrActual, _setArrActual] = useState(Object.values(hardskills));
   const [indexG, setIndex] = useState(0);
   const [object, setObject] = useState({});
   let indexGlobal = 0;
@@ -59,8 +59,18 @@ function Skills() {
     });
   };
 
+  const Section = styled.section`
+    background: ${props => props.theme[`transitionLinear${theme}`]};
+    .hardskills-item {
+      color: ${props => props.theme[`text${theme}`]};
+    };
+    .bottom {
+      color: ${props => props.theme.purpleDark};
+    };
+  `;
+
   return (
-    <section id='skills'>
+    <Section id='skills'>
       <div className='' style={{ 'width': '100%'}}>
         <ul
           className="hardskills"
@@ -71,7 +81,7 @@ function Skills() {
         </ul>
       </div>
       <img src={ illustration } className="illustration" alt="illustration"/>
-    </section>
+    </Section>
   )
 };
 

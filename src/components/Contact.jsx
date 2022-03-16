@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Spinner } from 'react-bootstrap';
+import Context from '../services/Context';
 import linkedin from '../images/icons/linkedin.svg';
 import github from '../images/icons/github.svg';
 import whatsapp from '../images/icons/whatsapp.svg';
@@ -8,6 +9,7 @@ import telegram from '../images/icons/telegram.svg';
 import instagram from '../images/icons/instagram.svg';
 import gmail from '../images/icons/gmail.svg';
 import '../sass/Contact.scss';
+import styled from 'styled-components';
 
 const SERVICE_ID = 'service_b4xnyht';
 const TEMPLATE_ID = 'template_a7eg9en';
@@ -28,6 +30,7 @@ const ERROR_ICON = (
 const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
 export default function Contact() {
+  const { theme } = useContext(Context);
   const form = useRef();
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
@@ -81,8 +84,24 @@ export default function Contact() {
     }
   };
 
+  const DIV = styled.div`
+    background: ${props => props.theme[`transitionLinear${theme}`]};
+  `;
+
+  const Button = styled.button`
+    background-color: ${props => props.theme[`button${theme}`]};
+    color: ${props => props.theme.buttonText};
+  `;
+
+  const A = styled.a`
+    &:hover {
+      background-color: ${props => props.theme[`purple${theme}`]};
+      color: ${props => props.theme.buttonText} !important;
+    }
+  `;
+
   return (
-    <div id="portfolio-contact" className="local-bootstrap">
+    <DIV id="portfolio-contact" className="local-bootstrap">
       <h1 className='center-title'>Contatos</h1>
       <div className="contact-body">
         <form ref={ form } onSubmit={ sendForm }>
@@ -115,12 +134,12 @@ export default function Contact() {
           <div className="button-form-contact">
             {loading
             ? <Spinner animation="border" variant="primary" />
-            : <button
+            : <Button
                 type="submit"
                 disabled={ isDisabled }
               >
                 Enviar
-              </button>}
+              </Button>}
             { sendStatus() }
           </div>
         </form>
@@ -128,30 +147,30 @@ export default function Contact() {
           <h2 className='center-title'>Agora é com você, estou à disposição para conversar sobre o que você precisa</h2>
           <div className="other-contacts">
             <div>
-              <a href='https://api.whatsapp.com/send?phone=5511986629946' target='_blank' rel="noreferrer">
+              <A href='https://api.whatsapp.com/send?phone=5511986629946' target='_blank' rel="noreferrer">
                 <img src={ whatsapp } alt='Whatsapp'/> Whatsapp
-              </a>
-              <a href='https://t.me/gabrielbenedicto' target='_blank' rel="noreferrer">
+              </A>
+              <A href='https://t.me/gabrielbenedicto' target='_blank' rel="noreferrer">
                 <img src={ telegram } alt='Telegram'/> Telegram
-              </a>
-              <a href='https://www.linkedin.com/in/gabrielbenedicto/' target='_blank' rel="noreferrer">
+              </A>
+              <A href='https://www.linkedin.com/in/gabrielbenedicto/' target='_blank' rel="noreferrer">
                 <img src={ linkedin } alt='Linkedin'/> Linkedin
-              </a>
+              </A>
             </div>
             <div className="right-side">
-              <a href='https://github.com/BicaBenedicto' target='_blank' rel="noreferrer">
+              <A href='https://github.com/BicaBenedicto' target='_blank' rel="noreferrer">
                 <img src={ github } alt='GitHub'/> GitHub
-              </a>
-              <a href='https://www.instagram.com/gabrielbenedicto/' target='_blank' rel="noreferrer">
+              </A>
+              <A href='https://www.instagram.com/gabrielbenedicto/' target='_blank' rel="noreferrer">
                 <img src={ instagram } alt='instagram'/> Instagram
-              </a>
-              <a href='mailto:gabrielpbenedicto@gmail.com' rel="noreferrer">
+              </A>
+              <A href='mailto:gabrielpbenedicto@gmail.com' rel="noreferrer">
                 <img src={ gmail } alt='Gmail'/> Gmail
-              </a>
+              </A>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </DIV>
   )
 };

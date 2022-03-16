@@ -4,9 +4,7 @@
 	#header-top {
 		align-content: center;
 		align-items: center;
-		background-color: $header-light;
 		display: flex;
-		color: $header-text;
 		flex-flow: column;
 		justify-content: center;
 		padding: 10px 0;
@@ -21,7 +19,6 @@
       background-color: transparent;
       border: none;
       .logo-title {
-        color: $purple-light;
         font-size: 30px;
       }
     }
@@ -37,7 +34,6 @@
 }
 
 .nav-link {
-	color: $header-text;
 	text-decoration: none;
 }
 
@@ -51,14 +47,9 @@
       z-index: 30;
       #header-menu {
         .nav-link {
-          border-bottom: 2px solid transparent;
-          color: $header-text;
           display: inline-block;
           font-weight: 600;
           padding: 0 50px;
-          &:hover {
-            border-bottom: 2px solid $purple-light;
-          }
         }
       }
       .button-logo {

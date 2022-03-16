@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Route, Switch } from 'react-router';
+import styled from 'styled-components';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Trybewallet from './projects/builds/trybewallet/App';
@@ -10,20 +11,27 @@ import ButtonBackToHome from './components/ButtonBackToHome';
 import './assets/output.css';
 import './App.css';
 import NotFound from './pages/NotFound';
+import Context from './services/Context';
 
 export default function App() {
+  const { theme } = useContext(Context);
+
+  const Portfolio = styled.div`
+    background-color: ${props => props.theme[`background${theme}`]};
+    color: ${props => props.theme[`text${theme}`]};
+  `;
 
   return (
     <Switch>
       <Route exact path="/">
-        <div id="portfolio">
+        <Portfolio id="portfolio">
           <Home />
-        </div>
+        </Portfolio>
       </Route>
       <Route exact path="/projects">
-        <div id="portfolio">
+        <Portfolio id="portfolio">
           <Projects />
-        </div>
+        </Portfolio>
       </Route>
       <Route path="/projects/trybewallet">
         <div id="trybewallet">
@@ -50,9 +58,9 @@ export default function App() {
         </div>
       </Route>
       <Route path="*">
-        <div id="portfolio">
+        <Portfolio id="portfolio">
           <NotFound />
-        </div>
+        </Portfolio>
       </Route>
     </Switch>
   );

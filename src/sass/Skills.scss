@@ -4,7 +4,6 @@
 #portfolio {
   #skills {
     align-items: center;
-    background: $transition-linear-light;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -59,7 +58,6 @@
           left: 0;
         }
         &.bottom {
-          color: $purple-dark;
           font-style: italic;
           left: 0;
           bottom: 0;
@@ -79,7 +77,6 @@
   #portfolio {
     #skills {
       align-items: center;
-      background: $transition-linear-light;
       display: flex;
       justify-content: space-around;
       flex-direction: row;
@@ -123,7 +120,6 @@
           transform: translateY(-80px);
         }
         &.bottom {
-          color: $purple-dark;
           font-style: italic;
           transform: translateY(30px);
         }

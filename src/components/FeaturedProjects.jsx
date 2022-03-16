@@ -1,11 +1,14 @@
-import React, { useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import Slider from 'infinite-react-carousel';
 import ProjectItem from './ProjectItem';
 import { FEATURED_PROJECTS } from '../assets/data';
 import '../sass/FeaturedProjects.scss';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import Context from '../services/Context';
 
 export default function FeaturedProjects({ lookAll }) {
+  const { theme } = useContext(Context);
   const screenSize = useRef(null);
   const [slides, setSlideQuant] = useState(3);
   
@@ -16,8 +19,14 @@ export default function FeaturedProjects({ lookAll }) {
     return setSlideQuant(3);
   };
 
+  const Section = styled.section`
+    .carousel-arrow {
+      background-color: ${props => props.theme[`header${theme}`]}
+    }
+  `;
+
   return (
-    <section
+    <Section
       id='project'
       className='container'
       ref={ screenSize }
@@ -48,6 +57,6 @@ export default function FeaturedProjects({ lookAll }) {
           />
         ))}
       </Slider>
-    </section>
+    </Section>
   )
 };

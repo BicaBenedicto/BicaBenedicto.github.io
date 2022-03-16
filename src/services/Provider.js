@@ -5,6 +5,7 @@ export default function Provider({ children }) {
   const [projectName, setProjectName] = useState('Pixel Art');
   const [projectImage, setProjectImage] = useState('');
   const [projectHasShow, projectToggleShow] = useState(false);
+  const [theme, isDarkTheme] = useState(true);
 
   const STORE = {
     projects: {
@@ -15,6 +16,8 @@ export default function Provider({ children }) {
       projectHasShow,
       projectToggleShow,
     },
+    theme: (theme ? 'Dark' : 'Light'),
+    isDarkTheme,
   };
 
   return (

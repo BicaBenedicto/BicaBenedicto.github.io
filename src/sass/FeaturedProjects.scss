@@ -77,7 +77,6 @@
         }
         .carousel-arrow {
           display: flex;
-          background-color: $header-light;
           filter: opacity(0.5);
           transition: 1s;
           &:hover {
