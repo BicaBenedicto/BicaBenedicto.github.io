@@ -18,7 +18,7 @@ const theme = {
   buttonDark: '#6b63ff',
   headerDark: 'black',
   purpleDark: '#6b63ff',
-  textDark: 'rgb(245, 245, 245)',
+  textDark: '#ccc',
   transitionLinearDark: 'linear-gradient(0deg, hsl(0, 0%, 8%) 0%, hsl(0, 0% ,12%) 20%, hsl(0, 0%,10%) 80%, hsl(0, 0%, 8%) 100%)',
 
   // Light mode colors
