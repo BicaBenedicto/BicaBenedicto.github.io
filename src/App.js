@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Route, Switch } from 'react-router';
 import styled from 'styled-components';
 import Home from './pages/Home';
@@ -14,12 +14,17 @@ import NotFound from './pages/NotFound';
 import Context from './services/Context';
 
 export default function App() {
-  const { theme } = useContext(Context);
+  const { theme, isDarkTheme } = useContext(Context);
 
   const Portfolio = styled.div`
     background-color: ${props => props.theme[`background${theme}`]};
     color: ${props => props.theme[`text${theme}`]};
   `;
+
+  useEffect(() => {
+  const themeUser = window.matchMedia('(prefers-color-scheme: dark)');
+  themeUser.matches ? isDarkTheme(true) : isDarkTheme(false);
+  }, []);
 
   return (
     <Switch>

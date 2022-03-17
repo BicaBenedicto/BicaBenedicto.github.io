@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
-import illustration from '../images/eu.jpeg';
+// import illustration from '../images/eu.jpeg';
+import illustration from '../images/test.png';
 import illustration2 from '../images/undraw_hello_re_3evm.svg';
 import styled from 'styled-components';
 import '../sass/About.scss';
