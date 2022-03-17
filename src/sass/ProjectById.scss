@@ -1,0 +1,13 @@
+#portfolio {
+  div.project-individual {
+    min-height: 100vh;
+    height: 100%;
+    padding: 100px 0;
+    width: 100%;
+    iframe {
+      min-height: 100vh;
+      height: 100%;
+      width: 100%;
+    }
+  };
+};

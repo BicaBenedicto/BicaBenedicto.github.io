@@ -19,7 +19,7 @@ export default function Footer() {
           <img className='rede-social' src={ linkedin } alt='Linkedin'/>
         </a>
         <a href='https://github.com/BicaBenedicto' target='_blank' rel="noreferrer">
-          <img className='rede-social' src={ github } alt='GitHub'/>
+          <img className='rede-social git' src={ github } alt='GitHub'/>
         </a>
       </div>
       <a href="mailto:gabrielpbenedicto@gmail.com" className="link-none">

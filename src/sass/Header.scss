@@ -9,11 +9,11 @@
 		justify-content: center;
 		padding: 10px 0;
 		width: 100%;
-		#header-menu {
-      display: flex;
-			.nav-link {
-				display: block;
-				padding: 5px 20px;
+    #header-menu {
+      display: none;
+      .nav-link {
+        display: block;
+        padding: 5px 20px;
       }
     }
     .button-logo {
@@ -23,9 +23,6 @@
         font-size: 30px;
       }
     }
-  }
-	#header-menu {
-		display: none;
   }
 	#logo {
 		border-radius: 100%;
@@ -47,6 +44,7 @@
       position: fixed;
       z-index: 30;
       #header-menu {
+        display: flex;
         .nav-link {
           font-weight: 600;
           padding: 0 50px;
@@ -134,9 +132,6 @@
           font-size: unset();
         }
       }
-    }
-    #header-menu {
-      display: block;
     }
     #logo {
       border-radius: 100%;

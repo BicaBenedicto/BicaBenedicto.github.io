@@ -148,24 +148,24 @@ export default function Contact() {
           <div className="other-contacts">
             <div>
               <A href='https://api.whatsapp.com/send?phone=5511986629946' target='_blank' rel="noreferrer">
-                <img src={ whatsapp } alt='Whatsapp'/> Whatsapp
+                <img src={ whatsapp } alt='Whatsapp' className="rede-social"/> Whatsapp
               </A>
               <A href='https://t.me/gabrielbenedicto' target='_blank' rel="noreferrer">
-                <img src={ telegram } alt='Telegram'/> Telegram
+                <img src={ telegram } alt='Telegram' className="rede-social"/> Telegram
               </A>
               <A href='https://www.linkedin.com/in/gabrielbenedicto/' target='_blank' rel="noreferrer">
-                <img src={ linkedin } alt='Linkedin'/> Linkedin
+                <img src={ linkedin } alt='Linkedin' className="rede-social"/> Linkedin
               </A>
             </div>
             <div className="right-side">
               <A href='https://github.com/BicaBenedicto' target='_blank' rel="noreferrer">
-                <img src={ github } alt='GitHub'/> GitHub
+                <img src={ github } alt='GitHub' className="rede-social git"/> GitHub
               </A>
               <A href='https://www.instagram.com/gabrielbenedicto/' target='_blank' rel="noreferrer">
-                <img src={ instagram } alt='instagram'/> Instagram
+                <img src={ instagram } alt='instagram' className="rede-social"/> Instagram
               </A>
               <A href='mailto:gabrielpbenedicto@gmail.com' rel="noreferrer">
-                <img src={ gmail } alt='Gmail'/> Gmail
+                <img src={ gmail } alt='Gmail' className="rede-social"/> Gmail
               </A>
             </div>
           </div>

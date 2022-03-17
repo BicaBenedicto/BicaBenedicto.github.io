@@ -29,7 +29,7 @@
 		.eu {
 			border-radius:  0 0 100% 100%;
 			filter: saturate(1.5);
-			height: 300px;
+			width: 90%;
 			margin: 40px 20px;
     }
   }
@@ -40,7 +40,7 @@
     #home {
       align-items: center;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       flex-direction: column;
       text-align: start;
       margin: 0 auto;
@@ -53,12 +53,18 @@
         flex-direction: row-reverse;
         margin: 20px 0;
         width: 80%;
+        .home-word-p {
+          padding-right: 15px;
+        }
       }
       .text-body-2 {
         align-items: center;
         display: flex;
         flex-direction: row;
         width: 80%;
+        .home-word-p {
+          padding-left: 15px;
+        }
       }
       .home-word-p {
         font-size: 20px;
@@ -75,6 +81,7 @@
         display: none;
       }
       .eu {
+        width: unset();
         height: 400px;
       }
     }

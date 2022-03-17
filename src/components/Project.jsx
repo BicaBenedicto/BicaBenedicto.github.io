@@ -38,7 +38,7 @@ export default function Contact() {
         <div className="project-technologies">
           { PROJECT.technologies && PROJECT.technologies.map((tech, index) => (
             <div key={ index }>
-              <img src={ HARDSKILLS[tech].image } alt={ HARDSKILLS[tech].name }/>
+              <img src={ HARDSKILLS[tech].image } alt={ HARDSKILLS[tech].name } className={ HARDSKILLS[tech].name === "GitHub" ? 'rede-social git' : '' }/>
               <p>{HARDSKILLS[tech].name}</p>
             </div>
           )) }

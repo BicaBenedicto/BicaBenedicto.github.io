@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
-// import illustration from '../images/eu.jpeg';
-import illustration from '../images/test.png';
+import illustration from '../images/gabriel-benedicto.png';
 import illustration2 from '../images/undraw_hello_re_3evm.svg';
 import styled from 'styled-components';
 import '../sass/About.scss';
@@ -23,7 +22,7 @@ export default function About() {
         <img src={ illustration2 } className="illustration" alt="illustration"/>
         <div>
           <h2>Olá, me chamo Gabriel. </h2>
-          <h3>Sou desenvolvedor web e trabalho com criação e manutenção de websites.</h3>
+          <h3>Sou desenvolvedor web, trabalho com criação e manutenção de websites.</h3>
           <Button
             type="button"
             className="show-more"

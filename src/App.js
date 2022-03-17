@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router';
 import styled from 'styled-components';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import ProjectById from './pages/ProjectById';
 import Trybewallet from './projects/builds/trybewallet/App';
 import Trybetunes from './projects/builds/trybetunes/App';
 import Trivia from './projects/builds/trivia-react-redux/App';
@@ -61,6 +62,11 @@ export default function App() {
           <ButtonBackToHome />
           <DrinksAndFoods />
         </div>
+      </Route>
+      <Route exact path="/projects/:name">
+        <Portfolio id="portfolio">
+          <ProjectById />
+        </Portfolio>
       </Route>
       <Route path="*">
         <Portfolio id="portfolio">

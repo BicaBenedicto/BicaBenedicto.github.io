@@ -54,10 +54,11 @@
         margin: 0 auto;
         width: 100%;
         &.top {
-          top: 0;
+          top: -10px;
           left: 0;
         }
         &.bottom {
+          color: $purple-dark;
           font-style: italic;
           left: 0;
           bottom: 0;

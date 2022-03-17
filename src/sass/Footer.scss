@@ -26,6 +26,10 @@
 		&:active {
 			transform: translateY(5px);
 		}
+		&.git {
+			background-color: white;
+			border-radius: 100%;
+		}
 	}
 }
 
