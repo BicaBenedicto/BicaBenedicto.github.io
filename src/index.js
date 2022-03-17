@@ -7,8 +7,8 @@ import reportWebVitals from './reportWebVitals';
 import Provider from './services/Provider';
 
 const theme = {
-  buttonText: 'white',
-  headerText: 'white',
+  buttonText: 'rgb(245, 245, 245)',
+  headerText: 'rgb(245, 245, 245)',
   projectLink: 'magenta',
   projectLinkHover: 'hsl(300, 100%, 80%)',
 
@@ -18,8 +18,8 @@ const theme = {
   buttonDark: '#6b63ff',
   headerDark: 'black',
   purpleDark: '#6b63ff',
-  textDark: 'white',
-  transitionLinearDark: 'linear-gradient(0deg, hsl(0, 0%, 8%) 0%, hsl(0, 0% ,20%) 20%, hsl(0, 0%,10%) 80%, hsl(0, 0%, 8%) 100%)',
+  textDark: 'rgb(245, 245, 245)',
+  transitionLinearDark: 'linear-gradient(0deg, hsl(0, 0%, 8%) 0%, hsl(0, 0% ,12%) 20%, hsl(0, 0%,10%) 80%, hsl(0, 0%, 8%) 100%)',
 
   // Light mode colors
 
@@ -27,7 +27,7 @@ const theme = {
   buttonLight: '#cac7ff',
   headerLight: 'hsl(0, 0%, 40%)',
   purpleLight: '#cac7ff',
-  textLight: 'black',
+  textLight: 'hsl(0, 0%, 8%)',
   transitionLinearLight: 'linear-gradient(0deg, rgba(31,31,31,0) 0%, rgba(230,230,230,1) 20%, rgba(230,230,230,1) 80%, rgba(54,54,54,0) 100%)',
 
 };
