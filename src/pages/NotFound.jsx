@@ -6,16 +6,21 @@ import Footer from '../components/Footer';
 import FeaturedProjects from '../components/FeaturedProjects';
 import Project from '../components/Project';
 import Context from '../services/Context';
+import styled from 'styled-components';
 
 export default function NotFound() {
-  const { projects } = useContext(Context);
+  const { projects, theme } = useContext(Context);
   const { projectHasShow } = projects;
+
+  const Div = styled.div`
+    background: ${props => props.theme[`transitionLinear${theme}`]};
+  `;
 
   return (
     <>
       <Header isRoot={ false } />
       <main className={projectHasShow ? 'blur projects-portfolio' : 'not-blur projects-portfolio'} style={{ 'margin': '0 auto','maxWidth': '1700px' }}>
-        <div className="not-found-body">
+        <Div className="not-found-body">
           <lottie-player
             autoplay
             background="transparent"
@@ -31,7 +36,7 @@ export default function NotFound() {
               Poxa a página que tentou acessar não foi encontrada, mas não desanime! Que tal aproveitar nossa exploração e olhar os projetos em destaque?
             </p>
           </div>
-        </div>
+        </Div>
         <FeaturedProjects lookAll={ false }/>
       </main>
       <Footer />
