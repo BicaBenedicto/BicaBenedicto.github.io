@@ -7,13 +7,18 @@ import Context from '../services/Context';
 import Menu from '../components/Menu';
 
 export default function Contacts() {
-  const { projects, menu } = useContext(Context);
-  const { projectHasShow } = projects;
+  const { menu } = useContext(Context);
+
+  const changeBlur = () => {
+    if(menu === 'menu-show') return 'hasShow';
+    if(menu === 'menu-empty') return 'empty';
+    return 'hasHidden'
+  };
 
   return (
     <>
       <Header isRoot={ true } />
-      <main className={ `contact-page ${menu ? 'hasShow' : projectHasShow}`} style={{ 'margin': '0 auto','maxWidth': '1700px' }}>
+      <main className={ `contact-page ${changeBlur()}`} style={{ 'margin': '0 auto','maxWidth': '1700px' }}>
         <Contact />
       </main>
       <Footer />

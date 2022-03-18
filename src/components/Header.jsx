@@ -98,7 +98,7 @@ const BootsHeader = styled(Dropdown.Header)`
       <button className='button-logo' onClick={ () => history.push('/') }>
         { '{ Gabriel Benedicto }' }
       </button>
-      <button className='button-menu' onClick={ () => toggleMenu(true) }>
+      <button className='button-menu' onClick={ () => toggleMenu('menu-show') }>
         <img src={ menu } alt="menu"/>
       </button>
       <nav id='header-menu'>

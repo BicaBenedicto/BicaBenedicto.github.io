@@ -14,10 +14,16 @@ export default function Home() {
   const { projects, menu } = useContext(Context);
   const { projectHasShow } = projects;
 
+  const changeBlur = () => {
+    if(projectHasShow === 'hasShow' || menu === 'menu-show') return 'hasShow';
+    if(projectHasShow === 'notStarted' || menu === 'menu-empty') return 'empty';
+    return 'hasHidden'
+  };
+
   return (
     <>
       <Header isRoot={ true } />
-      <main className={projectHasShow === 'hasShow' || menu ? 'hasShow' : projectHasShow} style={{ 'margin': '0 auto','maxWidth': '1700px' }}>
+      <main className={changeBlur()} style={{ 'margin': '0 auto','maxWidth': '1700px' }}>
         <About />
         <Skills />
         <FeaturedProjects lookAll={ true} />

@@ -29,17 +29,17 @@ export default function Menu({ isRoot = true }) {
   `;
 
   const onNavClick = (location = '') => {
-    toggleMenu(false);
+    toggleMenu('menu-hidden');
     return history.push(`/${location}`);
   }
-
+  console.log(menu);
   return (
-    <MenuBody className={ `menu-body ${menu ? 'menu-show' : 'menu-hidden'}` }>
+    <MenuBody className={ `menu-body ${menu}` }>
       <Header className="menu-header">
         <button className='button-logo' onClick={ () => {} }>
         { '{ Gabriel Benedicto }' }
         </button>
-        <button className='button-menu' onClick={ () => toggleMenu(false) }>
+        <button className='button-menu' onClick={ () => toggleMenu('menu-hidden') }>
           <img src={ close } alt="menu"/>
         </button>
       </Header>

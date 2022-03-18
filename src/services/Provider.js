@@ -6,7 +6,7 @@ export default function Provider({ children }) {
   const [projectImage, setProjectImage] = useState('');
   const [projectHasShow, projectToggleShow] = useState('notStarted');
   const [theme, isDarkTheme] = useState(false);
-  const [menu, toggleMenu] = useState(false);
+  const [menu, toggleMenu] = useState('menu-empty');
 
   const STORE = {
     projects: {
