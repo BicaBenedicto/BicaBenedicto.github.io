@@ -20,8 +20,16 @@ export default function FeaturedProjects({ lookAll }) {
   };
 
   const Section = styled.section`
-    .carousel-arrow {
-      background-color: ${props => props.theme[`header${theme}`]}
+    @media(min-width: 1000px) {
+      .carousel-arrow {
+        background-color: ${props => props.theme[`header${theme}`]}
+      }
+      .slick-next {
+        border-radius: 0 20px 20px 0;
+      }
+      .slick-prev {
+        border-radius: 20px 0 0 20px;
+      }
     }
   `;
 
