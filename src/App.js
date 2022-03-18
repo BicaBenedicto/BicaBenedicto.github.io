@@ -8,6 +8,7 @@ import './assets/output.css';
 import './App.css';
 import NotFound from './pages/NotFound';
 import Context from './services/Context';
+import Contact from './pages/Contact';
 
 export default function App() {
   const { theme, isDarkTheme } = useContext(Context);
@@ -35,12 +36,17 @@ export default function App() {
           <Home />
         </Portfolio>
       </Route>
-      <Route exact path="/projects">
+      <Route path="/contact">
+        <Portfolio id="portfolio">
+          <Contact />
+        </Portfolio>
+      </Route>
+      <Route path="/projects">
         <Portfolio id="portfolio">
           <Projects />
         </Portfolio>
       </Route>
-      <Route exact path="/projects/:name">
+      <Route path="/projects/:name">
         <Portfolio id="portfolio">
           <ProjectById />
         </Portfolio>

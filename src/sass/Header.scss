@@ -5,10 +5,20 @@
 		align-content: center;
 		align-items: center;
 		display: flex;
-		flex-flow: column;
-		justify-content: center;
+		flex-flow: row;
+		justify-content: space-between;
 		padding: 10px 0;
 		width: 100%;
+    .button-menu {
+      display: block;
+      background-color: transparent;
+      border: none;
+      margin: 0 20px;
+      width: 30px;
+      img {
+        width: 100%;
+      }
+    }
     #header-menu {
       display: none;
       .nav-link {
@@ -19,25 +29,26 @@
     .button-logo {
       background-color: transparent;
       border: none;
-      .logo-title {
-        font-size: 30px;
-      }
+      margin: 0 20px;
+      font-size: 19px;
     }
   }
 }
 
 .nav-link {
 	text-decoration: none;
+  cursor: pointer;
 }
 
 
 @media only screen and (min-width: 1000px) {
   #portfolio {
     #header-top {
-      flex-flow: row;
-      justify-content: space-between;
       position: fixed;
       z-index: 30;
+      .button-menu {
+        display: none;
+      }
       #header-menu {
         display: flex;
         .nav-link {

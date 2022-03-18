@@ -1,6 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
-import { Spinner } from 'react-bootstrap';
+import React, { useContext } from 'react';
 import Context from '../services/Context';
 import linkedin from '../images/icons/linkedin.svg';
 import github from '../images/icons/github.svg';

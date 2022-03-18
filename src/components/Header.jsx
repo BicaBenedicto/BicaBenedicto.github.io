@@ -6,18 +6,18 @@ import '../sass/Header.scss';
 import Context from '../services/Context';
 import sun from '../images/icons/sun.svg';
 import moon from '../images/icons/moon.svg';
+import menu from '../images/icons/menu.svg';
 
 export default function Header({ isRoot = true }) {
-  const { theme, isDarkTheme } = useContext(Context);
+  const { theme, isDarkTheme, toggleMenu } = useContext(Context);
   const history = useHistory();
 
   const Header = styled.header`
 		background-color: ${props => props.theme[`header${theme}`]};
 		color: ${props => props.theme.headerText};
-  `;
-
-  const H1 = styled.h1`
-    color: ${props => props.theme[`purple${theme}`]};;
+    .button-logo {
+      color: ${props => props.theme[`purple${theme}`]};;
+    }
   `;
 
   const A = styled.a`
@@ -96,12 +96,15 @@ const BootsHeader = styled(Dropdown.Header)`
   return (
     <Header id='header-top'>
       <button className='button-logo' onClick={ () => history.push('/') }>
-        <H1 className="logo-title">{ '{ Gabriel Benedicto }' }</H1>
+        { '{ Gabriel Benedicto }' }
+      </button>
+      <button className='button-menu' onClick={ () => toggleMenu(true) }>
+        <img src={ menu } alt="menu"/>
       </button>
       <nav id='header-menu'>
-        <A className='nav-link' href={isRoot ? '#home' : '/#home'}>Home</A>|
-        <A className='nav-link' href='/projects'>Projetos</A>|
-        <A className='nav-link' href={isRoot ? '#portfolio-contact' : '/#portfolio-contact'}>Contato</A>|
+        <A className='nav-link' onClick={ () => history.push('/')}>Home</A>|
+        <A className='nav-link' onClick={ () => history.push('/projects')}>Projetos</A>|
+        <A className='nav-link' onClick={ () => history.push('/contact')}>Contato</A>|
         <Dropdown>
           <BootsToggle>
             <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">

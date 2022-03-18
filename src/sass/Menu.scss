@@ -1,0 +1,146 @@
+@import './variables.scss';
+
+#portfolio {
+  .menu-body {
+    position: fixed;
+    height: 100vh;
+    transition: 1s;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 1s;
+    &.menu-show {
+      animation: menu-show 1s ease-in-out both;
+    }
+    &.menu-hidden {
+      animation: menu-hidden 1s ease-in-out both;
+    }
+    .menu-header {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      .button-logo {
+        background-color: transparent;
+        border: none;
+        padding: 25px 0;
+        margin: 0 20px;
+        font-size: 21px;
+      }
+      .button-menu {
+        display: block;
+        background-color: transparent;
+        border: none;
+        margin: 0 20px;
+        height: 100%;
+      }
+    }
+    #header-menu {
+      align-items: center;
+      color: $header-text;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 20px;
+      text-align: center;
+      padding: 10px 0;
+      height: 80%;
+      a {
+        color: $header-text;
+        font-size: 5rem;
+        padding: 20px 0;
+      }
+      .slideThree {
+        display: flex;
+        justify-content: space-around;
+        min-height: 50px;
+        margin: 0 auto;
+        width: 100%;
+        .idk {
+          border-radius: 20px;
+          padding: 5px 0;
+          margin: 0 auto;
+          position: relative;
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+          }
+
+          .radio {
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            height: 40px;
+            width: 40px;
+            &:after {
+              content: "";
+              position: absolute;
+              display: none;
+            }
+            &.radio-dark {
+              padding: 4px;
+              left: 0;
+            }
+            &.radio-light {
+              right: 0;
+            }
+          }
+          &:hover input ~ .radio-dark {
+            background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(2,0,36,0) 90%, rgba(0,212,255,0) 100%);
+          }
+          &:hover input ~ .radio-light {
+            background: radial-gradient(circle, rgba(245,255,0,1) 0%, rgba(2,0,36,0) 80%, rgba(0,212,255,0) 100%);
+          }
+          input:checked ~ .radio-dark {
+            background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(2,0,36,0) 90%, rgba(0,212,255,0) 100%);
+          }
+          input:checked ~ .radio-light {
+            background: radial-gradient(circle, rgba(245,255,0,1) 0%, rgba(2,0,36,0) 80%, rgba(0,212,255,0) 100%);
+          }
+          input:checked ~ .radio:after {
+            display: block;
+          }
+          .radio:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes menu-show {
+  0% {
+    transform: translateX(-100vw) scale(0, 1);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes menu-hidden {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    transform: translateX(-100vw) scale(0, 1);
+  }
+}
+
+@keyframes menu-notStarted {
+  0% {
+    transform: translateX(0) scale(0);
+  }
+  100% {
+    transform: translateX(0) scale(0);
+  }
+}

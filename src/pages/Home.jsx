@@ -8,15 +8,16 @@ import FeaturedProjects from '../components/FeaturedProjects';
 import Project from '../components/Project';
 import Skills from '../components/Skills';
 import Context from '../services/Context';
+import Menu from '../components/Menu';
 
 export default function Home() {
-  const { projects } = useContext(Context);
+  const { projects, menu } = useContext(Context);
   const { projectHasShow } = projects;
 
   return (
     <>
       <Header isRoot={ true } />
-      <main className={projectHasShow.show ? 'blur' : 'not-blur'} style={{ 'margin': '0 auto','maxWidth': '1700px' }}>
+      <main className={projectHasShow === 'hasShow' || menu ? 'hasShow' : projectHasShow} style={{ 'margin': '0 auto','maxWidth': '1700px' }}>
         <About />
         <Skills />
         <FeaturedProjects lookAll={ true} />
@@ -24,6 +25,7 @@ export default function Home() {
       </main>
       <Footer />
       <Project />
+      <Menu isRoot={ true }/>
     </>
   );
 }

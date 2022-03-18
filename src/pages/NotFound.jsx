@@ -7,9 +7,10 @@ import FeaturedProjects from '../components/FeaturedProjects';
 import Project from '../components/Project';
 import Context from '../services/Context';
 import styled from 'styled-components';
+import Menu from '../components/Menu';
 
 export default function NotFound() {
-  const { projects, theme } = useContext(Context);
+  const { projects, theme, menu } = useContext(Context);
   const { projectHasShow } = projects;
 
   const Div = styled.div`
@@ -19,7 +20,7 @@ export default function NotFound() {
   return (
     <>
       <Header isRoot={ false } />
-      <main className={projectHasShow.show ? 'blur projects-portfolio' : 'not-blur projects-portfolio'} style={{ 'margin': '0 auto','maxWidth': '1700px' }}>
+      <main className={ `projects-portfolio ${projectHasShow === 'hasShow' || menu ? 'hasShow' : projectHasShow}`} style={{ 'margin': '0 auto','maxWidth': '1700px' }}>
         <Div className="not-found-body">
           <lottie-player
             autoplay
@@ -41,6 +42,7 @@ export default function NotFound() {
       </main>
       <Footer />
       <Project />
+      <Menu isRoot={ false }/>
     </>
   );
 }

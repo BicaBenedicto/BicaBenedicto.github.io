@@ -114,6 +114,17 @@
 	width: 100%;
 }
 
+#portfolio .contact-page {
+	padding: 0;
+	margin: 0;
+	.contact-body {
+		margin: 0;
+		padding: 0;
+		min-height: 100vh;
+		height: 100%;
+	}
+}
+
 @media only screen and (min-width: 1000px) {
 	#portfolio-contact {
 		.contact-body {
@@ -142,4 +153,9 @@
 			}
     }
   }
+	#portfolio .contact-page {
+		.contact-body {
+			margin: 20px auto;
+		}
+	}
 }

@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { PROJECTS } from '../assets/data';
 import HARDSKILLS from '../assets/data-hardskills';
 import '../sass/Project.scss';
@@ -6,7 +6,7 @@ import Context from '../services/Context.js';
 import { useHistory } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 
-export default function Contact() {
+export default function Project() {
   const imageShowing = useRef(null);
   const history = useHistory();
   const [isShowingImage, setIsShowingImage] = useState(false);
@@ -53,12 +53,20 @@ export default function Contact() {
 
   const Div = styled.div`
     background-color: ${props => props.theme[`backgroundProject${theme}`]};
-    animation: ${CHANGED[Object.keys(hasShow)[0]] ? CHANGED[Object.keys(hasShow)[0]]: ''} 1s ease-in-out both;
+    &.hasHidden {
+      animation: ${keyFrame2} 1s ease-in-out both;
+    }
+    &.hasShow {
+      animation: ${keyFrame} 1s ease-in-out both;
+    }
+    &.notStarted {
+      animation: ${keyFrame3} 1s ease-in-out both;
+    }
   `;
 
   return (
     <Div
-      className='project-show'
+      className={`project-show ${hasShow}`}
     >
       <button type="button" onClick={ onClickImage } ref={ imageShowing } className="image-show">
         <img src={ image } alt={ name } className={ isShowingImage ? 'exhibition' : '' }/>
@@ -69,7 +77,9 @@ export default function Contact() {
           <button
             type="button"
             className='project-show-exit'
-            onClick={ () => projectToggleShow({ hidden: '' })}
+            onClick={ () => {
+              projectToggleShow('hasHidden')
+              setTimeout(() => projectToggleShow('notStarted'), 1000)}}
           >
             X
           </button>
