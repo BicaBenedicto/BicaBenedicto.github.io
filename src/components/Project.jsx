@@ -36,14 +36,29 @@ export default function Contact() {
     }
   `;
 
+  const keyFrame3 = keyframes`
+  to {
+    transform: translateX(0) scale(0);
+  }
+  from {
+    transform: translateX(0) scale(0);
+  }
+`;
+
+  const CHANGED = {
+    show: keyFrame,
+    hidden: keyFrame2,
+    start: keyFrame3,
+  };
+
   const Div = styled.div`
     background-color: ${props => props.theme[`backgroundProject${theme}`]};
-    animation: ${hasShow ? keyFrame : keyFrame2} 1s ease-in-out both;
+    animation: ${CHANGED[Object.keys(hasShow)[0]] ? CHANGED[Object.keys(hasShow)[0]]: ''} 1s ease-in-out both;
   `;
 
   return (
     <Div
-      className={hasShow ? 'project-show hasShow' : 'project-show hasHide'}
+      className='project-show'
     >
       <button type="button" onClick={ onClickImage } ref={ imageShowing } className="image-show">
         <img src={ image } alt={ name } className={ isShowingImage ? 'exhibition' : '' }/>
@@ -54,7 +69,7 @@ export default function Contact() {
           <button
             type="button"
             className='project-show-exit'
-            onClick={ () => projectToggleShow(false)}
+            onClick={ () => projectToggleShow({ hidden: '' })}
           >
             X
           </button>
@@ -92,5 +107,5 @@ export default function Contact() {
           </div>
       </div>
     </Div>
-  )
+  );
 };

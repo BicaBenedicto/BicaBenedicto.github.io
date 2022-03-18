@@ -19,7 +19,7 @@ export default function NotFound() {
   return (
     <>
       <Header isRoot={ false } />
-      <main className={projectHasShow ? 'blur projects-portfolio' : 'not-blur projects-portfolio'} style={{ 'margin': '0 auto','maxWidth': '1700px' }}>
+      <main className={projectHasShow.show ? 'blur projects-portfolio' : 'not-blur projects-portfolio'} style={{ 'margin': '0 auto','maxWidth': '1700px' }}>
         <Div className="not-found-body">
           <lottie-player
             autoplay

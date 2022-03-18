@@ -9,7 +9,7 @@ export default function ProjectItem({ name, image }) {
   const onProjectClick = () => {
     setProjectName(name);
     setProjectImage(image);
-    return projectToggleShow(true);
+    return projectToggleShow({ show: 'B' });
   };
 
   return (

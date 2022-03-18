@@ -99,8 +99,8 @@ const BootsHeader = styled(Dropdown.Header)`
         <H1 className="logo-title">{ '{ Gabriel Benedicto }' }</H1>
       </button>
       <nav id='header-menu'>
-        <A className='nav-link' onClick={ () => history.push('/') }>Home</A>|
-        <A className='nav-link' onClick={ () => history.push('/projects') }>Projetos</A>|
+        <A className='nav-link' href={isRoot ? '#home' : '/#home'}>Home</A>|
+        <A className='nav-link' href='/projects'>Projetos</A>|
         <A className='nav-link' href={isRoot ? '#portfolio-contact' : '/#portfolio-contact'}>Contato</A>|
         <Dropdown>
           <BootsToggle>
@@ -119,7 +119,10 @@ const BootsHeader = styled(Dropdown.Header)`
                   value="Dark"
                   name="theme"
                   checked={ theme === "Dark" }
-                  onClick={ () => isDarkTheme(true) }
+                  onClick={ () => {
+                    localStorage.setItem('theme', JSON.stringify('dark'));
+                    isDarkTheme(true);
+                  } }
                 />
                 <img src={ moon } alt="moon" className="radio radio-dark"/>
               </label>
@@ -130,7 +133,10 @@ const BootsHeader = styled(Dropdown.Header)`
                   value="Light"
                   name="theme"
                   checked={ theme === "Light" }
-                  onClick={ () => isDarkTheme(false) }
+                  onClick={ () => {
+                    localStorage.setItem('theme', JSON.stringify('light'));
+                    isDarkTheme(false);
+                  } }
                 />
                 <img src={ sun } alt="sun" className="radio radio-light"/>
               </label>

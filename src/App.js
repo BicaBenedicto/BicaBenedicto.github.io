@@ -18,8 +18,14 @@ export default function App() {
   `;
 
   useEffect(() => {
-  const themeUser = window.matchMedia('(prefers-color-scheme: dark)');
-  themeUser.matches ? isDarkTheme(true) : isDarkTheme(false);
+    const themeExistis = JSON.parse(localStorage.getItem('theme'));
+    if(themeExistis) {
+      const themeSet = () => themeExistis === 'dark' ? isDarkTheme(true) : isDarkTheme(false);
+      themeSet();
+    } else {
+      const themeUser = window.matchMedia('(prefers-color-scheme: dark)');
+      themeUser.matches ? isDarkTheme(true) : isDarkTheme(false);
+    }
   }, []);
 
   return (
