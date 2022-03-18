@@ -84,7 +84,7 @@ export default function Project() {
             X
           </button>
         </span>
-        <p>{ PROJECT[name].message }</p>
+        <p>{ PROJECT.message }</p>
         <div className="project-technologies">
           { PROJECT.technologies && PROJECT.technologies.map((tech, index) => (
             <div key={ index }>
@@ -94,20 +94,20 @@ export default function Project() {
           )) }
         </div>
         <div>
-          { PROJECT[name].site && (!PROJECT[name].site.includes('http')
-            ? <button className="button-preview" onClick={() => history.push(PROJECT[name].site)}>
+          { PROJECT.site && (!PROJECT.site.includes('http')
+            ? <button className="button-preview" onClick={() => history.push(PROJECT.site)}>
               Demonstração
             </button>
             : <a
-              href={ PROJECT[name].site }
+              href={ PROJECT.site }
               rel="noreferrer"
               className="button-preview"
             >
               Demonstração
             </a>)}
-            { PROJECT[name].rep
+            { PROJECT.rep
             && <a
-              href={ PROJECT[name].rep }
+              href={ PROJECT.rep }
               target='_blank'
               rel="noreferrer"
               className="button-preview"

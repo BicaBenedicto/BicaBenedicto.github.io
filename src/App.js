@@ -41,14 +41,14 @@ export default function App() {
           <Contact />
         </Portfolio>
       </Route>
-      <Route path="/projects">
-        <Portfolio id="portfolio">
-          <Projects />
-        </Portfolio>
-      </Route>
       <Route path="/projects/:name">
         <Portfolio id="portfolio">
           <ProjectById />
+        </Portfolio>
+      </Route>
+      <Route path="/projects">
+        <Portfolio id="portfolio">
+          <Projects />
         </Portfolio>
       </Route>
       <Route path="*">
