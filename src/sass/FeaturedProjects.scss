@@ -24,8 +24,8 @@
         }
       }
       .link-none {
-        color: black;
         text-decoration: none;
+        color: inherit;
       }
       .project-img {
         width: 100% !important;
@@ -56,27 +56,13 @@
 @media only screen and (min-width: 1000px) {
   #portfolio {
     #project {
-      margin: 0 auto;
-      width: 90%;
       .slider-div {
         .project-div {
           align-items: stretch;
-          align-content: center;
-          background-color: transparent;
-          border: none;
-          display: flex;
           flex-flow: wrap;
           font-size: 20px;
           font-weight: 500;
-          justify-content: center;
           position: relative;
-        }
-        .project-img {
-          width: 100% !important;
-        }
-        .link-none {
-          text-decoration: none;
-          color: inherit;
         }
         .carousel-arrow {
           display: flex;
