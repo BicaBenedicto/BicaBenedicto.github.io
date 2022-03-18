@@ -21,6 +21,9 @@
 				display: flex;
 				flex-direction: column;
 				width: 100%;
+				input, textarea {
+					color: black;
+				}
 			}
 			textarea {
 				height: 200px;

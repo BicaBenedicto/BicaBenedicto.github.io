@@ -4,20 +4,45 @@ import HARDSKILLS from '../assets/data-hardskills';
 import '../sass/Project.scss';
 import Context from '../services/Context.js';
 import { useHistory } from 'react-router-dom';
+import styled, { keyframes } from 'styled-components';
 
 export default function Contact() {
   const imageShowing = useRef(null);
   const history = useHistory();
   const [isShowingImage, setIsShowingImage] = useState(false);
-  const { projects } = useContext(Context);
+  const { projects, theme } = useContext(Context);
   const { projectName: name, projectImage: image, projectHasShow: hasShow, projectToggleShow } = projects;
   const PROJECT = PROJECTS.find((item) => item.name === name);
   
   const onClickImage = () => {
     setIsShowingImage(!isShowingImage);
   };
+
+  const keyFrame = keyframes`
+    to {
+      transform: translateX(0) scale(1);
+    }
+    from {
+      transform: translateX(-100vw) scale(0, 1);
+    }
+  `;
+
+  const keyFrame2 = keyframes`
+    to {
+      transform: translateX(-100vw) scale(0, 1);
+    }
+    from {
+      transform: translateX(0) scale(1);
+    }
+  `;
+
+  const Div = styled.div`
+    background-color: ${props => props.theme[`backgroundProject${theme}`]};
+    animation: ${hasShow ? keyFrame : keyFrame2} 1s ease-in-out both;
+  `;
+
   return (
-    <div
+    <Div
       className={hasShow ? 'project-show hasShow' : 'project-show hasHide'}
     >
       <button type="button" onClick={ onClickImage } ref={ imageShowing } className="image-show">
@@ -66,6 +91,6 @@ export default function Contact() {
             </a>}
           </div>
       </div>
-    </div>
+    </Div>
   )
 };

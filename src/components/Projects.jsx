@@ -10,9 +10,10 @@ export default function Projects({ search }) {
 
   const Section = styled.section`
     background: ${props => props.theme[`transitionLinear${theme}`]};
-    .project {
+    .project-div {
       span {
-        background-color: ${props => props.theme[`purple${theme}`]};
+        background-color: ${props => props.theme[`purpleLight`]};
+        color: black;
       }
     }
   `;

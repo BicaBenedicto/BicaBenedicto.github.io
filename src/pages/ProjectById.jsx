@@ -9,7 +9,7 @@ export default function ProjectById() {
 
   return (
     <>
-      <Header isRoot={ true } />
+      <Header isRoot={ false } />
       <div className="project-individual">
         <iframe src={ `https://gabrielbenedicto.com/${name}` } title={ name }></iframe>
       </div>

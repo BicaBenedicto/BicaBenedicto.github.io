@@ -99,8 +99,8 @@ const BootsHeader = styled(Dropdown.Header)`
         <H1 className="logo-title">{ '{ Gabriel Benedicto }' }</H1>
       </button>
       <nav id='header-menu'>
-        <A className='nav-link' href={isRoot ? '#home' : '/#home'}>Home</A>|
-        <A className='nav-link' href={isRoot ? '#project' : '/#project'}>Projetos</A>|
+        <A className='nav-link' onClick={ () => history.push('/') }>Home</A>|
+        <A className='nav-link' onClick={ () => history.push('/projects') }>Projetos</A>|
         <A className='nav-link' href={isRoot ? '#portfolio-contact' : '/#portfolio-contact'}>Contato</A>|
         <Dropdown>
           <BootsToggle>
