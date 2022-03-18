@@ -15,6 +15,7 @@ const theme = {
   // Dark mode colors
 
   backgroundDark: 'hsl(0, 0%, 8%)',
+  backgroundProjectDark: 'rgba(40, 40, 40, 0.711)',
   buttonDark: '#6b63ff',
   headerDark: 'black',
   purpleDark: '#6b63ff',
@@ -24,6 +25,7 @@ const theme = {
   // Light mode colors
 
   backgroundLight: 'rgb(245, 245, 245)',
+  backgroundProjectLight: 'rgba(0, 0, 0, 0.767)',
   buttonLight: '#cac7ff',
   headerLight: 'hsl(0, 0%, 40%)',
   purpleLight: '#cac7ff',

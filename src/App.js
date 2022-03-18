@@ -4,11 +4,6 @@ import styled from 'styled-components';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import ProjectById from './pages/ProjectById';
-import Trybewallet from './projects/builds/trybewallet/App';
-import Trybetunes from './projects/builds/trybetunes/App';
-import Trivia from './projects/builds/trivia-react-redux/App';
-import DrinksAndFoods from './projects/builds/drinks-and-foods-recipes/App';
-import ButtonBackToHome from './components/ButtonBackToHome';
 import './assets/output.css';
 import './App.css';
 import NotFound from './pages/NotFound';
@@ -38,30 +33,6 @@ export default function App() {
         <Portfolio id="portfolio">
           <Projects />
         </Portfolio>
-      </Route>
-      <Route path="/projects/trybewallet">
-        <div id="trybewallet">
-          <ButtonBackToHome />
-          <Trybewallet />
-        </div>
-      </Route>
-      <Route path="/projects/trybetunes">
-        <div id="trybetunes" className="local-bootstrap">
-          <ButtonBackToHome />
-          <Trybetunes />
-        </div>
-      </Route>
-      <Route path="/projects/trivia">
-        <div id="trivia" className="local-bootstrap">
-          <ButtonBackToHome />
-          <Trivia />
-        </div>
-      </Route>
-      <Route path="/projects/drinks-and-foods">
-        <div id="drinks-and-foods" className="local-bootstrap">
-          <ButtonBackToHome />
-          <DrinksAndFoods />
-        </div>
       </Route>
       <Route exact path="/projects/:name">
         <Portfolio id="portfolio">
