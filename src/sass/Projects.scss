@@ -8,6 +8,7 @@
 	main {
 		padding-top: 80px;
 		.filter-projects-select {
+			color: black;
 			display: block;
 			margin: 0 auto;
 		}
@@ -15,7 +16,6 @@
 	#projects {
 		align-items: center;
 		align-content: flex-start;
-		background: $transition-linear-light;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -31,7 +31,6 @@
 			margin: 0 5px;
 			width: 46%;
 			span {
-				background-color: $purple-light;
 				border-radius: 5px 5px 0 0;
 				display: block;
 				position: relative;

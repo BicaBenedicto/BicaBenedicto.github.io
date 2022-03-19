@@ -2,7 +2,7 @@
   "name": "bicabenedicto",
   "version": "2.0.0",
   "author": "Gabriel Pereira Benedicto",
-  "homepage": "https://bicabenedicto.github.io",
+  "homepage": "https://gabrielbenedicto.com",
   "private": true,
   "dependencies": {
     "@craco/craco": "^5.9.0",
@@ -35,6 +35,7 @@
     "sass": "^1.45.0",
     "styled-components": "^5.3.3",
     "web-vitals": "^2.1.2",
+    "webpack": "^5.70.0",
     "websocket-extensions": ">=0.1.4"
   },
   "scripts": {

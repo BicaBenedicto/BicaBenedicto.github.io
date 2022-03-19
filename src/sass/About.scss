@@ -22,17 +22,14 @@
       }
     }
 		.show-more {
-			background-color: $button-light;
-			border: 1px solid $button-light;
 			border-radius: 10px;
-			color: $button-text;
-			display: block;
+      display: block;
       margin: 0 auto;
     }
 		.eu {
-			border-radius: 100%;
+			border-radius:  0 0 100% 100%;
 			filter: saturate(1.5);
-			height: 300px;
+			width: 90%;
 			margin: 40px 20px;
     }
   }
@@ -42,11 +39,8 @@
   #portfolio {
     #home {
       align-items: center;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
+      justify-content: space-between;
       text-align: start;
-      margin: 0 auto;
       padding-top: 100px;
       position: relative;
       width: 90%;
@@ -56,12 +50,18 @@
         flex-direction: row-reverse;
         margin: 20px 0;
         width: 80%;
+        .home-word-p {
+          padding-right: 15px;
+        }
       }
       .text-body-2 {
         align-items: center;
         display: flex;
         flex-direction: row;
         width: 80%;
+        .home-word-p {
+          padding-left: 15px;
+        }
       }
       .home-word-p {
         font-size: 20px;
@@ -78,6 +78,7 @@
         display: none;
       }
       .eu {
+        width: unset();
         height: 400px;
       }
     }

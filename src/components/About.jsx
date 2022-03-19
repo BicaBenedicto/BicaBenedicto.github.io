@@ -1,11 +1,20 @@
-import React, { useState } from 'react';
-import illustration from '../images/eu.jpeg';
+import React, { useContext, useState } from 'react';
+import illustration from '../images/gabriel-benedicto.png';
 import illustration2 from '../images/undraw_hello_re_3evm.svg';
+import styled from 'styled-components';
 import '../sass/About.scss';
+import Context from '../services/Context';
 
 
 export default function About() {
   const [aboutMore, toggleAboutMore] = useState(false);
+  const { theme } = useContext(Context);
+
+  const Button = styled.button`
+    background-color: ${props => props.theme[`button${theme}`]};
+    border: 1px solid ${props => props.theme[`button${theme}`]};
+		color: ${props => props.theme.buttonText};
+  `;
 
   return (
     <section id='home' className='container'>
@@ -13,14 +22,14 @@ export default function About() {
         <img src={ illustration2 } className="illustration" alt="illustration"/>
         <div>
           <h2>Olá, me chamo Gabriel. </h2>
-          <h3>Sou desenvolvedor web e trabalho com criação e manutenção de websites.</h3>
-          <button
+          <h3>Sou desenvolvedor web, trabalho com criação e manutenção de websites.</h3>
+          <Button
             type="button"
             className="show-more"
             onClick={ () => toggleAboutMore(!aboutMore) }
           >
             {aboutMore ? "Esconder" : "Saiba mais"}
-          </button>
+          </Button>
           <p
             className={aboutMore ? 'home-word-p display-show-more' : 'home-word-p hidden-show-more'}
           >

@@ -4,7 +4,6 @@
 	#footer {
 		align-content: center;
 		align-items: center;
-		background-color: $header-light;
 		bottom: 0;
 		color: $header-text;
 		display: flex;
@@ -27,6 +26,10 @@
 		&:active {
 			transform: translateY(5px);
 		}
+		&.git {
+			background-color: white;
+			border-radius: 100%;
+		}
 	}
 }
 
@@ -39,13 +42,6 @@
 		}
 		.rede-social {
 			margin: 0 15px;
-			width: 25px;
-			&:hover {
-				transform: translateY(-5px);
-			}
-			&:active {
-				transform: translateY(5px);
-			}
 		}
 	}
 }

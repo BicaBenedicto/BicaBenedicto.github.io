@@ -4,7 +4,6 @@
 #portfolio {
   #skills {
     align-items: center;
-    background: $transition-linear-light;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -55,7 +54,7 @@
         margin: 0 auto;
         width: 100%;
         &.top {
-          top: 0;
+          top: -10px;
           left: 0;
         }
         &.bottom {
@@ -78,58 +77,22 @@
 @media only screen and (min-width: 1000px) {
   #portfolio {
     #skills {
-      align-items: center;
-      background: $transition-linear-light;
-      display: flex;
-      justify-content: space-around;
       flex-direction: row;
-      margin: 0 auto;
       padding: 100px 80px;
-      position: relative;
-      .hardskills {
-        display: flex;
-        flex-flow: wrap;
-        position: relative;
-        padding-top: 200px;
-        margin: 0 auto;
-      }
       li.hardskills-item {
-        align-items: center;
-        align-content: center;
-        display: flex !important;
-        flex-direction: column;
-        justify-content: flex-end;
-        transition: 1s;
-        position: absolute;
-        height: 30px;
-        top: 130px;
         right: 50%;
         &.shadow {
           animation: shadow 1s ease-in-out both;
         }
       }
-      .hardskills-img {
-        margin-bottom: 10px;
-        width: 50px;
-      }
       .center-title {
-        display: block;
-        position: absolute;
-        text-align: center;
-        margin: 0 auto;
         font-size: 25px!important;
-        width: 100%;
         &.top {
           transform: translateY(-80px);
         }
         &.bottom {
-          color: $purple-dark;
-          font-style: italic;
           transform: translateY(30px);
         }
-      }
-      .illustration {
-        display: block;
       }
     }
   }

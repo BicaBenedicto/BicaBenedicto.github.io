@@ -1,58 +1,60 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Route, Switch } from 'react-router';
+import styled from 'styled-components';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
-import Trybewallet from './projects/builds/trybewallet/App';
-import Trybetunes from './projects/builds/trybetunes/App';
-import Trivia from './projects/builds/trivia-react-redux/App';
-import DrinksAndFoods from './projects/builds/drinks-and-foods-recipes/App';
-import ButtonBackToHome from './components/ButtonBackToHome';
+import ProjectById from './pages/ProjectById';
 import './assets/output.css';
 import './App.css';
 import NotFound from './pages/NotFound';
+import Context from './services/Context';
+import Contact from './pages/Contact';
 
 export default function App() {
+  const { theme, isDarkTheme } = useContext(Context);
+
+  const Portfolio = styled.div`
+    background-color: ${props => props.theme[`background${theme}`]};
+    color: ${props => props.theme[`text${theme}`]};
+  `;
+
+  useEffect(() => {
+    const themeExistis = JSON.parse(localStorage.getItem('theme'));
+    if(themeExistis) {
+      const themeSet = () => themeExistis === 'dark' ? isDarkTheme(true) : isDarkTheme(false);
+      themeSet();
+    } else {
+      const themeUser = window.matchMedia('(prefers-color-scheme: dark)');
+      themeUser.matches ? isDarkTheme(true) : isDarkTheme(false);
+    }
+  }, []);
 
   return (
     <Switch>
       <Route exact path="/">
-        <div id="portfolio">
+        <Portfolio id="portfolio">
           <Home />
-        </div>
+        </Portfolio>
       </Route>
-      <Route exact path="/projects">
-        <div id="portfolio">
+      <Route path="/contact">
+        <Portfolio id="portfolio">
+          <Contact />
+        </Portfolio>
+      </Route>
+      <Route path="/projects/:name">
+        <Portfolio id="portfolio">
+          <ProjectById />
+        </Portfolio>
+      </Route>
+      <Route path="/projects">
+        <Portfolio id="portfolio">
           <Projects />
-        </div>
-      </Route>
-      <Route path="/projects/trybewallet">
-        <div id="trybewallet">
-          <ButtonBackToHome />
-          <Trybewallet />
-        </div>
-      </Route>
-      <Route path="/projects/trybetunes">
-        <div id="trybetunes" className="local-bootstrap">
-          <ButtonBackToHome />
-          <Trybetunes />
-        </div>
-      </Route>
-      <Route path="/projects/trivia">
-        <div id="trivia" className="local-bootstrap">
-          <ButtonBackToHome />
-          <Trivia />
-        </div>
-      </Route>
-      <Route path="/projects/drinks-and-foods">
-        <div id="drinks-and-foods" className="local-bootstrap">
-          <ButtonBackToHome />
-          <DrinksAndFoods />
-        </div>
+        </Portfolio>
       </Route>
       <Route path="*">
-        <div id="portfolio">
+        <Portfolio id="portfolio">
           <NotFound />
-        </div>
+        </Portfolio>
       </Route>
     </Switch>
   );

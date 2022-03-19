@@ -1,7 +1,6 @@
 @import './variables.scss';
 
 #portfolio-contact {
-	background: $transition-linear-light;
 	padding: 20px;
 	padding-top: 100px;
 	text-align: center;
@@ -22,6 +21,9 @@
 				display: flex;
 				flex-direction: column;
 				width: 100%;
+				input, textarea {
+					color: black;
+				}
 			}
 			textarea {
 				height: 200px;
@@ -37,10 +39,8 @@
 				}
 			}
 			button {
-				background-color: $button-light;
 				border: none;
 				border-radius: 10px;
-				color: $button-text;
 				font-weight: 600;
 				margin: 0 20px;
 				width: 100%;
@@ -80,7 +80,6 @@
 					a {
 						align-items: center;
 						border-radius: 10px;
-						color: inherit;
 						display: flex;
 						font-size: 17px;
 						font-weight: 400;
@@ -92,7 +91,6 @@
 						}
 		
 						&:hover {
-							background-color: $purple-light;
 							font-weight: 600;
 							transition: 1s;
 							width: 100%;
@@ -116,101 +114,48 @@
 	width: 100%;
 }
 
+#portfolio .contact-page {
+	padding: 0;
+	margin: 0;
+	.contact-body {
+		margin: 0;
+		padding: 0;
+		min-height: 100vh;
+		height: 100%;
+	}
+}
+
 @media only screen and (min-width: 1000px) {
 	#portfolio-contact {
-		background: $transition-linear-light;
-		padding: 20px;
-		padding-top: 100px;
-		width: 100%;
 		.contact-body {
-			display: flex;
-			justify-content: center;
 			flex-direction: row;
 			margin: 0 auto;
 			width: 90%;
 			form {
-				align-items: center;
-				display: flex;
-				flex-direction: column;
 				width: 30%;
-				label {
-					align-items: center;
-					display: flex;
-					flex-direction: column;
-					width: 100%;
-				}
-				textarea {
-					height: 200px;
-				}
-				div {
-					&.button-form-contact {
-						align-items: center;
-						display: flex;
-						justify-content: center;
-						margin: 10px 0;
-						position: relative;
-						width: 100%;
-					}
-				}
 				button {
-					background-color: $button-light;
-					border: none;
-					border-radius: 10px;
-					color: $button-text;
-					font-weight: 600;
-					margin: 0 20px;
 					width: 50%;
-					&:disabled {
-						cursor: not-allowed;
-						opacity: 0.2;
-					}
-					&:hover {
-						opacity: 0.5;
-					}
-				}
-				svg {
-					position: absolute;
-					right: 0;
 				}
 			}
 		}
 		.contact-body-others { 
 			align-items: flex-start;
-			display: flex;
 			flex-direction: row-reverse;
-			flex-wrap: wrap;
-			justify-content: flex-start;
 			margin: 0 auto;
 			width: 35% !important;
 			div.other-contacts {
-				display: flex;
-				justify-content: space-around;
-				width: 100%;
-				img {
-					width: 30px;
-				}
 				a {
-					align-items: center;
-					border-radius: 10px;
 					color: inherit;
-					display: flex;
-					font-size: 17px;
-					font-weight: 400;
-					text-decoration: none;
-					margin: 20px 0;
-					width: 0;
-					img {
-						margin-right: 10px;
-					}
-
 					&:hover {
-						background-color: $purple-light;
-						font-weight: 600;
-						transition: 1s;
 						width: 50%;
 					}
 				}
 			}
     }
   }
+	#portfolio .contact-page {
+		.contact-body {
+			margin: 20px auto;
+		}
+	}
 }

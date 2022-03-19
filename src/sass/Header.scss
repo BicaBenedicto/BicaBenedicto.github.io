@@ -4,61 +4,133 @@
 	#header-top {
 		align-content: center;
 		align-items: center;
-		background-color: $header-light;
 		display: flex;
-		color: $header-text;
-		flex-flow: column;
-		justify-content: center;
+		flex-flow: row;
+		justify-content: space-between;
 		padding: 10px 0;
 		width: 100%;
-		#header-menu {
-			.nav-link {
-				display: inline-block;
-				padding: 5px 20px;
+    .button-menu {
+      display: block;
+      background-color: transparent;
+      border: none;
+      margin: 0 20px;
+      width: 30px;
+      img {
+        width: 100%;
+      }
+    }
+    #header-menu {
+      display: none;
+      .nav-link {
+        display: block;
+        padding: 5px 20px;
       }
     }
     .button-logo {
       background-color: transparent;
       border: none;
-      .logo-title {
-        color: $purple-light;
-        font-size: 30px;
-      }
+      margin: 0 20px;
+      font-size: 19px;
     }
-  }
-	#header-menu {
-		display: none;
-  }
-	#logo {
-		border-radius: 100%;
-		margin-bottom: 10px;
-		width: 50px;
   }
 }
 
 .nav-link {
-	color: $header-text;
 	text-decoration: none;
+  cursor: pointer;
 }
 
 
 @media only screen and (min-width: 1000px) {
   #portfolio {
     #header-top {
-      flex-flow: row;
-      justify-content: space-between;
       position: fixed;
       z-index: 30;
+      .button-menu {
+        display: none;
+      }
       #header-menu {
+        display: flex;
         .nav-link {
-          border-bottom: 2px solid transparent;
-          color: $header-text;
-          display: inline-block;
           font-weight: 600;
           padding: 0 50px;
-          &:hover {
-            border-bottom: 2px solid $purple-light;
+        }
+        .dropdown-menu {
+          display: flex;
+          flex-direction: column;
+          .dropdown-item {
+            display: block;
+            padding: 0 20px;
           }
+          .dropdown-header {
+            margin: 0 auto;
+            text-align: center;
+          }
+          .slideThree {
+            display: flex;
+            justify-content: space-around;
+            min-height: 50px;
+            margin: 0 auto;
+            width: 100%;
+            .idk {
+              border-radius: 20px;
+              padding: 5px 0;
+              margin: 0 auto;
+              position: relative;
+              input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+              }
+
+              .radio {
+                border-radius: 100%;
+                position: absolute;
+                top: 0;
+                height: 25px;
+                width: 25px;
+                &:after {
+                  content: "";
+                  position: absolute;
+                  display: none;
+                }
+                &.radio-dark {
+                  padding: 4px;
+                  left: 0;
+                }
+                &.radio-light {
+                  right: 0;
+                }
+              }
+              &:hover input ~ .radio-dark {
+                background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(2,0,36,0) 90%, rgba(0,212,255,0) 100%);
+              }
+              &:hover input ~ .radio-light {
+                background: radial-gradient(circle, rgba(245,255,0,1) 0%, rgba(2,0,36,0) 80%, rgba(0,212,255,0) 100%);
+              }
+              input:checked ~ .radio-dark {
+                background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(2,0,36,0) 90%, rgba(0,212,255,0) 100%);
+              }
+              input:checked ~ .radio-light {
+                background: radial-gradient(circle, rgba(245,255,0,1) 0%, rgba(2,0,36,0) 80%, rgba(0,212,255,0) 100%);
+              }
+              input:checked ~ .radio:after {
+                display: block;
+              }
+              .radio:after {
+                left: 9px;
+                top: 5px;
+                width: 5px;
+                height: 10px;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+              }
+            }
+          };
         }
       }
       .button-logo {
@@ -66,13 +138,6 @@
           font-size: unset();
         }
       }
-    }
-    #header-menu {
-      display: block;
-    }
-    #logo {
-      border-radius: 100%;
-      width: 50px;
     }
   }
 

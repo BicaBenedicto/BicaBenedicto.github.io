@@ -6,15 +6,17 @@ $project-link-hover: hsl(300, 100%, 80%);
 // Dark mode colors
 
 $background-dark: hsl(0, 0%, 8%);
+$background-project-dark: rgba(40, 40, 40, 0.711);
 $button-dark: #6b63ff;
 $header-dark: black;
 $purple-dark: #6b63ff;
-$text-dark: white;
-$transition-linear-dark: linear-gradient(0deg, hsl(0, 0%, 8%) 0%, hsl(0, 0% ,20%) 20%, hsl(0, 0%,10%) 80%, hsl(0, 0%, 8%) 100%);
+$text-dark: #ccc;
+$transition-linear-dark: linear-gradient(0deg, hsl(0, 0%, 8%) 0%, hsl(0, 0% ,15%) 20%, hsl(0, 0%,10%) 80%, hsl(0, 0%, 8%) 100%);
 
 // Light mode colors
 
 $background-light: rgb(245, 245, 245);
+$background-project-light: rgba(0, 0, 0, 0.767);
 $button-light: #cac7ff;
 $header-light: hsl(0, 0%, 40%);
 $purple-light: #cac7ff;
