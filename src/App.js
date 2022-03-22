@@ -32,14 +32,9 @@ export default function App() {
     }
     const Func = async () => {
     const [dataProjects, dataTechnologies] = await Promise.all([fetch(`${URL}projects`), fetch(`${URL}technologies`)]);
-    console.log('--------------------');
-    console.log(dataTechnologies);
-    console.log('--------------------');
     const technologies = await dataTechnologies.json()
     setTechnologies(technologies);
-    console.log(technologies);
     const projects = await dataProjects.json();
-    console.log(projects);
     setProjects(projects);
 
     };

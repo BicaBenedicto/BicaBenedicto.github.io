@@ -2,7 +2,6 @@ import styled, { keyframes } from 'styled-components';
 
 
 export const Div = styled.div`
-${(props) => console.log(props)}
 background-color: ${props => props.theme[`backgroundProject${props.type.theme}`]};
 ${props => `
   transition: 1s;

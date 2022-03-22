@@ -32,7 +32,7 @@ export default function Menu({ isRoot = true }) {
     toggleMenu('menu-hidden');
     return history.push(`/${location}`);
   }
-  console.log(menu);
+
   return (
     <MenuBody className={ `menu-body ${menu}` }>
       <Header className="menu-header">

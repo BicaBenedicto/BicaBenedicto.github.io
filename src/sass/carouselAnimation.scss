@@ -64,9 +64,9 @@
             transform: scale(($sides -$i - 1) * $size)  translateX(50px);
           } @else {
             @if $i == ($sides - 1) {
-              transform: scale(($sides - $i + 1) * $size)  translateX(($sides - 1) * -43px);
+              transform: scale(($sides - $i - 1) * $size)  translateX(($i - 1) * -50px);
             } @else {
-              transform: scale(($sides -$i - 1) * $size)  translateX($i * 50px);
+              transform: scale(($sides - $i - 1) * $size)  translateX($i * 50px);
             }
           }
           opacity: ($i * 0.05);
@@ -101,13 +101,15 @@
         }
       }
     }
-  }
-  @keyframes shadow {
-    0% {
-      transform: scale(($sides - 5) * $size)  translateX(4 * -50px);
-    }
-    100% {
-      transform: scale(0)  translateX(0);
+    @if $i == ($skills - 1) {
+        @keyframes shadow {
+        0% {
+          transform: scale(($sides - $i + 1) * $size)  translateX(($sides - 1) * -43px);
+        }
+        100% {
+          transform: scale(0)  translateX(0);
+        }
+      }
     }
   }
 }
