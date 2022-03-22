@@ -1,12 +1,15 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import ProjectItem from './ProjectItem';
-import { PROJECTS } from '../assets/data';
+import { PROJECTS_OFFLINE } from '../assets/data';
 import '../sass/Projects.scss';
 import Context from '../services/Context';
 import styled from 'styled-components';
 
 export default function Projects({ search }) {
-  const { theme } = useContext(Context);
+  const { theme, data } = useContext(Context);
+  const { projects } = data;
+
+  const PROJECTS = projects || PROJECTS_OFFLINE;
 
   const Section = styled.section`
     background: ${props => props.theme[`transitionLinear${theme}`]};

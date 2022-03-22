@@ -1,17 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import hardskills from '../assets/data-hardskills.js'
+import Context from '../services/Context';
 import '../sass/Skills.scss';
 
-const quantifyShow = Object.values(hardskills).length;
 
 export default function CarouselAnimation() {
-  const [arrActual, _setArrActual] = useState(Object.values(hardskills));
+  const { data } = useContext(Context);
+  const { technologies } = data;
+  const [arrActual, setArrActual] = useState(hardskills);
   const [indexG, setIndex] = useState(0);
   const [object, setObject] = useState({});
   let indexGlobal = 0;
-
+  
+  const quantifyShow = arrActual.length;
   useEffect(
     () => {
+      if(technologies) {
+        setArrActual(technologies);
+      }
       const id = setInterval(() => {
         if(indexGlobal >= arrActual.length - 1) {
           indexGlobal = 0;

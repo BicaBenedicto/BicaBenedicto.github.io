@@ -5,15 +5,16 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Menu from '../components/Menu';
 import Context from '../services/Context';
-import { PROJECTS } from '../assets/data';
+import { PROJECTS_OFFLINE } from '../assets/data';
 import NotFoundComponent from '../components/NotFound';
 import FeaturedProjects from '../components/FeaturedProjects';
 import '../sass/ProjectById.scss';
 
 export default function ProjectById() {
-  const { menu, theme } = useContext(Context);
+  const { menu, theme, data } = useContext(Context);
   const { name } = useParams();
   const [projectFound, setProjectFound] = useState(false);
+  const PROJECTS = data.projects || PROJECTS_OFFLINE;
 
   const changeBlur = () => {
     if(menu === 'menu-show') return 'hasShow';

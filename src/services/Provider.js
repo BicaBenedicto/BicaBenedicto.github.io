@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Context from './Context';
 
 export default function Provider({ children }) {
@@ -7,8 +7,16 @@ export default function Provider({ children }) {
   const [projectHasShow, projectToggleShow] = useState('notStarted');
   const [theme, isDarkTheme] = useState(false);
   const [menu, toggleMenu] = useState('menu-empty');
+  const [projects, setProjects] = useState('');
+  const [technologies, setTechnologies] = useState('');
 
   const STORE = {
+    data: {
+      projects,
+      setProjects,
+      technologies,
+      setTechnologies,
+    },
     projects: {
       projectName,
       setProjectName,

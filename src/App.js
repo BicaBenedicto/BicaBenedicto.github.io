@@ -10,8 +10,11 @@ import NotFound from './pages/NotFound';
 import Context from './services/Context';
 import Contact from './pages/Contact';
 
+const URL = 'https://gabrielbenedicto-backend.herokuapp.com/';
+
 export default function App() {
-  const { theme, isDarkTheme } = useContext(Context);
+  const { theme, isDarkTheme, data } = useContext(Context);
+  const { setProjects, setTechnologies } = data;
 
   const Portfolio = styled.div`
     background-color: ${props => props.theme[`background${theme}`]};
@@ -27,6 +30,21 @@ export default function App() {
       const themeUser = window.matchMedia('(prefers-color-scheme: dark)');
       themeUser.matches ? isDarkTheme(true) : isDarkTheme(false);
     }
+    const Func = async () => {
+    const [dataProjects, dataTechnologies] = await Promise.all([fetch(`${URL}projects`), fetch(`${URL}technologies`)]);
+    console.log('--------------------');
+    console.log(dataTechnologies);
+    console.log('--------------------');
+    const technologies = await dataTechnologies.json()
+    setTechnologies(technologies);
+    console.log(technologies);
+    const projects = await dataProjects.json();
+    console.log(projects);
+    setProjects(projects);
+
+    };
+    Func();
+
   }, []);
 
   return (
