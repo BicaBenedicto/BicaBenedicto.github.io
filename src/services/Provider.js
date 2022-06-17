@@ -14,6 +14,8 @@ export default function Provider({ children }) {
     data: {
       projects,
       setProjects,
+      favoriteProjects,
+      setFavoriteProjects,
       technologies,
       setTechnologies,
     },

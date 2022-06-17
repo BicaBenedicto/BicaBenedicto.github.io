@@ -8,9 +8,12 @@ import styled from 'styled-components';
 import Context from '../services/Context';
 
 export default function FeaturedProjects({ lookAll }) {
-  const { theme } = useContext(Context);
+  const { theme, data } = useContext(Context);
+  const { favoriteProjects } = data;
   const screenSize = useRef(null);
   const [slides, setSlideQuant] = useState(3);
+
+  const FAVORITE_PROJECTS = favoriteProjects || FEATURED_PROJECTS;
   
   const onLoadComponent = () => {
     const screenActual = Number(screenSize.current.offsetWidth);
@@ -57,7 +60,7 @@ export default function FeaturedProjects({ lookAll }) {
         wheelScroll={ slides }
         onResize={ onLoadComponent }
       >
-        {FEATURED_PROJECTS.map(({name, image}) => (
+        {FAVORITE_PROJECTS.map(({name, image}) => (
           <ProjectItem
             name={ name }
             image={ image }

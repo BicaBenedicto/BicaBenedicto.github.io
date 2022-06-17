@@ -14,7 +14,7 @@ const URL = 'https://gabrielbenedicto-backend.herokuapp.com/';
 
 export default function App() {
   const { theme, isDarkTheme, data } = useContext(Context);
-  const { setProjects, setTechnologies } = data;
+  const { setProjects, setTechnologies, setFavoriteProjects } = data;
 
   const Portfolio = styled.div`
     background-color: ${props => props.theme[`background${theme}`]};
@@ -30,16 +30,16 @@ export default function App() {
       const themeUser = window.matchMedia('(prefers-color-scheme: dark)');
       themeUser.matches ? isDarkTheme(true) : isDarkTheme(false);
     }
-    const Func = async () => {
+    (async () => {
     const [dataProjects, dataTechnologies] = await Promise.all([fetch(`${URL}projects`), fetch(`${URL}technologies`)]);
-    const technologies = await dataTechnologies.json()
+    const [technologies, projects] = await Promise.all([dataTechnologies.json(), dataProjects.json()]);
+
+    const favoriteProjects = projects.filter((project) => project.favorited);
+
     setTechnologies(technologies);
-    const projects = await dataProjects.json();
     setProjects(projects);
-
-    };
-    Func();
-
+    setFavoriteProjects(favoriteProjects);
+    })();
   }, []);
 
   return (
