@@ -28,9 +28,7 @@ export default function Login() {
           email,
           password,
       });
-      console.log(access, 'ACESSO');
       const { token } = await access.json();
-      console.log(token, 'TOKEN');
       localStorage.setItem('token', JSON.stringify(token));
       localStorage.setItem('user', JSON.stringify({ email }));
       login.isLogged(true);

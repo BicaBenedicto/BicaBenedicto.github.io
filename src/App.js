@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import ProjectById from './pages/ProjectById';
 import Login from './pages/Login';
+import Manager from './pages/Manager';
 import './assets/output.css';
 import './App.css';
 import NotFound from './pages/NotFound';
@@ -68,6 +69,11 @@ export default function App() {
       <Route path="/login">
         <Portfolio id="portfolio">
           <Login />
+        </Portfolio>
+      </Route>
+      <Route path="/manager">
+        <Portfolio id="portfolio">
+          <Manager />
         </Portfolio>
       </Route>
       <Route path="*">

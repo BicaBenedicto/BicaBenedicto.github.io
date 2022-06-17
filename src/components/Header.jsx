@@ -151,6 +151,7 @@ const BootsHeader = styled(Dropdown.Header)`
                   className="manager-button"
                   type="button"
                   onClick={ () => {
+                    history.push('/manager')
                   } }
                 >
                   Gerenciamento

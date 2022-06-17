@@ -9,7 +9,8 @@ import { useHistory } from 'react-router';
 
 export default function Menu({ isRoot = true }) {
   const history = useHistory();
-  const { menu, toggleMenu, theme, isDarkTheme } = useContext(Context);
+  const { menu, toggleMenu, theme, isDarkTheme, login } = useContext(Context);
+  const { logged, isLogged } = login;
 
   const Header = styled.header`
   background-color: ${props => props.theme[`header${theme}`]};
@@ -79,6 +80,30 @@ export default function Menu({ isRoot = true }) {
         <a className='nav-link' onClick={ () => onNavClick()}>Home</a>
         <a className='nav-link' onClick={ () => onNavClick('projects')}>Projetos</a>
         <a className='nav-link' onClick={ () => onNavClick('contact')}>Contato</a>
+        <Hr/>
+        {logged && (
+          <div className="logged">
+            <button
+              className="manager-button"
+              type="button"
+              onClick={ () => {
+                history.push('/manager')
+              } }
+            >
+              Gerenciamento
+            </button>
+            <button
+              className="exit-button"
+              type="button"
+              onClick={ () => {
+                localStorage.clear();
+                isLogged(false);
+              } }
+            >
+              Sair
+            </button>
+          </div>
+        )}
       </nav>
     </MenuBody>
   )
