@@ -9,6 +9,8 @@ export default function Provider({ children }) {
   const [menu, toggleMenu] = useState('menu-empty');
   const [projects, setProjects] = useState('');
   const [technologies, setTechnologies] = useState('');
+  const [favoriteProjects, setFavoriteProjects] = useState('');
+  const [logged, isLogged] = useState(true);
 
   const STORE = {
     data: {
@@ -26,6 +28,10 @@ export default function Provider({ children }) {
       setProjectImage,
       projectHasShow,
       projectToggleShow,
+    },
+    login: {
+      logged,
+      isLogged,
     },
     theme: (theme ? 'Dark' : 'Light'),
     isDarkTheme,

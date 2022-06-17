@@ -25,6 +25,18 @@
         display: block;
         padding: 5px 20px;
       }
+      .logged {
+        display: flex;
+        flex-direction: column;
+        button {
+          background: transparent;
+          border: none;
+          &:hover {
+            border-left: 1px solid yellow;
+            transform: scale(1.1);
+          }
+        }
+      }
     }
     .button-logo {
       background-color: transparent;

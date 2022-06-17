@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import ProjectById from './pages/ProjectById';
+import Login from './pages/Login';
 import './assets/output.css';
 import './App.css';
 import NotFound from './pages/NotFound';
@@ -62,6 +63,11 @@ export default function App() {
       <Route path="/projects">
         <Portfolio id="portfolio">
           <Projects />
+        </Portfolio>
+      </Route>
+      <Route path="/login">
+        <Portfolio id="portfolio">
+          <Login />
         </Portfolio>
       </Route>
       <Route path="*">

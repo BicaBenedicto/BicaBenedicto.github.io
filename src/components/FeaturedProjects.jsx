@@ -13,7 +13,7 @@ export default function FeaturedProjects({ lookAll }) {
   const screenSize = useRef(null);
   const [slides, setSlideQuant] = useState(3);
 
-  const FAVORITE_PROJECTS = favoriteProjects || FEATURED_PROJECTS;
+  const FAVORITE_PROJECTS = (favoriteProjects && favoriteProjects.length !== 0) ? favoriteProjects : FEATURED_PROJECTS;
   
   const onLoadComponent = () => {
     const screenActual = Number(screenSize.current.offsetWidth);

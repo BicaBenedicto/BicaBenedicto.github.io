@@ -9,7 +9,8 @@ import moon from '../images/icons/moon.svg';
 import menu from '../images/icons/menu.svg';
 
 export default function Header({ isRoot = true }) {
-  const { theme, isDarkTheme, toggleMenu } = useContext(Context);
+  const { theme, isDarkTheme, toggleMenu, login } = useContext(Context);
+  const { logged, isLogged } = login;
   const history = useHistory();
 
   const Header = styled.header`
@@ -144,6 +145,28 @@ const BootsHeader = styled(Dropdown.Header)`
                 <img src={ sun } alt="sun" className="radio radio-light"/>
               </label>
             </div>
+            {logged && (
+              <div className="logged">
+                <button
+                  className="manager-button"
+                  type="button"
+                  onClick={ () => {
+                  } }
+                >
+                  Gerenciamento
+                </button>
+                <button
+                  className="exit-button"
+                  type="button"
+                  onClick={ () => {
+                    localStorage.clear();
+                    isLogged(false);
+                  } }
+                >
+                  Sair
+                </button>
+              </div>
+            )}
           </BootsA>
           <Dropdown.Divider />
         </Dropdown>
