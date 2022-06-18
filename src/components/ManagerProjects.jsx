@@ -6,41 +6,50 @@ import Context from '../services/Context';
 export default function ManagerTechnologies() {
   const history = useHistory();
   const { data, login } = useContext(Context);
-  const { technologies } = data;
+  const { technologies, projects } = data;
   const [name, setName] = useState('');
+  const [nameEN, setNameEN] = useState('');
   const [description, setDescription] = useState('');
   const [descriptionEN, setDescriptionEN] = useState('');
   const [image, setImage] = useState('');
   const [mode, setMode] = useState('add');
   const [technologySelected, setTechnologySelected] = useState('');
+  const [technologiesArray, setTechnologies] = useState('');
+  const [ProjectSelected, setProjectSelected] = useState('');
 
   useEffect(() => {
     if (mode === 'edit') {
-      const { name, id, description, description_en, image } = technologies[0];
+      const { name, name_en, id, description, description_en, image, technologies} = projects[0];
       setName(name || '');
+      setNameEN(name_en || '');
       setDescription(description || '');
       setDescriptionEN(description_en || '');
       setImage(image || '');
-      setTechnologySelected(id);
+      setTechnologies(technologies || []);
+      setProjectSelected(id);
     }
     if (mode === 'add') {
       setName('');
+      setNameEN('');
       setDescription('');
       setDescriptionEN('');
       setImage('');
+      setTechnologies([]);
     }
   }, [mode]);
+
   useEffect(() => {
     if (mode === 'edit') {
-      const { name, id, description, description_en, image } = technologies.find((tech) => tech.id == technologySelected);
+      const { name, name_en, id, description, description_en, image, technologies} = projects.find((project) => project.id == ProjectSelected);
       setName(name || '');
+      setNameEN(name_en || '');
       setDescription(description || '');
       setDescriptionEN(description_en || '');
       setImage(image || '');
-      setTechnologySelected(id);
+      setTechnologies(technologies || []);
+      setProjectSelected(id);
     }
-  }, [technologySelected]);
-
+  }, [ProjectSelected]);
 
   const onSubmitButton = async (e) => {
     e.preventDefault();
@@ -52,11 +61,13 @@ export default function ManagerTechnologies() {
         return localStorage.clear();
       }
       if (mode === 'edit') {
-        await axios.put(`https://gabrielbenedicto-backend.herokuapp.com/technologies/${technologySelected}`, {
+        await axios.put(`https://gabrielbenedicto-backend.herokuapp.com/projects/${ProjectSelected}`, {
           name,
+          name_en: nameEN,
           description,
           description_en: descriptionEN,
           image,
+          technologies: technologiesArray,
         }, {
           headers: {
             authorization: JSON.parse(token),
@@ -64,11 +75,13 @@ export default function ManagerTechnologies() {
         });
         return;
       }
-      await axios.post('https://gabrielbenedicto-backend.herokuapp.com/technologies', {
+      await axios.post('https://gabrielbenedicto-backend.herokuapp.com/projects', {
         name,
+        name_en: nameEN,
         description,
         description_en: descriptionEN,
         image,
+        technologies: technologiesArray,
       }, {
         headers: {
           authorization: JSON.parse(token),
@@ -88,7 +101,7 @@ export default function ManagerTechnologies() {
         history.push('/');
         return localStorage.clear();
       }
-      await axios.delete(`https://gabrielbenedicto-backend.herokuapp.com/technologies/${technologySelected}`, {
+      await axios.delete(`https://gabrielbenedicto-backend.herokuapp.com/projects/${ProjectSelected}`, {
         headers: {
           authorization: JSON.parse(token),
         },
@@ -99,41 +112,61 @@ export default function ManagerTechnologies() {
   };
 
   return (
-    <form className='manager-technology' onSubmit={onSubmitButton}>
+    <section style={{ display: 'flex', justifyContent: 'space-evenly', padding: '20px 0' }}>
+    <div className="technologies" style={{ width: '20%' }}><div><h2>Tecnologias</h2></div>
+      {technologies && technologies.filter((tech) => !technologiesArray?.some((tec) => tech.id === tec.id)).map((tech) => (
+        <button style={{ background: 'transparent', border: 'none' }} type="button" onClick={() => {setTechnologies([...technologiesArray, tech])}}>
+          <img src={tech.image} alt={tech.name} style={{ width: '50px', margin: '10px' }} />
+        </button>
+      ))}
+    </div>
+    <form className='manager-project' onSubmit={onSubmitButton}>
       <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
         <label htmlFor="mode-add" style={{ alignItems: 'center' }}>
           <input id="mode-add" type="radio" name="mode" checked={mode === 'add'} onClick={() => setMode('add')} />
           Adicionar
         </label>
-        {(technologies && technologies.length > 0) && (
+        {(projects && projects.length > 0) && (
         <label htmlFor="mode-edit" style={{ alignItems: 'center' }}>
           <input id="mode-edit" type="radio" name="mode" checked={mode === 'edit'} onClick={() => setMode('edit')} />
           Editar
         </label>)}
       </div>
       {mode === 'edit' ? (
-        <select onChange={(e) => setTechnologySelected(e.target.value)} value={technologySelected}>
-          {technologies?.map((tech) => <option value={tech.id}>{tech.name}</option>)}
+        <select onChange={(e) => setProjectSelected(e.target.value)} value={ProjectSelected}>
+          {projects?.map((tech) => <option value={tech.id}>{tech.name}</option>)}
         </select>
       ) : <div />}
       <label>
-        Nome Tecnologia:
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Nome dela.." />
+        Nome Projeto:
+        <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Nome delete.." />
       </label>
       <label>
-        Descrição Tecnologia:
-        <textarea type="text" value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Descrição da tecnologia.." />
+        Nome Projeto Inglês:
+        <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Nome delete.." />
       </label>
       <label>
-        Descrição Tecnologia Inglês:
-        <textarea type="text" value={descriptionEN} onChange={(e) => setDescriptionEN(e.target.value)} placeholder="Descrição da tecnologia em inglês.." />
+        Descrição Projeto:
+        <textarea type="text" value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Descrição do Projeto.." />
       </label>
       <label>
-        Link imagem da Tecnologia:
+        Descrição Projeto Inglês:
+        <textarea type="text" value={descriptionEN} onChange={(e) => setDescriptionEN(e.target.value)} placeholder="Descrição do Projeto em inglês.." />
+      </label>
+      <label>
+        Link imagem da Projeto:
         <input type="text" value={image} onChange={(e) => setImage(e.target.value)} placeholder="Link da imagem.." />
       </label>
       <button type="submit">{mode === 'add' ? 'Adicionar' : 'Editar'}</button>
       {mode === 'edit' && <button type="button" onClick={onDeleteButton}>Remover</button>}
     </form>
+    <div className="technologies" style={{ width: '20%' }}><div><h2>Tecnologias Projeto</h2></div>
+      {technologiesArray && technologiesArray.map((tech) => (
+        <button style={{ background: 'transparent', border: 'none' }} type="button" onClick={() => {setTechnologies(technologiesArray.filter((tec) => tec.id !== tech.id))}}>
+          <img src={tech.image} alt={tech.name} style={{ width: '50px', margin: '10px' }} />
+        </button>
+      ))}
+    </div>
+    </section>
   );
 }

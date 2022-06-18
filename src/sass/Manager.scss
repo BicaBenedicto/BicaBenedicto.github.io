@@ -1,0 +1,93 @@
+#portfolio {
+	font-family: Montserrat, Monospace, Arial;
+	font-size: 16px;
+	line-height: 30px;
+	margin: 0 auto;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	min-width: 300px;
+	width: 100%;
+	main.hasShow {
+		animation: blur 0.5s ease-in-out both;
+  }
+	main.hasHidden { 
+		animation: not-blur 0.5s ease-in-out both;
+  }
+	.illustration {
+		width: 40% !important;
+  }
+	section {
+		margin: 0 10px;
+  } 
+	.projects-portfolio {
+		margin-top: 30px;
+  }
+	.manager-form {
+		form {
+			align-items: center;
+			color: black;
+			display: flex;
+			flex-direction: column;
+			padding: 20px 0;
+			margin: 0 auto;
+			width: 40%;
+			label {
+				align-items: flex-start;
+				display: flex;
+				flex-direction: column;
+				color: magenta;
+				width: 100%;
+			}
+			input, textarea {
+				color: red;
+				min-width: 100%;
+				width: 100%;
+				max-width: 100%;
+			}
+			select {
+				padding: 10px 0;
+				margin: 10px 0;
+				width: 100%;
+			}
+			button {
+				padding: 10px 0;
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+  #portfolio {
+    .illustration {
+      width: 600px;
+    }
+    section {
+      margin: 0 20px;
+    }
+    .projects-portfolio {
+      margin-top: 100px;
+    }
+  }
+}
+
+@keyframes blur {
+	0% {
+		filter: blur(0);
+	}
+	100% {
+		filter: blur(200px);
+	}
+}
+
+@keyframes not-blur {
+	0% {
+		filter: blur(200px);
+	}
+	100% {
+		filter: blur(0);
+	}
+}

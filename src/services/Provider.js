@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Context from './Context';
 
 export default function Provider({ children }) {
@@ -11,6 +11,11 @@ export default function Provider({ children }) {
   const [technologies, setTechnologies] = useState('');
   const [favoriteProjects, setFavoriteProjects] = useState('');
   const [logged, isLogged] = useState(false);
+
+  useEffect(() => {
+    const user = localStorage.getItem('user');
+    if (user) isLogged(true);
+  }, []);
 
   const STORE = {
     data: {
