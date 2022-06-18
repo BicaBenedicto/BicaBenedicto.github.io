@@ -10,6 +10,11 @@ import NotFoundComponent from '../components/NotFound';
 import FeaturedProjects from '../components/FeaturedProjects';
 import '../sass/ProjectById.scss';
 
+
+const Main = styled.main`
+background-color: ${props => props.theme[`background${props.type}`]}
+`;
+
 export default function ProjectById() {
   const { menu, theme, data } = useContext(Context);
   const { name } = useParams();
@@ -27,14 +32,10 @@ export default function ProjectById() {
     if(projectFounded) setProjectFound(true);
   }, []);
 
-  const Main = styled.main`
-    background-color: ${props => props.theme[`background${theme}`]}
-  `;
-
   return (
     <>
       <Header isRoot={ false } />
-      <Main className={ `project-individual ${changeBlur()}`}>
+      <Main type={theme} className={ `project-individual ${changeBlur()}`}>
         {projectFound
         ? <iframe src={ `https://gabrielbenedicto.com/${name}` } title={ name }></iframe>
         : <>

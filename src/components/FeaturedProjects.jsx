@@ -7,6 +7,20 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Context from '../services/Context';
 
+const Section = styled.section`
+@media(min-width: 1000px) {
+  .carousel-arrow {
+    background-color: ${props => props.theme[`header${props.type}`]}
+  }
+  .slick-next {
+    border-radius: 0 20px 20px 0;
+  }
+  .slick-prev {
+    border-radius: 20px 0 0 20px;
+  }
+}
+`;
+
 export default function FeaturedProjects({ lookAll }) {
   const { theme, data } = useContext(Context);
   const { favoriteProjects } = data;
@@ -22,22 +36,9 @@ export default function FeaturedProjects({ lookAll }) {
     return setSlideQuant(3);
   };
 
-  const Section = styled.section`
-    @media(min-width: 1000px) {
-      .carousel-arrow {
-        background-color: ${props => props.theme[`header${theme}`]}
-      }
-      .slick-next {
-        border-radius: 0 20px 20px 0;
-      }
-      .slick-prev {
-        border-radius: 20px 0 0 20px;
-      }
-    }
-  `;
-
   return (
     <Section
+      type={theme}
       id='project'
       className='container'
       ref={ screenSize }

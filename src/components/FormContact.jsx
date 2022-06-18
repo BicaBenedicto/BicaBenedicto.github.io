@@ -21,6 +21,12 @@ const ERROR_ICON = (
 </svg>
 );
 
+const Button = styled.button`
+background-color: ${props => props.theme[`button${props.TYPE}`]};
+color: ${props => props.theme.buttonText};
+`;
+
+
 const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
 export default function FormContact() {
@@ -78,11 +84,6 @@ export default function FormContact() {
     }
   };
 
-  const Button = styled.button`
-    background-color: ${props => props.theme[`button${theme}`]};
-    color: ${props => props.theme.buttonText};
-  `;
-
   return (
     <form ref={ form } onSubmit={ sendForm }>
       <label>
@@ -115,6 +116,7 @@ export default function FormContact() {
         {loading
         ? <Spinner animation="border" variant="primary" />
         : <Button
+            TYPE={theme}
             type="submit"
             disabled={ isDisabled }
           >

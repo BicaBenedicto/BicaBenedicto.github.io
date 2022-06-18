@@ -5,16 +5,15 @@ import styled from 'styled-components';
 import '../sass/About.scss';
 import Context from '../services/Context';
 
+const Button = styled.button`
+background-color: ${props => props.theme[`button${props.TYPE}`]};
+border: 1px solid ${props => props.theme[`button${props.TYPE}`]};
+color: ${props => props.theme.buttonText};
+`;
 
 export default function About() {
   const [aboutMore, toggleAboutMore] = useState(false);
   const { theme } = useContext(Context);
-
-  const Button = styled.button`
-    background-color: ${props => props.theme[`button${theme}`]};
-    border: 1px solid ${props => props.theme[`button${theme}`]};
-		color: ${props => props.theme.buttonText};
-  `;
 
   return (
     <section id='home' className='container'>
@@ -24,6 +23,7 @@ export default function About() {
           <h2>Olá, me chamo Gabriel. </h2>
           <h3>Sou desenvolvedor web, trabalho com criação e manutenção de websites.</h3>
           <Button
+            TYPE={theme}
             type="button"
             className="show-more"
             onClick={ () => toggleAboutMore(!aboutMore) }

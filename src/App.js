@@ -14,14 +14,14 @@ import Contact from './pages/Contact';
 
 const URL = 'https://gabrielbenedicto-backend.herokuapp.com/';
 
+const Portfolio = styled.div`
+background-color: ${props => props.theme[`background${props.type}`]};
+color: ${props => props.theme[`text${props.type}`]};
+`;
+
 export default function App() {
   const { theme, isDarkTheme, data } = useContext(Context);
   const { setProjects, setTechnologies, setFavoriteProjects } = data;
-
-  const Portfolio = styled.div`
-    background-color: ${props => props.theme[`background${theme}`]};
-    color: ${props => props.theme[`text${theme}`]};
-  `;
 
   useEffect(() => {
     const themeExistis = JSON.parse(localStorage.getItem('theme'));
@@ -47,37 +47,37 @@ export default function App() {
   return (
     <Switch>
       <Route exact path="/">
-        <Portfolio id="portfolio">
+        <Portfolio type={theme} id="portfolio">
           <Home />
         </Portfolio>
       </Route>
       <Route path="/contact">
-        <Portfolio id="portfolio">
+        <Portfolio type={theme} id="portfolio">
           <Contact />
         </Portfolio>
       </Route>
       <Route path="/projects/:name">
-        <Portfolio id="portfolio">
+        <Portfolio type={theme} id="portfolio">
           <ProjectById />
         </Portfolio>
       </Route>
       <Route path="/projects">
-        <Portfolio id="portfolio">
+        <Portfolio type={theme} id="portfolio">
           <Projects />
         </Portfolio>
       </Route>
       <Route path="/login">
-        <Portfolio id="portfolio">
+        <Portfolio type={theme} id="portfolio">
           <Login />
         </Portfolio>
       </Route>
       <Route path="/manager">
-        <Portfolio id="portfolio">
+        <Portfolio type={theme} id="portfolio">
           <Manager />
         </Portfolio>
       </Route>
       <Route path="*">
-        <Portfolio id="portfolio">
+        <Portfolio type={theme} id="portfolio">
           <NotFound />
         </Portfolio>
       </Route>

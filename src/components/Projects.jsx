@@ -5,24 +5,25 @@ import '../sass/Projects.scss';
 import Context from '../services/Context';
 import styled from 'styled-components';
 
+const Section = styled.section`
+background: ${props => props.theme[`transitionLinear${props.type}`]};
+.project-div {
+  span {
+    background-color: ${props => props.theme[`purpleLight`]};
+    color: black;
+  }
+}
+`;
+
 export default function Projects({ search }) {
   const { theme, data } = useContext(Context);
   const { projects } = data;
 
   const PROJECTS = projects || PROJECTS_OFFLINE;
 
-  const Section = styled.section`
-    background: ${props => props.theme[`transitionLinear${theme}`]};
-    .project-div {
-      span {
-        background-color: ${props => props.theme[`purpleLight`]};
-        color: black;
-      }
-    }
-  `;
-
   return (
     <Section
+      type={theme}
       id='projects'
     >
       {PROJECTS.filter(({name, technologies}) => {

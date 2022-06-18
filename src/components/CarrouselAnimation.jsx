@@ -12,26 +12,29 @@ export default function CarouselAnimation() {
   const [object, setObject] = useState({});
   let indexGlobal = 0;
   
-  const quantifyShow = arrActual.length;
-  // useEffect(
-  //   () => {
-  //     if(technologies) {
-  //       setArrActual(technologies);
-  //     }
-  //     const id = setInterval(() => {
-  //       if(indexGlobal >= arrActual.length - 1) {
-  //         indexGlobal = 0;
-  //       } else {
-  //         indexGlobal += 1;
-  //       }
-  //       setIndex(indexGlobal);
-  //     }, 1500);
-  //     return () => {
-  //       clearInterval(id);
-  //     };
-  //   },
-  //   [] // empty dependency array
-  // );
+  const [quantifyShow, setQuantifyShow] = useState(arrActual.length);
+
+  useEffect(
+    () => {
+      if(technologies) {
+        setArrActual(technologies);
+      }
+      const id = setInterval(() => {
+        if(indexGlobal >= arrActual.length - 1) {
+          indexGlobal = 0;
+        } else {
+          indexGlobal += 1;
+        }
+        setIndex(indexGlobal);
+      }, 1500);
+      return () => {
+        clearInterval(id);
+      };
+    },
+    [] // empty dependency array
+  );
+
+  useEffect(() => { setQuantifyShow(arrActual.length) }, [arrActual])
 
   useEffect(() => {
     const newObject = arrActual.reduce((acc, _value, index, array) => {

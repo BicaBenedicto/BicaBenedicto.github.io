@@ -5,15 +5,15 @@ import illustration from '../images/undraw_programming_re_kg9v.svg';
 import '../sass/Skills.scss';
 import CarouselAnimation from './CarrouselAnimation.jsx';
 
+const Section = styled.section`
+background: ${props => props.theme[`transitionLinear${props.type}`]};
+`;
+
 export default function Skills() {
   const { theme } = useContext(Context);
 
-  const Section = styled.section`
-    background: ${props => props.theme[`transitionLinear${theme}`]};
-  `;
-
   return (
-    <Section id='skills'>
+    <Section id='skills' type={theme}>
       <div className='' style={{ 'width': '100%'}}>
         <ul
           className="hardskills"

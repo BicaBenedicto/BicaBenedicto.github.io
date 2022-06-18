@@ -10,7 +10,7 @@ export default function Provider({ children }) {
   const [projects, setProjects] = useState('');
   const [technologies, setTechnologies] = useState('');
   const [favoriteProjects, setFavoriteProjects] = useState('');
-  const [logged, isLogged] = useState(true);
+  const [logged, isLogged] = useState(false);
 
   const STORE = {
     data: {

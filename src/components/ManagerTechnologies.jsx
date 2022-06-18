@@ -38,24 +38,26 @@ export default function ManagerTechnologies() {
       }
       if (mode === 'edit') {
         await axios.put(`https://gabrielbenedicto-backend.herokuapp.com/technologies/${id}`, {
-          headers: {
-            authorization: token,
-          },
           name,
           description,
-          descriptionEN,
+          description_en: descriptionEN,
           image,
+        }, {
+          headers: {
+            authorization: JSON.parse(token),
+          }
         });
         return;
       }
       await axios.post('https://gabrielbenedicto-backend.herokuapp.com/technologies', {
-        headers: {
-          authorization: token,
-        },
         name,
         description,
-        descriptionEN,
+        description_en: descriptionEN,
         image,
+      }, {
+        headers: {
+          authorization: JSON.parse(token),
+        }
       });
       return;
     } catch (e) {
@@ -71,7 +73,11 @@ export default function ManagerTechnologies() {
         history.push('/');
         return localStorage.clear();
       }
-      await axios.delete(`https://gabrielbenedicto-backend.herokuapp.com/technologies/${id}`);
+      await axios.delete(`https://gabrielbenedicto-backend.herokuapp.com/technologies/${id}`, {
+        headers: {
+          authorization: JSON.parse(token),
+        },
+      });
     } catch (e) {
       console.error(e);
     }
@@ -81,12 +87,12 @@ export default function ManagerTechnologies() {
     <form className='manager-technology' onSubmit={onSubmitButton}>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <label htmlFor="mode-add">
-          <input id="mode-add" type="radio" name="mode" checked={mode === 'add'} onClick={setMode('add')} />
+          <input id="mode-add" type="radio" name="mode" checked={mode === 'add'} onClick={() => setMode('add')} />
           Adicionar
         </label>
         {(technologies && technologies.length > 0) && (
         <label htmlFor="mode-edit">
-          <input id="mode-edit" type="radio" name="mode" checked={mode === 'edit'} onClick={setMode('edit')} />
+          <input id="mode-edit" type="radio" name="mode" checked={mode === 'edit'} onClick={() => setMode('edit')} />
           Editar
         </label>)}
       </div>

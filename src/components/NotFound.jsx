@@ -4,15 +4,15 @@ import '../sass/NotFound.scss';
 import Context from '../services/Context';
 import styled from 'styled-components';
 
+const Div = styled.div`
+background: ${props => props.theme[`transitionLinear${props.type}`]};
+`;
+
 export default function NotFoundComponent() {
   const { theme } = useContext(Context);
 
-  const Div = styled.div`
-    background: ${props => props.theme[`transitionLinear${theme}`]};
-  `;
-
   return (
-    <Div className="not-found-body">
+    <Div type={theme} className="not-found-body">
       <lottie-player
         autoplay
         background="transparent"

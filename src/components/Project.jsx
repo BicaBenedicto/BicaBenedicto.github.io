@@ -6,6 +6,46 @@ import Context from '../services/Context.js';
 import { useHistory } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 
+const keyFrame = keyframes`
+to {
+  transform: translateX(0) scale(1);
+}
+from {
+  transform: translateX(-100vw) scale(0, 1);
+}
+`;
+
+const keyFrame2 = keyframes`
+to {
+  transform: translateX(-100vw) scale(0, 1);
+}
+from {
+  transform: translateX(0) scale(1);
+}
+`;
+
+const keyFrame3 = keyframes`
+to {
+transform: translateX(0) scale(0);
+}
+from {
+transform: translateX(0) scale(0);
+}
+`;
+
+const Div = styled.div`
+background-color: ${props => props.theme[`backgroundProject${props.type}`]};
+&.hasHidden {
+  animation: ${keyFrame2} 1s ease-in-out both;
+}
+&.hasShow {
+  animation: ${keyFrame} 1s ease-in-out both;
+}
+&.notStarted {
+  animation: ${keyFrame3} 1s ease-in-out both;
+}
+`;
+
 export default function Project() {
   const imageShowing = useRef(null);
   const history = useHistory();
@@ -19,48 +59,9 @@ export default function Project() {
     setIsShowingImage(!isShowingImage);
   };
 
-  const keyFrame = keyframes`
-    to {
-      transform: translateX(0) scale(1);
-    }
-    from {
-      transform: translateX(-100vw) scale(0, 1);
-    }
-  `;
-
-  const keyFrame2 = keyframes`
-    to {
-      transform: translateX(-100vw) scale(0, 1);
-    }
-    from {
-      transform: translateX(0) scale(1);
-    }
-  `;
-
-  const keyFrame3 = keyframes`
-  to {
-    transform: translateX(0) scale(0);
-  }
-  from {
-    transform: translateX(0) scale(0);
-  }
-`;
-
-  const Div = styled.div`
-    background-color: ${props => props.theme[`backgroundProject${theme}`]};
-    &.hasHidden {
-      animation: ${keyFrame2} 1s ease-in-out both;
-    }
-    &.hasShow {
-      animation: ${keyFrame} 1s ease-in-out both;
-    }
-    &.notStarted {
-      animation: ${keyFrame3} 1s ease-in-out both;
-    }
-  `;
-
   return (
     <Div
+      type={theme}
       className={`project-show ${hasShow}`}
     >
       <button type="button" onClick={ onClickImage } ref={ imageShowing } className="image-show">
