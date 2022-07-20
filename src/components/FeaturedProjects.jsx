@@ -6,12 +6,35 @@ import '../sass/FeaturedProjects.scss';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Context from '../services/Context';
+import { useEffect } from 'react';
+
+const Section = styled.section`
+@media(min-width: 1000px) {
+  .carousel-arrow {
+    background-color: ${props => props.theme[`header${props.type}`]}
+  }
+  .slick-next {
+    border-radius: 0 20px 20px 0;
+  }
+  .slick-prev {
+    border-radius: 20px 0 0 20px;
+  }
+}
+`;
 
 export default function FeaturedProjects({ lookAll }) {
-  const { theme } = useContext(Context);
+  const { theme, data } = useContext(Context);
+  const { favoriteProjects } = data;
   const screenSize = useRef(null);
   const [slides, setSlideQuant] = useState(3);
-  
+  const [projects, setProjects] = useState(FEATURED_PROJECTS);
+
+  useEffect(() => {
+    if(favoriteProjects && favoriteProjects > 0) {
+      setProjects(favoriteProjects);
+    }
+  }, [favoriteProjects])
+
   const onLoadComponent = () => {
     const screenActual = Number(screenSize.current.offsetWidth);
     if (screenActual < 600) return setSlideQuant(1);
@@ -19,22 +42,9 @@ export default function FeaturedProjects({ lookAll }) {
     return setSlideQuant(3);
   };
 
-  const Section = styled.section`
-    @media(min-width: 1000px) {
-      .carousel-arrow {
-        background-color: ${props => props.theme[`header${theme}`]}
-      }
-      .slick-next {
-        border-radius: 0 20px 20px 0;
-      }
-      .slick-prev {
-        border-radius: 20px 0 0 20px;
-      }
-    }
-  `;
-
   return (
     <Section
+      type={theme}
       id='project'
       className='container'
       ref={ screenSize }
@@ -42,7 +52,7 @@ export default function FeaturedProjects({ lookAll }) {
     >
       <h1 className='center-title'>Meus projetos favoritos</h1>
       {lookAll && <Link to='/projects' className="look-all">Mostrar todos</Link>}
-      <Slider
+      {/* <Slider
         arrowsScroll={ slides }
         autoplay
         autoplayScroll={ slides }
@@ -57,14 +67,14 @@ export default function FeaturedProjects({ lookAll }) {
         wheelScroll={ slides }
         onResize={ onLoadComponent }
       >
-        {FEATURED_PROJECTS.map(({name, image}) => (
+        {projects.map(({name, image}) => (
           <ProjectItem
             name={ name }
             image={ image }
             key={ name }
           />
         ))}
-      </Slider>
+      </Slider> */}
     </Section>
   )
 };

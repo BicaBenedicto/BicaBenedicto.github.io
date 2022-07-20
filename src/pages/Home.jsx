@@ -30,7 +30,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-      <Project />
+      {/* <Project /> */}
       <Menu isRoot={ true }/>
     </>
   );

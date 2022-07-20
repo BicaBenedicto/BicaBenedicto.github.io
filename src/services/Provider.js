@@ -7,8 +7,25 @@ export default function Provider({ children }) {
   const [projectHasShow, projectToggleShow] = useState('notStarted');
   const [theme, isDarkTheme] = useState(false);
   const [menu, toggleMenu] = useState('menu-empty');
+  const [projects, setProjects] = useState('');
+  const [technologies, setTechnologies] = useState('');
+  const [favoriteProjects, setFavoriteProjects] = useState('');
+  const [logged, isLogged] = useState(false);
+
+  useEffect(() => {
+    const user = localStorage.getItem('user');
+    if (user) isLogged(true);
+  }, []);
 
   const STORE = {
+    data: {
+      projects,
+      setProjects,
+      favoriteProjects,
+      setFavoriteProjects,
+      technologies,
+      setTechnologies,
+    },
     projects: {
       projectName,
       setProjectName,
@@ -16,6 +33,10 @@ export default function Provider({ children }) {
       setProjectImage,
       projectHasShow,
       projectToggleShow,
+    },
+    login: {
+      logged,
+      isLogged,
     },
     theme: (theme ? 'Dark' : 'Light'),
     isDarkTheme,

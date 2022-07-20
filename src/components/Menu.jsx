@@ -7,35 +7,36 @@ import close from '../images/icons/close.svg';
 import Context from '../services/Context.js';
 import { useHistory } from 'react-router';
 
-export default function Menu({ isRoot = true }) {
-  const history = useHistory();
-  const { menu, toggleMenu, theme, isDarkTheme } = useContext(Context);
-
-  const Header = styled.header`
-  background-color: ${props => props.theme[`header${theme}`]};
-  color: ${props => props.theme.headerText};
-  .button-logo {
-    color: ${props => props.theme[`purple${theme}`]};
-  };
+const Header = styled.header`
+background-color: ${props => props.theme[`header${props.type}`]};
+color: ${props => props.theme.headerText};
+.button-logo {
+  color: ${props => props.theme[`purple${props.type}`]};
+};
 `;
 
-  const MenuBody = styled.div`
-    background-color: ${props => props.theme[`backgroundProject${theme}`]};
-  `;
+const MenuBody = styled.div`
+  background-color: ${props => props.theme[`backgroundProject${props.type}`]};
+`;
 
-  const Hr = styled.hr`
-    color: ${props => props.theme[`text${theme}`]};
-    width: 100%;
-  `;
+const Hr = styled.hr`
+  color: ${props => props.theme[`text${props.type}`]};
+  width: 100%;
+`;
+
+export default function Menu({ isRoot = true }) {
+  const history = useHistory();
+  const { menu, toggleMenu, theme, isDarkTheme, login } = useContext(Context);
+  const { logged, isLogged } = login;
 
   const onNavClick = (location = '') => {
     toggleMenu('menu-hidden');
     return history.push(`/${location}`);
   }
-  console.log(menu);
+
   return (
-    <MenuBody className={ `menu-body ${menu}` }>
-      <Header className="menu-header">
+    <MenuBody type={theme} className={ `menu-body ${menu}` }>
+      <Header type={theme} className="menu-header">
         <button className='button-logo' onClick={ () => {} }>
         { '{ Gabriel Benedicto }' }
         </button>
@@ -75,10 +76,34 @@ export default function Menu({ isRoot = true }) {
             <img src={ sun } alt="sun" className="radio radio-light"/>
           </label>
         </div>
-        <Hr/>
+        <Hr type={theme}/>
         <a className='nav-link' onClick={ () => onNavClick()}>Home</a>
         <a className='nav-link' onClick={ () => onNavClick('projects')}>Projetos</a>
         <a className='nav-link' onClick={ () => onNavClick('contact')}>Contato</a>
+        <Hr type={theme}/>
+        {logged && (
+          <div className="logged">
+            <button
+              className="manager-button"
+              type="button"
+              onClick={ () => {
+                history.push('/manager')
+              } }
+            >
+              Gerenciamento
+            </button>
+            <button
+              className="exit-button"
+              type="button"
+              onClick={ () => {
+                localStorage.clear();
+                isLogged(false);
+              } }
+            >
+              Sair
+            </button>
+          </div>
+        )}
       </nav>
     </MenuBody>
   )

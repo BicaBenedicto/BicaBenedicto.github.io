@@ -5,14 +5,15 @@ import '../sass/Footer.scss';
 import Context from '../services/Context';
 import styled from 'styled-components';
 
-export default function Footer() {
+const Footer = styled.footer`
+background-color: ${props => props.theme[`header${props.type}`]};
+`;
+
+export default function FooterComponet() {
   const { theme } = useContext(Context);
 
-  const Footer = styled.footer`
-    background-color: ${props => props.theme[`header${theme}`]};
-  `;
   return (
-    <Footer id='footer' className='container'>
+    <Footer type={theme} id='footer' className='container'>
       <span>Criado com carinho por Gabriel Benedicto</span>
       <div>
         <a href='https://www.linkedin.com/in/gabrielbenedicto/' target='_blank' rel="noreferrer">
