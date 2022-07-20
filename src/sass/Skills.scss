@@ -1,104 +1,104 @@
-@import './variables.scss';
-@import './carouselAnimation.scss';
+// @import './variables.scss';
+// @import './carouselAnimation.scss';
 
-#portfolio {
-  #skills {
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    margin: 0 auto;
-    padding: 100px 0;
-    position: relative;
-    width: 100%;
-    div {
-      width: 100%;
-      .hardskills {
-        display: flex;
-        flex-flow: wrap;
-        position: relative;
-        padding-top: 200px;
-        margin: 0 auto;
-        width: 100%;
-      }
-      li.hardskills-item {
-        align-items: center;
-        align-content: center;
-        display: flex !important;
-        flex-direction: column;
-        justify-content: flex-end;
-        transition: 1s;
-        position: absolute;
-        height: 30px;
-        top: 130px;
-        left: 25%;
-        width: 52%;
-        &.shadow {
-          animation: shadow 1s ease-in-out both;
-        }
-        .sinonjs {
-          background-color: white;
-          border-radius: 100%;
-        }
-      }
-      .hardskills-img {
-        margin-bottom: 10px;
-        width: 50px;
-      }
-      .center-title {
-        display: block;
-        position: absolute;
-        text-align: center;
-        padding: 10px;
-        font-size: 20px;
-        margin: 0 auto;
-        width: 100%;
-        &.top {
-          top: -10px;
-          left: 0;
-        }
-        &.bottom {
-          color: $purple-dark;
-          font-style: italic;
-          left: 0;
-          bottom: 0;
-          transform: translateY(40px);
-        }
-      }
-    }
-    .illustration {
-      display: none;
-    }
-  }
-}
+// #portfolio {
+//   #skills {
+//     align-items: center;
+//     display: flex;
+//     justify-content: space-around;
+//     flex-direction: column;
+//     margin: 0 auto;
+//     padding: 100px 0;
+//     position: relative;
+//     width: 100%;
+//     div {
+//       width: 100%;
+//       .hardskills {
+//         display: flex;
+//         flex-flow: wrap;
+//         position: relative;
+//         padding-top: 200px;
+//         margin: 0 auto;
+//         width: 100%;
+//       }
+//       li.hardskills-item {
+//         align-items: center;
+//         align-content: center;
+//         display: flex !important;
+//         flex-direction: column;
+//         justify-content: flex-end;
+//         transition: 1s;
+//         position: absolute;
+//         height: 30px;
+//         top: 130px;
+//         left: 25%;
+//         width: 52%;
+//         &.shadow {
+//           animation: shadow 1s ease-in-out both;
+//         }
+//         .sinonjs {
+//           background-color: white;
+//           border-radius: 100%;
+//         }
+//       }
+//       .hardskills-img {
+//         margin-bottom: 10px;
+//         width: 50px;
+//       }
+//       .center-title {
+//         display: block;
+//         position: absolute;
+//         text-align: center;
+//         padding: 10px;
+//         font-size: 20px;
+//         margin: 0 auto;
+//         width: 100%;
+//         &.top {
+//           top: -10px;
+//           left: 0;
+//         }
+//         &.bottom {
+//           color: $purple-dark;
+//           font-style: italic;
+//           left: 0;
+//           bottom: 0;
+//           transform: translateY(40px);
+//         }
+//       }
+//     }
+//     .illustration {
+//       display: none;
+//     }
+//   }
+// }
 
-@include carouselAnimation($skills-mobile, $sides-mobile, $size-mobile);
+// // @include carouselAnimation($skills-mobile, $sides-mobile, $size-mobile);
 
-@media only screen and (min-width: 1000px) {
-  #portfolio {
-    #skills {
-      flex-direction: row;
-      padding: 100px 80px;
-      li.hardskills-item {
-        right: 50%;
-        &.shadow {
-          animation: shadow 1s ease-in-out both;
-        }
-      }
-      .center-title {
-        font-size: 25px!important;
-        &.top {
-          transform: translateY(-80px);
-        }
-        &.bottom {
-          transform: translateY(30px);
-        }
-      }
-    }
-  }
-  @include carouselAnimation($skills, $sides, $size);
-  @media only screen and (max-width: 1250px) {
-    $size-middle: 0.11;
-    @include carouselAnimation($skills, $sides, $size-middle);
-  }
-}
+// @media only screen and (min-width: 1000px) {
+//   #portfolio {
+//     #skills {
+//       flex-direction: row;
+//       padding: 100px 80px;
+//       li.hardskills-item {
+//         right: 50%;
+//         &.shadow {
+//           animation: shadow 1s ease-in-out both;
+//         }
+//       }
+//       .center-title {
+//         font-size: 25px!important;
+//         &.top {
+//           transform: translateY(-80px);
+//         }
+//         &.bottom {
+//           transform: translateY(30px);
+//         }
+//       }
+//     }
+//   }
+//   // @include carouselAnimation($skills, $sides, $size);
+//   // @media only screen and (max-width: 1250px) {
+//   //   $size-middle: 0.11;
+//   //   @include carouselAnimation($skills, $sides, $size-middle);
+//   // }
+// }

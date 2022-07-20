@@ -6,6 +6,7 @@ import '../sass/FeaturedProjects.scss';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Context from '../services/Context';
+import { useEffect } from 'react';
 
 const Section = styled.section`
 @media(min-width: 1000px) {
@@ -26,9 +27,14 @@ export default function FeaturedProjects({ lookAll }) {
   const { favoriteProjects } = data;
   const screenSize = useRef(null);
   const [slides, setSlideQuant] = useState(3);
+  const [projects, setProjects] = useState(FEATURED_PROJECTS);
 
-  const FAVORITE_PROJECTS = (favoriteProjects && favoriteProjects.length !== 0) ? favoriteProjects : FEATURED_PROJECTS;
-  
+  useEffect(() => {
+    if(favoriteProjects && favoriteProjects > 0) {
+      setProjects(favoriteProjects);
+    }
+  }, [favoriteProjects])
+
   const onLoadComponent = () => {
     const screenActual = Number(screenSize.current.offsetWidth);
     if (screenActual < 600) return setSlideQuant(1);
@@ -46,7 +52,7 @@ export default function FeaturedProjects({ lookAll }) {
     >
       <h1 className='center-title'>Meus projetos favoritos</h1>
       {lookAll && <Link to='/projects' className="look-all">Mostrar todos</Link>}
-      <Slider
+      {/* <Slider
         arrowsScroll={ slides }
         autoplay
         autoplayScroll={ slides }
@@ -61,14 +67,14 @@ export default function FeaturedProjects({ lookAll }) {
         wheelScroll={ slides }
         onResize={ onLoadComponent }
       >
-        {FAVORITE_PROJECTS.map(({name, image}) => (
+        {projects.map(({name, image}) => (
           <ProjectItem
             name={ name }
             image={ image }
             key={ name }
           />
         ))}
-      </Slider>
+      </Slider> */}
     </Section>
   )
 };
