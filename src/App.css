@@ -10,9 +10,9 @@ body, #root, #trybewallet, #drinks-and-foods {
   width: 100%;
 }
 
-
 ::-webkit-scrollbar {
-  background-color: #0fff;
+  display: none;
+  background-color: none;
   width: 50px;
 }
 

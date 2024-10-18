@@ -8,6 +8,8 @@
 		flex-flow: row;
 		justify-content: space-between;
 		padding: 10px 0;
+    align-self: center;
+    justify-self: center;
 		width: 100%;
     .button-menu {
       display: block;
@@ -70,6 +72,7 @@
         .dropdown-menu {
           display: flex;
           flex-direction: column;
+          background-color: $button-dark;
           .dropdown-item {
             display: block;
             padding: 0 20px;
@@ -81,6 +84,7 @@
           .slideThree {
             display: flex;
             justify-content: space-around;
+            background-color: $button-dark;
             min-height: 50px;
             margin: 0 auto;
             width: 100%;

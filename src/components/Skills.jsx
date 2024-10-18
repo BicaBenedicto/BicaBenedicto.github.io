@@ -10,6 +10,10 @@ const Section = styled.section`
 background: ${props => props.theme[`transitionLinear${props.type}`]};
 `;
 
+const H2 = styled.h2`
+color: ${props => props.theme[`button${props.type}`]}!important;
+`;
+
 export default function Skills() {
   const { theme, data } = useContext(Context);
 
@@ -22,7 +26,7 @@ export default function Skills() {
         <h3 className='center-title top'>Algumas das linguagens, bibliotecas e ferramentas que utilizo</h3>
           {hardskills && <CarouselAnimation data={hardskills
               .map((tech) => <><img src={tech.image} alt={tech.name} height="50px"/><p>{tech.name}</p></>)} />}
-        <h2 className='center-title bottom'>Fique tranquilo vou selecionar a ideal para o seu projeto</h2>
+        <H2 type={theme} className='center-title bottom'>Fique tranquilo vou selecionar a ideal para o seu projeto</H2>
         </ul>
       </div>
       <img src={ illustration } className="illustration" alt="illustration"/>

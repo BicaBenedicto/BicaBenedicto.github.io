@@ -15,7 +15,7 @@ import Contact from './pages/Contact';
 const URL = 'https://gabrielbenedicto-backend.herokuapp.com/';
 
 const Portfolio = styled.div`
-background-color: ${props => props.theme[`background${props.type}`]};
+background: ${props => props.theme[`background${props.type}`]};
 color: ${props => props.theme[`text${props.type}`]};
 `;
 

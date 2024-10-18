@@ -7,28 +7,28 @@ import reportWebVitals from './reportWebVitals';
 import Provider from './services/Provider';
 
 const theme = {
-  buttonText: 'rgb(245, 245, 245)',
-  headerText: 'rgb(245, 245, 245)',
-  projectLink: 'magenta',
-  projectLinkHover: 'hsl(300, 100%, 80%)',
+  buttonText: '#FEFEFF',
+  headerText: '#FEFEFF',
+  projectLink: 'rgba(290,103,95,1)',
+  projectLinkHover: 'rgba(290,103,95,1)',
 
   // Dark mode colors
 
-  backgroundDark: 'hsl(0, 0%, 8%)',
-  backgroundProjectDark: 'rgba(40, 40, 40, 0.711)',
-  buttonDark: '#6b63ff',
-  headerDark: 'black',
-  purpleDark: '#6b63ff',
-  textDark: '#ccc',
-  transitionLinearDark: 'linear-gradient(0deg, hsl(0, 0%, 8%) 0%, hsl(0, 0% ,12%) 20%, hsl(0, 0%,10%) 80%, hsl(0, 0%, 8%) 100%)',
+  backgroundDark: 'linear-gradient(180deg, rgba(12,22,34,1) 30%, rgba(45,45,45,1) 100%)',
+  backgroundProjectDark: 'linear-gradient(180deg, rgba(12,22,34,1) 30%, rgba(45,45,45,1) 100%)',
+  buttonDark: '#FEFEFF',
+  headerDark: 'linear-gradient(35deg, rgba(12,22,34,1) 40%, rgba(250,103,95,1) 100%)',
+  purpleDark: 'rgba(290,103,95,1)',
+  textDark: 'rgba(290,103,95,1)',
+  transitionLinearDark: 'linear-gradient(100deg, rgba(250,103,95,1) 80%), rgba(12,22,34,1) 70%',
 
   // Light mode colors
 
-  backgroundLight: 'rgb(245, 245, 245)',
+  backgroundLight: '#FEFEFF',
   backgroundProjectLight: 'rgba(0, 0, 0, 0.767)',
-  buttonLight: '#cac7ff',
-  headerLight: 'hsl(0, 0%, 40%)',
-  purpleLight: '#cac7ff',
+  buttonLight: 'rgba(290,103,95,1)',
+  headerLight: 'linear-gradient(35deg, hsl(0, 0%, 40%) 30%, rgba(250,103,95,1) 100%)',
+  purpleLight: 'rgba(290,103,95,1)',
   textLight: 'hsl(0, 0%, 8%)',
   transitionLinearLight: 'linear-gradient(0deg, rgba(31,31,31,0) 0%, rgba(230,230,230,1) 20%, rgba(230,230,230,1) 80%, rgba(54,54,54,0) 100%)',
 

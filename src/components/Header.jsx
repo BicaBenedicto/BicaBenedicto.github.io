@@ -7,12 +7,16 @@ import Context from '../services/Context';
 import sun from '../images/icons/sun.svg';
 import moon from '../images/icons/moon.svg';
 import menu from '../images/icons/menu.svg';
+import logoPng from '../images/Logo.png'
+import logoSvg from '../images/Logo.svg'
 
 const Header = styled.header`
-background-color: ${props => props.theme[`header${props.type}`]};
+background: ${props => props.theme[`header${props.type}`]};
 color: ${props => props.theme.headerText};
 .button-logo {
-  color: ${props => props.theme[`purple${props.type}`]};;
+  .logo-img {
+    height: 5em;
+  }
 }
 `;
 
@@ -97,7 +101,7 @@ export default function HeaderComponent({ isRoot = true }) {
   return (
     <Header type={theme} id='header-top'>
       <button className='button-logo' onClick={ () => history.push('/') }>
-        { '{ Gabriel Benedicto }' }
+        <img src={ logoSvg } alt="logo" className="logo-img"/>
       </button>
       <button className='button-menu' onClick={ () => toggleMenu('menu-show') }>
         <img src={ menu } alt="menu"/>

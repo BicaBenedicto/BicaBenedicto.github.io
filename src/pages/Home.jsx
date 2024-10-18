@@ -10,6 +10,7 @@ import Skills from '../components/Skills';
 import Context from '../services/Context';
 import Menu from '../components/Menu';
 
+
 export default function Home() {
   const { projects, menu } = useContext(Context);
   const { projectHasShow } = projects;
@@ -30,7 +31,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-      {/* <Project /> */}
+      <Project />
       <Menu isRoot={ true }/>
     </>
   );

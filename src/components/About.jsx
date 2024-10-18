@@ -1,6 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import illustration from '../images/gabriel-benedicto.png';
+import illustration4 from '../images/gabriel-benedicto2.jpg';
 import illustration2 from '../images/undraw_hello_re_3evm.svg';
+import illustration3 from '../images/person (1).svg';
 import styled from 'styled-components';
 import '../sass/About.scss';
 import Context from '../services/Context';
@@ -14,14 +16,36 @@ color: ${props => props.theme.buttonText};
 export default function About() {
   const [aboutMore, toggleAboutMore] = useState(false);
   const { theme } = useContext(Context);
+  const [age, setAge] = useState(0);
+  const [yearWork, setYearWork] = useState(0);
+
+  useEffect(() => {
+    const yearAge = new Date('1997-11-29');
+    const yearWork = new Date('2021-01-01');
+
+    const today = new Date();
+
+    const timeSum = today.getTime() - yearAge.getTime()
+  
+    const timeSumWork = today.getTime() - yearWork.getTime()
+
+    const ageActual = Math.floor(timeSum / 1000 / 60 / 60 / 24 / 365);
+  
+    const yearWorkingActual = Math.floor(timeSumWork / 1000 / 60 / 60 / 24 / 365);
+
+    setAge(ageActual);
+
+    setYearWork(yearWorkingActual)
+    return;
+  }, [])
 
   return (
     <section id='home' className='container'>
       <div className="text-body-1">
-        <img src={ illustration2 } className="illustration" alt="illustration"/>
+        <img src={ illustration4 } className="eu" alt="illustration"/>
         <div>
           <h2>Olá, me chamo Gabriel. </h2>
-          <h3>Sou desenvolvedor web, trabalho com criação e manutenção de websites.</h3>
+          <h3>Sou desenvolvedor web, trabalho com criação e manutenção de websites e chatbots.</h3>
           <Button
             TYPE={theme}
             type="button"
@@ -33,16 +57,16 @@ export default function About() {
           <p
             className={aboutMore ? 'home-word-p display-show-more' : 'home-word-p hidden-show-more'}
           >
-              Tenho 24 anos, apaixonado por tecnologia desde sempre, iniciei em 2021 a Faculdade de Análise e Desenvolvimento de Sistemas na FMU. E no mesmo ano aproveitei a chance de ingressar na área, estudei muito e passei no processo seletivo muito disputado no Curso da Trybe, referência em formação e integração de profissionais ao mercado de trabalho, curso focado nas necessidades das empresas.
+              Tenho {age} anos, apaixonado por tecnologia desde sempre, aprendendo contínuamente novas ferramentas, tecnologias e formas de ajudar nas necessidades das empresas.
           </p>
         </div>
       </div>
       <div className="text-body-2">
-        <img src={ illustration } className="eu" alt="illustration"/>
+        <img src={ illustration3 } className="illustration" alt="illustration"/>
         <p
           className={aboutMore ? 'home-word-p display-show-more' : 'home-word-p hidden-show-more'}
         >
-          Comprometido, dedicado e focado, estou pronto para os desafios, quero aprender novas linguagens, sistemas e o que for preciso para atender as necessidades da empresa e crescer profissionalmente.
+          Comprometido, dedicado e focado, estou pronto para os desafios, há mais de {yearWork} anos no mercado trazendo a solução e inovação para diversos clientes.
         </p>
       </div>
     </section>

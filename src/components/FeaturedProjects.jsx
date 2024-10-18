@@ -29,10 +29,16 @@ export default function FeaturedProjects({ lookAll }) {
   const [slides, setSlideQuant] = useState(3);
   const [projects, setProjects] = useState(FEATURED_PROJECTS);
 
+  const [isSlider, setisSlider] = useState(false)
+  useEffect(()=>{
+    setisSlider(true)
+  },[])
+
   useEffect(() => {
     if(favoriteProjects && favoriteProjects > 0) {
       setProjects(favoriteProjects);
     }
+    onLoadComponent()
   }, [favoriteProjects])
 
   const onLoadComponent = () => {
@@ -50,9 +56,10 @@ export default function FeaturedProjects({ lookAll }) {
       ref={ screenSize }
       onLoad={ onLoadComponent }
     >
-      <h1 className='center-title'>Meus projetos favoritos</h1>
-      {lookAll && <Link to='/projects' className="look-all">Mostrar todos</Link>}
-      {/* <Slider
+      <h1 className='center-title'>Projetos em destaque</h1>
+      {/* {lookAll && <Link to='/projects' className="look-all">Mostrar todos</Link>} */}
+      {console.log(projects, projects.length)}
+      {(isSlider && projects && projects.length > 0) && <Slider
         arrowsScroll={ slides }
         autoplay
         autoplayScroll={ slides }
@@ -74,7 +81,7 @@ export default function FeaturedProjects({ lookAll }) {
             key={ name }
           />
         ))}
-      </Slider> */}
+      </Slider>}
     </Section>
   )
 };
