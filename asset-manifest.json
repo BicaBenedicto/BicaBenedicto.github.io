@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2b46dc78.css",
-    "main.js": "/static/js/main.bfba75ab.js",
+    "main.css": "/static/css/main.62b2d107.css",
+    "main.js": "/static/js/main.3dec3cd6.js",
     "static/js/787.72781b8e.chunk.js": "/static/js/787.72781b8e.chunk.js",
     "static/media/gabriel-benedicto.png": "/static/media/gabriel-benedicto.c6cf5dd09b02f4eda153.png",
     "static/media/gabriel-benedicto2.jpg": "/static/media/gabriel-benedicto2.d47c21b71580daa5589c.jpg",
@@ -23,12 +23,12 @@
     "static/media/arrow-right.svg": "/static/media/arrow-right.fae068e2c438d06cf501.svg",
     "static/media/arrow-left.svg": "/static/media/arrow-left.c7ce37029fd3ea6cf7d1.svg",
     "static/media/menu.svg": "/static/media/menu.4afa023271c4ef1a91f50fe5aafcfb0d.svg",
-    "main.2b46dc78.css.map": "/static/css/main.2b46dc78.css.map",
-    "main.bfba75ab.js.map": "/static/js/main.bfba75ab.js.map",
+    "main.62b2d107.css.map": "/static/css/main.62b2d107.css.map",
+    "main.3dec3cd6.js.map": "/static/js/main.3dec3cd6.js.map",
     "787.72781b8e.chunk.js.map": "/static/js/787.72781b8e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2b46dc78.css",
-    "static/js/main.bfba75ab.js"
+    "static/css/main.62b2d107.css",
+    "static/js/main.3dec3cd6.js"
   ]
 }
