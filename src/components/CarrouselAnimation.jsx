@@ -22,6 +22,9 @@ export default function CarouselAnimation() {
       }, 1500);
       return () => {
         clearInterval(id);
+        for (let i = 1; i < id; i++) {
+          window.clearInterval(i);
+        }
       };
     },
     [] // empty dependency array

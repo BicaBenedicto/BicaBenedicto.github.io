@@ -58,7 +58,6 @@ export default function FeaturedProjects({ lookAll }) {
     >
       <h1 className='center-title'>Projetos em destaque</h1>
       {/* {lookAll && <Link to='/projects' className="look-all">Mostrar todos</Link>} */}
-      {console.log(projects, projects.length)}
       {(isSlider && projects && projects.length > 0) && <Slider
         arrowsScroll={ slides }
         autoplay

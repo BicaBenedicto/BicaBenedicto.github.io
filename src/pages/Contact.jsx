@@ -19,6 +19,8 @@ export default function Contacts() {
     <>
       <Header isRoot={ true } />
       <main className={ `contact-page ${changeBlur()}`} style={{ 'margin': '0 auto','maxWidth': '1700px' }}>
+        <br/>
+        <br/>
         <Contact />
       </main>
       <Footer />

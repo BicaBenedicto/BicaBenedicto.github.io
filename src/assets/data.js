@@ -4,7 +4,8 @@ const PROJETO_DESTAQUE = ["Store Manager", "To do List", "Trybewarts", "SpotiTry
 export const PROJECTS_OFFLINE = [
   {
     "name": "Pixel Art",
-    "image": "http://191.101.78.123:4000/view/projects/pixels-art.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/pixels-art.png",
+    "image": require('../images/projetos/pixels-art.png'),
     "technologies": ["Html5", "Css3", "Javascript", "Git", "GitHub"],
     "description": "O projeto é um site de desenho, com algumas paletas de cores aleatórias que são geradas, podendo adicionar, remover ou alterar a cor das paletas conforme desejar, o quadro inicial é de 5 por 5, podendo chegar até 50 por 50 para fazer desenhos em pixel art da maneira que preferir.",
     "site": "/projects/pixel-art/",
@@ -12,7 +13,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "To do List",
-    "image": "http://191.101.78.123:4000/view/projects/to-do-list.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/to-do-list.png",
+    "image": require("../images/projetos/to-do-list.png"),
     "technologies": ["Html5", "Css3", "Javascript", "Git", "GitHub"],
     "description": "O projeto é uma lista de tarefas simples, onde pode adicionar, remover, marca, riscar, excluir e mover itens, além de poder salvar os itens em seu navegador para sempre que precisar pode acessar e conferir a sua lista.",
     "site": "/projects/todo-list",
@@ -20,7 +22,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "Trybewarts",
-    "image": "http://191.101.78.123:4000/view/projects/trybewarts.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/trybewarts.png",
+    "image": require("../images/projetos/trybewarts.png"),
     "technologies": ["Html5", "Css3", "Javascript", "Git", "GitHub"],
     "description": "O projeto é um site de cadastro, onde você coloca as informações como nome, escola, tecnologias que deseja aprender, entre outras coisas e ao final é impresso uma carta com as informações.",
     "site": "/projects/trybewarts/",
@@ -36,7 +39,8 @@ export const PROJECTS_OFFLINE = [
   // },
   {
     "name": "Trybewallet",
-    "image": "http://191.101.78.123:4000/view/projects/trybewallet.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/trybewallet.png",
+    "image": require("../images/projetos/trybewallet.png"),
     "technologies": ["React.js", "Css3", "React Router", "Redux", "Git", "GitHub"],
     "description": "O projeto é um site de cambio, utilizando uma API que informa os valores do cambio para Real, sendo possivel anotar os gastos em diversas moedas, e o valor é convertido para Real Brasileiro, ficando salvo em seu navegador e utilizando o cambio no momento atual que realizou a adição.",
     "site": "",
@@ -44,7 +48,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "TrybeTunes",
-    "image": "http://191.101.78.123:4000/view/projects/trybetunes.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/trybetunes.png",
+    "image": require("../images/projetos/trybetunes.png"),
     "technologies": ["React.js", "Css3", "React Router", "Git", "GitHub"],
     "description": "O projeto é um site de música, onde é possivel escutar os primeiros 30 segundos de suas músicas favoritas, é utilizado a API do Itunes, com um simulador de sistema de login, podendo favoritas as músicas que mais gosta.",
     "site": "",
@@ -60,7 +65,8 @@ export const PROJECTS_OFFLINE = [
   // },
   {
     "name": "Davsom",
-    "image": "http://191.101.78.123:4000/view/projects/davsom.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/davsom.png",
+    "image": require("../images/projetos/davsom.png"),
     "technologies": ["React.js", "Css3", "Php"],
     "description": "Projeto realizado como trabalho freelancer de campanha publicitária de uma loja automotiva",
     "site": "",
@@ -68,7 +74,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "SpotiTrybe",
-    "image": "http://191.101.78.123:4000/view/projects/spotitrybe.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/spotitrybe.png",
+    "image": require("../images/projetos/spotitrybe.png"),
     "technologies": ["Html5", "Css3", "Javascript", "Scrum", "Kanban", "Git", "GitHub"],
     "description": "Projeto realizado em grupo, utilizando metodologia Scrum e método Kanban, criação de site com API do Spotify, podendo selecionar músicas por categorias, pesquisar playlist ou álbuns e tocar os primeiros 30 segundos de sua música favorita (limitação da API)",
     "site": "/projects/spotitrybe/",
@@ -76,7 +83,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "Mistery Letter",
-    "image": "http://191.101.78.123:4000/view/projects/mistery-letter.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/mistery-letter.png",
+    "image": require("../images/projetos/mistery-letter.png"),
     "technologies": ["Html5", "Css3", "Javascript", "Git", "GitHub"],
     "description": "Projeto que transforma frases em imagens coladas como recortes de jornal, utilizado para treinamento de Javascript, DOM e propriedades do Css",
     "site": "/projects/mistery-letter/",
@@ -84,7 +92,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "Lessons Learned",
-    "image": "http://191.101.78.123:4000/view/projects/lessons-learned.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/lessons-learned.png",
+    "image": require("../images/projetos/lessons-learned.png"),
     "technologies": ["Html5", "Css3", "Git", "GitHub"],
     "description": "Projeto de portfolio, uma página de apresentação sobre mim, utilizando Html e Css, quando iniciei o curso da Trybe.",
     "site": "/projects/lessons-learned/",
@@ -92,7 +101,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "Shopping Cart",
-    "image": "http://191.101.78.123:4000/view/projects/shopping-cart.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/shopping-cart.png",
+    "image": require("../images/projetos/shopping-cart.png"),
     "technologies": ["Html5", "Css3", "Javascript", "Git", "GitHub"],
     "description": "Projeto é um site utilizando html, css e Javascript, com requisição de api com o mercado livre, podendo ver produtos e adicionar ao carrinho.",
     "site": "/projects/shopping-cart/",
@@ -100,7 +110,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "Color Guess",
-    "image": "http://191.101.78.123:4000/view/projects/color-guess.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/color-guess.png",
+    "image": require("../images/projetos/color-guess.png"),
     "technologies": ["Html5", "Css3", "Javascript", "Git", "GitHub"],
     "description": "Projeto é um jogo de seleção de cores, onde é informado um código em RGB, e cores para selecionar a correta, adicionando pontos ao selecionar a cor certa e podendo aumentar a dificuldade.",
     "site": "/projects/color-guess/",
@@ -108,7 +119,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "Meme Generator",
-    "image": "http://191.101.78.123:4000/view/projects/meme-generator.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/meme-generator.png",
+    "image": require("../images/projetos/meme-generator.png"),
     "technologies": ["Html5", "Css3", "Javascript", "Git", "GitHub"],
     "description": "Projeto é uma página para criação de memes, podendo fazer o upload de uma imagem e adicionar um texto nela.",
     "site": "/projects/meme-generator/",
@@ -116,7 +128,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "Netflix Interface",
-    "image": "http://191.101.78.123:4000/view/projects/netflix-interface.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/netflix-interface.png",
+    "image": require("../images/projetos/netflix-interface.png"),
     "technologies": ["Html5", "Css3", "Javascript", "Git", "GitHub"],
     "description": "Projeto é uma página com a interface do Netflix, com aparência similar e utilizando API de filmes para os gêneros.",
     "site": "/projects/Netflix-Interface/",
@@ -124,7 +137,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "Docker Todo List",
-    "image": "http://191.101.78.123:4000/view/projects/code.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/code.png",
+    "image": require("../images/projetos/code.png"),
     "technologies": ["Docker", "Git", "GitHub"],
     "description": "Projeto de unificação de Front-end, Back-end e testes, utilizando o Docker em aplicação já pronta.",
     "site": "",
@@ -132,7 +146,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "Jest",
-    "image": "http://191.101.78.123:4000/view/projects/code.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/code.png",
+    "image": require("../images/projetos/code.png"),
     "technologies": ["Jest","Javascript", "Git", "GitHub"],
     "description": "Testes unitários para código já criado anteriormente com testes assíncronos e mockagem de resultados utilizando o Jest.",
     "site": "",
@@ -140,7 +155,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "Js Unit Tests",
-    "image": "http://191.101.78.123:4000/view/projects/code.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/code.png",
+    "image": require("../images/projetos/code.png"),
     "technologies": ["Jest","Javascript", "Git", "GitHub"],
     "description": "Códigos em Javascript completando pequenos desafios com testes unitários com implementação de testes unitários em códigos já feitos.",
     "site": "",
@@ -148,7 +164,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "MySQL All for One",
-    "image": "http://191.101.78.123:4000/view/projects/code.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/code.png",
+    "image": require("../images/projetos/code.png"),
     "technologies": ["MySQL", "Git", "GitHub"],
     "description": "Resolução de desafios em interação com banco de dados utilizando MySQL.",
     "site": "",
@@ -156,7 +173,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "MySQL One for All",
-    "image": "http://191.101.78.123:4000/view/projects/code.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/code.png",
+    "image": require("../images/projetos/code.png"),
     "technologies": ["MySQL", "Git", "GitHub"],
     "description": "Resolução de desafios em interação, manipulação e criação de banco de dados utilizando MySQL.",
     "site": "",
@@ -164,7 +182,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "Playground Functions",
-    "image": "http://191.101.78.123:4000/view/projects/code.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/code.png",
+    "image": require("../images/projetos/code.png"),
     "technologies": ["Javascript", "Git", "GitHub"],
     "description": "Códigos em Javascript completando diversos desafios.",
     "site": "",
@@ -172,7 +191,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "React Testing Library",
-    "image": "http://191.101.78.123:4000/view/projects/code.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/code.png",
+    "image": require("../images/projetos/code.png"),
     "technologies": ["Testing Library", "Git", "GitHub"],
     "description": "Realização de testes unitário com RTL em aplicação React já pronta.",
     "site": "",
@@ -180,7 +200,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "Store Manager",
-    "image": "http://191.101.78.123:4000/view/projects/code.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/code.png",
+    "image": require("../images/projetos/code.png"),
     "technologies": ["Node.js", "Express.js", "Mocha.js", "Sinon.js", "Chai.js", "Jest", "Git", "GitHub", "MySQL"],
     "description": "Criação de API, utilizando Node.js e a biblioteca Express.js, para gerenciamento de vendas e produtos, com diversas rotas para o gerenciamento e validações. Com testes unitários",
     "site": "",
@@ -188,7 +209,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "Talker Manager",
-    "image": "http://191.101.78.123:4000/view/projects/code.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/code.png",
+    "image": require("../images/projetos/code.png"),
     "technologies": ["Node.js", "Express.js", "Git", "GitHub", "MySQL"],
     "description": "Criação de API utilizando Node.js e Express.js com middlewares de validação e tratamento de erro e manipulação de arquivos e leitura.",
     "site": "",
@@ -196,7 +218,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "Teste de conhecimento",
-    "image": "http://191.101.78.123:4000/view/projects/code.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/code.png",
+    "image": require("../images/projetos/code.png"),
     "technologies": ["Javascript", "Git", "GitHub", "MySQL"],
     "description": "Questões de lógica e desafios diversos, manipulação de arquivos, tratamento, filtro, entre diversos outros",
     "site": "",
@@ -204,7 +227,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "Zoo Functions",
-    "image": "http://191.101.78.123:4000/view/projects/code.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/code.png",
+    "image": require("../images/projetos/code.png"),
     "technologies": ["Jest","Javascript", "Git", "GitHub"],
     "description": "Códigos em Javascript completando pequenos desafios com testes unitários e funções",
     "site": "",
@@ -212,7 +236,8 @@ export const PROJECTS_OFFLINE = [
   },
   {
     "name": "Blogs API",
-    "image": "http://191.101.78.123:4000/view/projects/code.png",
+    // "image": "http://api.gabrielbenedicto.com:4000/view/projects/code.png",
+    "image": require("../images/projetos/code.png"),
     "technologies": ["Node.js", "Express.js", "Sequelize.js", "JSON Web Tokens", "Git", "GitHub"],
     "description": "Back-end criação de API de Blog, com token e validação de tokens, criação de usuário, post, categorias, utilizando o Node.js, Express.js, Sequelize e JSON Web Tokens",
     "site": "",

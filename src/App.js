@@ -12,7 +12,7 @@ import NotFound from './pages/NotFound';
 import Context from './services/Context';
 import Contact from './pages/Contact';
 
-const URL = 'https://gabrielbenedicto-backend.herokuapp.com/';
+const URL = 'https://api.gabrielbenedicto.com/';
 
 const Portfolio = styled.div`
 background: ${props => props.theme[`background${props.type}`]};
@@ -33,14 +33,14 @@ export default function App() {
       themeUser.matches ? isDarkTheme(true) : isDarkTheme(false);
     }
     (async () => {
-    const [dataProjects, dataTechnologies] = await Promise.all([fetch(`${URL}projects`), fetch(`${URL}technologies`)]);
-    const [technologies, projects] = await Promise.all([dataTechnologies.json(), dataProjects.json()]);
+    // const [dataProjects, dataTechnologies] = await Promise.all([fetch(`${URL}projects`), fetch(`${URL}technologies`)]);
+    // const [technologies, projects] = await Promise.all([dataTechnologies.json(), dataProjects.json()]);
 
-    const favoriteProjects = projects.filter((project) => project.favorited);
+    // const favoriteProjects = projects.filter((project) => project.favorited);
 
-    setTechnologies(technologies);
-    setProjects(projects);
-    setFavoriteProjects(favoriteProjects);
+    // setTechnologies(technologies);
+    // setProjects(projects);
+    // setFavoriteProjects(favoriteProjects);
     })();
   }, []);
 

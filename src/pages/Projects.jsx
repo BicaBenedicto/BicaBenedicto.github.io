@@ -29,6 +29,8 @@ export default function Projects() {
     <>
       <Header isRoot={ false } />
       <main className={ `projects-portfolio ${changeBlur()}`} style={{ 'margin': '0 auto','maxWidth': '1700px' }}>
+        <br/>
+        <br/>
         <FeaturedProjects lookAll={ false }/>
         <h1 className='center-title'>Projetos</h1>
         <select value={ search } onChange={ changeFilter } className="filter-projects-select">
