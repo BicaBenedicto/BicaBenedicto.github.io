@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-black: #000000;
+    --color-purple: #A855F7;
+    --color-purple-dark: #7C3AED;
+    --color-purple-light: #D946EF;
+    --color-dark-bg: #0F0F0F;
+    --color-card-bg: #1A1A1A;
+    
+    /* Glow effects */
+    --glow-purple: 0 0 20px rgba(168, 85, 247, 0.5), 0 0 40px rgba(168, 85, 247, 0.3);
+    --glow-purple-strong: 0 0 30px rgba(168, 85, 247, 0.8), 0 0 60px rgba(168, 85, 247, 0.5), 0 0 90px rgba(168, 85, 247, 0.3);
+  }
+
+  * {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-black text-white;
+    font-family: 'Inter', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-animated {
+    @apply bg-gradient-to-r from-purple-400 via-purple-500 to-purple-600 bg-clip-text text-transparent;
+    background-size: 200% auto;
+    animation: gradientShift 3s ease infinite;
+  }
+
+  /* Neon Glow */
+  .neon-glow {
+    text-shadow: var(--glow-purple);
+  }
+
+  .neon-glow-strong {
+    text-shadow: var(--glow-purple-strong);
+  }
+
+  /* Glassmorphism */
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+
+  /* Dark Card */
+  .dark-card {
+    @apply bg-[var(--color-card-bg)] border border-purple-500/20 rounded-xl;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark-card:hover {
+    @apply border-purple-500/60;
+    box-shadow: var(--glow-purple);
+    transform: translateY(-4px);
+  }
+
+  /* Button Glow */
+  .btn-glow {
+    @apply bg-purple-500 hover:bg-purple-600 text-white font-semibold px-6 py-3 rounded-lg;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+  }
+
+  .btn-glow:hover {
+    box-shadow: var(--glow-purple-strong);
+    transform: translateY(-2px);
+  }
+
+  /* Section Divider */
+  .section-divider {
+    @apply relative;
+  }
+
+  .section-divider::before {
+    content: '';
+    @apply absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent;
+  }
+}
+
+@layer utilities {
+  /* Smooth Transitions */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .transition-smooth-slow {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Hover Scale */
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+
+  .hover-scale-sm:hover {
+    transform: scale(1.02);
+  }
+
+  /* Text Glow on Hover */
+  .hover-glow:hover {
+    text-shadow: var(--glow-purple);
+  }
+
+  /* Border Glow Animation */
+  .border-glow-animated {
+    position: relative;
+    background: linear-gradient(var(--color-card-bg), var(--color-card-bg)) padding-box,
+                linear-gradient(90deg, rgba(168, 85, 247, 0.5), rgba(217, 70, 239, 0.5)) border-box;
+    border: 2px solid transparent;
+    animation: borderGlow 3s ease infinite;
+  }
+
+  /* Responsive Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Animations */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.6));
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-purple-500/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-purple-500;
+}
